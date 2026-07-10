@@ -13,7 +13,7 @@
 				class="flex aspect-video w-full flex-col items-center justify-center gap-2 self-start rounded-lg border border-dashed border-outline-gray-3 p-1.5 text-ink-gray-5 shadow-sm transition-colors duration-150 hover:border-outline-gray-4 hover:bg-surface-gray-1 hover:text-ink-gray-7"
 				@click="$emit('blank')">
 				<PlusIcon class="size-5" />
-				<span class="text-sm">Start from scratch</span>
+				<span class="text-sm">{{ __("Start from scratch") }}</span>
 			</button>
 			<TemplatePageCard
 				v-for="page in group?.pages"

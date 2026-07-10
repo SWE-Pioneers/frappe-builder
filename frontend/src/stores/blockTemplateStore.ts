@@ -40,7 +40,7 @@ const useBlockTemplateStore = defineStore("blockTemplateStore", {
 				(block: Block) => {
 					this.saveBlockTemplate(block, blockTemplateName);
 				},
-				"Save Template",
+				__("Save Template"),
 				blockTemplate.template_name,
 			);
 			builderStore.leftPanelActiveTab = "Layers";
@@ -90,7 +90,7 @@ const useBlockTemplateStore = defineStore("blockTemplateStore", {
 			this.blockTemplateMap.delete(templateName);
 			await builderBlockTemplate.reload();
 
-			toast.success("Block template saved!");
+			toast.success(__("Block template saved!"));
 		},
 	},
 });

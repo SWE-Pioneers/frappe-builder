@@ -2,8 +2,8 @@
 	<div v-show="isSmallScreen" class="grid h-screen w-screen place-content-center gap-4 text-ink-gray-9">
 		<img src="/builder_logo.png" alt="logo" class="h-10" />
 		<div class="flex flex-col">
-			<h1 class="text-p-3xl-semibold">Screen too small</h1>
-			<p class="text-p-base">Please switch to a larger screen to edit</p>
+			<h1 class="text-p-3xl-semibold">{{ __("Screen too small") }}</h1>
+			<p class="text-p-base">{{ __("Please switch to a larger screen to edit") }}</p>
 		</div>
 	</div>
 	<div v-show="!isSmallScreen" class="page-builder relative h-screen overflow-hidden bg-surface-gray-1">
@@ -30,7 +30,7 @@
 			<template v-slot:header>
 				<div class="flex items-center justify-between bg-surface-base p-2 text-sm text-ink-gray-8 shadow-sm">
 					<div class="flex items-center gap-1 pl-2 text-xs">
-						<a @click="canvasStore.exitFragmentMode" class="cursor-pointer">Page</a>
+						<a @click="canvasStore.exitFragmentMode" class="cursor-pointer">{{ __("Page") }}</a>
 						<span class="lucide-chevron-right h-3 w-3" aria-hidden="true" />
 						<span class="flex items-center gap-2">
 							{{ canvasStore.fragmentData.fragmentName }}
@@ -43,7 +43,7 @@
 						</span>
 					</div>
 					<Button variant="solid" class="text-xs" @click="saveAndExitFragmentMode">
-						{{ canvasStore.fragmentData.saveActionLabel || "Save" }}
+						{{ canvasStore.fragmentData.saveActionLabel || __("Save") }}
 					</Button>
 				</div>
 			</template>
@@ -83,7 +83,7 @@
 		v-model="canvasStore.showEditorDialog"
 		class="overscroll-none"
 		:isDirty="expandedEditor?.isDirty"
-		title="HTML"
+		:title="__('HTML')"
 		size="7xl">
 		<template #default>
 			<CodeEditor
@@ -296,8 +296,8 @@ provide("showShortcuts", () => {
 useShortcut([
 	{
 		key: " ",
-		description: "Hold for move mode",
-		group: "Tools",
+		description: __("Hold for move mode"),
+		group: __("Tools"),
 		handler: () => {
 			if (!canvasStore.editableBlock) {
 				builderStore.mode = "move";
@@ -307,8 +307,8 @@ useShortcut([
 	},
 	{
 		key: "?",
-		description: "Show keyboard shortcuts",
-		group: "General",
+		description: __("Show keyboard shortcuts"),
+		group: __("General"),
 		handler: () => {
 			shortcutsModalOpen.value = true;
 		},
@@ -316,8 +316,8 @@ useShortcut([
 	{
 		key: "i",
 		ctrl: true,
-		description: "Edit block with AI",
-		group: "Edit",
+		description: __("Edit block with AI"),
+		group: __("Edit"),
 		condition: () =>
 			builderStore.isAIEnabled &&
 			!blockController.isRoot() &&
@@ -334,8 +334,8 @@ useShortcut([
 		key: "d",
 		ctrl: true,
 		shift: true,
-		description: "Delete Page",
-		group: "General",
+		description: __("Delete Page"),
+		group: __("General"),
 		handler: () => {
 			if (pageStore.activePage && !pageStore.activePage.is_standard) {
 				pageStore.deletePage(pageStore.activePage).then(() => {
@@ -367,15 +367,15 @@ let expandedEditorOptions = computed(() => {
 	let title, label;
 	let type: "HTML" | "JavaScript" | "CSS" = "HTML";
 	if (canvasStore.editingContentType === "html") {
-		title = "HTML";
-		label = "Edit HTML";
+		title = __("HTML");
+		label = __("Edit HTML");
 	} else if (canvasStore.editingContentType === "js") {
-		title = "Block Client Script";
-		label = "Edit Block Client Script";
+		title = __("Block Client Script");
+		label = __("Edit Block Client Script");
 		type = "JavaScript";
 	} else if (canvasStore.editingContentType === "css") {
-		title = "CSS";
-		label = "Edit CSS";
+		title = __("CSS");
+		label = __("Edit CSS");
 		type = "CSS";
 	}
 	return { title, label, type };
@@ -418,7 +418,7 @@ watch(
 	(to, from) => {
 		if (to.name === "builder" && to.params.pageId === "new") {
 			const pageInfo = {
-				page_title: "My Page",
+				page_title: __("My Page"),
 				draft_blocks: [getRootBlockTemplate()],
 			} as BuilderPage;
 			if (builderStore.activeFolder) {
@@ -456,12 +456,12 @@ const debouncedPageSave = useDebounceFn(pageStore.savePage, 300);
 
 const usageMessage = computed(() => {
 	if (usageCount.value === 0) {
-		return "not used in any pages";
+		return __("not used in any pages");
 	}
 	if (usageCount.value === 1) {
-		return "used in 1 page";
+		return __("used in 1 page");
 	}
-	return `used in ${usageCount.value} pages`;
+	return __("used in {0} pages", [usageCount.value]);
 });
 
 watch(

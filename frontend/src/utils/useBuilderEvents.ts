@@ -124,8 +124,8 @@ export function useBuilderEvents(
 
 				if (text.startsWith("<svg")) {
 					if (text.includes("<image")) {
-						toast.warning("Warning", {
-							description: "SVG with inlined image in it is not supported. Please paste it as PNG instead.",
+						toast.warning(__("Warning"), {
+							description: __("SVG with inlined image in it is not supported. Please paste it as PNG instead."),
 						});
 						return;
 					}
@@ -575,11 +575,11 @@ const copySelectedBlocksToClipboard = (e: ClipboardEvent) => {
 	) {
 		// Handle dialog first and wait for response
 		showDialog({
-			title: "Copy entire page?",
-			message: "Do you want to copy the entire page including settings and scripts?",
+			title: __("Copy entire page?"),
+			message: __("Do you want to copy the entire page including settings and scripts?"),
 			actions: [
 				{
-					label: "Yes",
+					label: __("Yes"),
 					variant: "solid",
 					onClick: () => {
 						canvasStore.requiresConfirmationForCopyingEntirePage = false;
@@ -588,7 +588,7 @@ const copySelectedBlocksToClipboard = (e: ClipboardEvent) => {
 					},
 				},
 				{
-					label: "No, just blocks",
+					label: __("No, just blocks"),
 					variant: "subtle",
 					onClick: () => {
 						canvasStore.requiresConfirmationForCopyingEntirePage = false;

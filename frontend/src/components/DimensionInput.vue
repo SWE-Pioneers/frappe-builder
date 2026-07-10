@@ -6,15 +6,15 @@
 		:enableSlider="true"
 		:options="[
 			{
-				label: 'Auto',
+				label: __('Auto'),
 				value: 'auto',
 			},
 			{
-				label: 'Fit Content',
+				label: __('Fit Content'),
 				value: 'fit-content',
 			},
 			{
-				label: 'Stretch',
+				label: __('Stretch'),
 				value: '100%',
 			},
 		]"

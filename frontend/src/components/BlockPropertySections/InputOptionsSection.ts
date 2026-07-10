@@ -7,7 +7,7 @@ const inputOptionsSectionProperties = [
 		component: InlineInput,
 		getProps: () => {
 			return {
-				label: "Type",
+				label: __("Type"),
 				type: "select",
 				options: ["text", "number", "email", "password", "date", "time", "search", "tel", "url", "color", "radio"],
 				modelValue: blockController.getAttribute("type") || "text",
@@ -23,7 +23,7 @@ const inputOptionsSectionProperties = [
 		component: InlineInput,
 		getProps: () => {
 			return {
-				label: "Placeholder",
+				label: __("Placeholder"),
 				modelValue: blockController.getAttribute("placeholder"),
 			};
 		},
@@ -38,10 +38,11 @@ const inputOptionsSectionProperties = [
 		component: InlineInput,
 		getProps: () => {
 			return {
-				label: "Name",
+				label: __("Name"),
 				modelValue: blockController.getAttribute("name") || "",
-				description:
+				description: __(
 					"Group name for this radio button. Radio buttons with the same name are grouped together.",
+				),
 			};
 		},
 		searchKeyWords: "Radio, Name, Group, RadioName, Radio Name, Group Name, input, radio button",
@@ -54,9 +55,9 @@ const inputOptionsSectionProperties = [
 		component: InlineInput,
 		getProps: () => {
 			return {
-				label: "Value",
+				label: __("Value"),
 				modelValue: blockController.getAttribute("value") || "",
-				description: "Value submitted with the form when this radio button is selected.",
+				description: __("Value submitted with the form when this radio button is selected."),
 			};
 		},
 		searchKeyWords: "Radio, Value, RadioValue, Radio Value, input, radio button",
@@ -69,10 +70,10 @@ const inputOptionsSectionProperties = [
 		component: OptionToggle,
 		getProps: () => {
 			return {
-				label: "Checked",
+				label: __("Checked"),
 				options: [
-					{ label: "Yes", value: true },
-					{ label: "No", value: false },
+					{ label: __("Yes"), value: true },
+					{ label: __("No"), value: false },
 				],
 				modelValue:
 					blockController.getAttribute("checked") === "" || blockController.getAttribute("checked") === "checked",
@@ -93,7 +94,7 @@ const inputOptionsSectionProperties = [
 ];
 
 export default {
-	name: "Input Options",
+	name: __("Input Options"),
 	properties: inputOptionsSectionProperties,
 	condition: () => blockController.isInput(),
 };

@@ -6,29 +6,29 @@
 				hideLabel: true,
 				items: [
 					{
-						label: 'Duplicate',
+						label: __('Duplicate'),
 						onClick: () => pageStore.duplicatePage(props.page),
 						icon: 'lucide-copy',
 					},
 					{
-						label: 'View Page',
+						label: __('View Page'),
 						onClick: () => pageStore.openPageInBrowser(props.page),
 						icon: 'lucide-globe',
 						condition: () => Boolean(props.page.published),
 					},
 					{
-						label: 'Unpublish',
+						label: __('Unpublish'),
 						onClick: () => pageStore.unpublishPage(props.page),
 						icon: 'lucide-globe-x',
 						condition: () => Boolean(props.page.published),
 					},
 					{
-						label: 'View in Desk',
+						label: __('View in Desk'),
 						onClick: () => openInDesk(props.page),
 						icon: 'lucide-arrow-up-right',
 					},
 					{
-						label: 'Delete',
+						label: __('Delete'),
 						onClick: () => pageStore.deletePage(props.page),
 						icon: 'lucide-trash',
 						condition: () => !props.page.is_standard,

@@ -22,26 +22,26 @@
 							class="pointer-events-none absolute inset-0 flex items-center justify-center rounded-md border-2 border-dashed border-outline-blue-4 bg-surface-blue-1/60">
 							<div class="text-xs-medium flex items-center gap-1.5 text-ink-blue-8">
 								<span class="lucide-image h-3.5 w-3.5" aria-hidden="true" />
-								Drop image to attach
+								{{ __("Drop image to attach") }}
 							</div>
 						</div>
 					</Transition>
 					<span
 						v-if="isVisionModel && !imagePreviewUrl && !isDragging"
 						class="pointer-events-none absolute bottom-2 right-2 select-none text-[10px] text-ink-gray-4">
-						Paste or drop image
+						{{ __("Paste or drop image") }}
 					</span>
 				</div>
 				<Transition name="fade">
 					<div
 						v-if="imagePreviewUrl"
 						class="flex items-center gap-2 rounded-md border border-outline-gray-2 bg-surface-gray-1 p-1.5 pr-2.5">
-						<img :src="imagePreviewUrl" class="h-8 w-8 rounded object-cover" alt="Reference image" />
+						<img :src="imagePreviewUrl" class="h-8 w-8 rounded object-cover" :alt="__('Reference image')" />
 						<span class="flex-1 truncate text-xs text-ink-gray-7">{{ imageFileName }}</span>
 						<button
 							type="button"
 							class="flex items-center rounded text-ink-gray-5 hover:text-ink-red-7"
-							title="Remove image"
+							:title="__('Remove image')"
 							@click="clearImage">
 							<span class="lucide-x h-3.5 w-3.5" aria-hidden="true" />
 						</button>
@@ -60,7 +60,7 @@
 						<Dropdown
 							:options="[
 								{
-									label: 'Select Model',
+									label: __('Select Model'),
 									disabled: true,
 								},
 								...modelOptions.map((m) => ({
@@ -71,14 +71,14 @@
 							<Button
 								variant="ghost"
 								icon-right="chevron-up"
-								:label="modelOptions.find((m) => m.value === selectedModel)?.label || 'Model'" />
+								:label="modelOptions.find((m) => m.value === selectedModel)?.label || __('Model')" />
 						</Dropdown>
 						<Popover v-if="mode === 'generate'" placement="top" :offset="10">
 							<template #target="{ togglePopover }">
 								<Button
 									variant="ghost"
 									icon-right="chevron-up"
-									:label="selectedPreset?.name || 'No Style'"
+									:label="selectedPreset?.name || __('No Style')"
 									:class="{
 										'!text-ink-gray-4': !selectedPreset,
 									}"
@@ -87,7 +87,7 @@
 							<template #body-main="{ close }">
 								<div class="z-[1100] w-[420px] rounded-lg border bg-surface-base p-2 shadow-2xl">
 									<div class="flex items-center justify-between p-1 px-2">
-										<div class="text-sm text-ink-gray-4">Styles</div>
+										<div class="text-sm text-ink-gray-4">{{ __("Styles") }}</div>
 										<Button
 											v-if="selectedPreset"
 											class="text-sm text-ink-gray-5 hover:text-ink-gray-7"
@@ -95,7 +95,7 @@
 												selectedPreset = null;
 												close();
 											">
-											Clear Selection
+											{{ __("Clear Selection") }}
 										</Button>
 									</div>
 									<div class="max-h-[350px] overflow-y-auto p-2">
@@ -118,7 +118,7 @@
 						@click="handleSubmit"
 						:disabled="!canGenerate"
 						:loading="generating"
-						:label="mode === 'modify' ? 'Modify' : 'Generate'"
+						:label="mode === 'modify' ? __('Modify') : __('Generate')"
 						icon-right="arrow-up" />
 				</div>
 			</div>
@@ -141,7 +141,7 @@
 						]"
 						aria-hidden="true" />
 					<span class="text-sm-medium text-ink-gray-9">
-						{{ progressMessage || (mode === "modify" ? "Modifying section…" : "Generating page…") }}
+						{{ progressMessage || (mode === "modify" ? __("Modifying section…") : __("Generating page…")) }}
 					</span>
 				</div>
 			</div>
@@ -286,13 +286,13 @@ const canGenerate = computed(
 );
 
 const title = computed(() => {
-	if (props.mode === "generate") return "Generate with AI";
-	return "Modify with AI";
+	if (props.mode === "generate") return __("Generate with AI");
+	return __("Modify with AI");
 });
 
 const placeholder = computed(() => {
-	if (props.mode === "generate") return "Describe the page you want to create…";
-	return "Describe how you want to modify this section…";
+	if (props.mode === "generate") return __("Describe the page you want to create…");
+	return __("Describe how you want to modify this section…");
 });
 
 function buildPrompt(base: string) {
@@ -309,11 +309,11 @@ function clearImage() {
 
 function attachImageFile(file: File) {
 	if (!file.type.startsWith("image/")) {
-		errorMessage.value = "Please paste a valid image.";
+		errorMessage.value = __("Please paste a valid image.");
 		return;
 	}
 	if (file.size > 5 * 1024 * 1024) {
-		errorMessage.value = "Image must be smaller than 5 MB.";
+		errorMessage.value = __("Image must be smaller than 5 MB.");
 		return;
 	}
 	imageFileName.value = file.name || "pasted-image.png";
@@ -393,7 +393,7 @@ function parseBlock(raw: string): BlockOptions | null {
 function resetState() {
 	generating.value = true;
 	errorMessage.value = "";
-	progressMessage.value = "Initializing…";
+	progressMessage.value = __("Initializing…");
 	streamingContent.value = "";
 	showDialog.value = false;
 }
@@ -422,7 +422,7 @@ async function runTask(type: "generate" | "modify", customParams: Record<string,
 			}),
 		}).submit();
 	} catch (e) {
-		handleError(e, `An error occurred while ${isModify ? "modifying" : "generating"}`);
+		handleError(e, __("An error occurred while {0}", [isModify ? __("modifying") : __("generating")]));
 	}
 }
 
@@ -443,7 +443,7 @@ async function executeDirect(
 ) {
 	emit("update:blockContext", block);
 	runTask("modify", {
-		prompt: customPrompt || (type === "rewrite_text" ? "Improve this text" : "Replace image"),
+		prompt: customPrompt || (type === "rewrite_text" ? __("Improve this text") : __("Replace image")),
 		block_context: JSON.stringify(block),
 		task_type: type,
 	});
@@ -506,7 +506,7 @@ function makeHandlers(isModify: boolean) {
 
 	const onComplete = (data: CompleteData) => {
 		generating.value = false;
-		progressMessage.value = data.message || "Operation completed";
+		progressMessage.value = data.message || __("Operation completed");
 		setTimeout(() => (progressMessage.value = ""), 2000);
 		if (isModify) {
 			processModifyStreaming();
@@ -525,7 +525,8 @@ function makeHandlers(isModify: boolean) {
 		progressMessage.value = "";
 		showDialog.value = true;
 		errorMessage.value =
-			data.message || `An error occurred while ${isModify ? "modifying the section" : "generating the page"}`;
+			data.message ||
+			__("An error occurred while {0}", [isModify ? __("modifying the section") : __("generating the page")]);
 		remoteTaskType.value = null;
 		remoteBlockId.value = null;
 	};

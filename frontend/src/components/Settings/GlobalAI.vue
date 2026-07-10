@@ -1,7 +1,7 @@
 <template>
 	<div class="flex flex-col gap-5">
 		<div class="flex flex-col gap-2">
-			<label class="text-sm text-ink-gray-9">OpenRouter API Key</label>
+			<label class="text-sm text-ink-gray-9">{{ __("OpenRouter API Key") }}</label>
 			<div class="flex items-center gap-2">
 				<FormControl
 					type="password"
@@ -10,11 +10,11 @@
 					placeholder="sk-or-v1-…"
 					class="flex-1" />
 				<Button v-if="apiKey" variant="subtle" @click="testApiKey" :disabled="testing">
-					{{ testing ? "Testing..." : "Test Key" }}
+					{{ testing ? __("Testing...") : __("Test Key") }}
 				</Button>
 			</div>
 			<p class="text-xs text-ink-gray-6">
-				Get API key from
+				{{ __("Get API key from") }}
 				<a
 					href="https://openrouter.ai/keys"
 					target="_blank"
@@ -22,7 +22,7 @@
 					class="text-ink-blue-8 underline">
 					openrouter.ai/keys
 				</a>
-				— supports Claude, Gemini, GPT and more under one key.
+				{{ __("— supports Claude, Gemini, GPT and more under one key.") }}
 			</p>
 		</div>
 		<div v-if="statusMessage" class="rounded-lg p-3 text-sm" :class="statusClass">
@@ -60,14 +60,14 @@ const testApiKey = async () => {
 		}).submit()) as { success: boolean; message?: string };
 
 		if (result.success) {
-			statusMessage.value = "API key is valid!";
+			statusMessage.value = __("API key is valid!");
 			statusClass.value = "text-ink-green-6 bg-surface-green-1";
 		} else {
-			statusMessage.value = result.message || "API key test failed";
+			statusMessage.value = result.message || __("API key test failed");
 			statusClass.value = "text-ink-red-6 bg-surface-red-1";
 		}
 	} catch (error: unknown) {
-		statusMessage.value = error instanceof Error ? error.message : "Failed to test API key";
+		statusMessage.value = error instanceof Error ? error.message : __("Failed to test API key");
 		statusClass.value = "text-ink-red-6 bg-surface-red-1";
 	} finally {
 		testing.value = false;

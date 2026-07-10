@@ -230,8 +230,8 @@ export function useCanvasUtils(
 
 	function removeBlock(block: Block, force: boolean = false) {
 		if (block.blockId === "root") {
-			toast.warning("Warning", {
-				description: "Cannot delete root block",
+			toast.warning(__("Warning"), {
+				description: __("Cannot delete root block"),
 			});
 			return;
 		}

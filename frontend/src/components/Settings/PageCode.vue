@@ -1,20 +1,20 @@
 <template>
 	<div class="no-scrollbar flex flex-col gap-6 overflow-auto">
 		<CodeEditor
-			label="<head> HTML"
+			:label="__('<head> HTML')"
 			type="HTML"
 			:readonly="builderStore.readOnlyMode"
-			description="Add meta tags, styles, and scripts to page head"
+			:description="__('Add meta tags, styles, and scripts to page head')"
 			height="200px"
 			class="shrink-0"
 			:modelValue="pageStore.activePage?.head_html"
 			@update:modelValue="(val) => pageStore.updateActivePage('head_html', val)"
 			:showLineNumbers="true"></CodeEditor>
 		<CodeEditor
-			label="<body> HTML"
+			:label="__('<body> HTML')"
 			type="HTML"
 			:readonly="builderStore.readOnlyMode"
-			description="Add scripts to page body"
+			:description="__('Add scripts to page body')"
 			:modelValue="pageStore.activePage?.body_html"
 			height="200px"
 			class="shrink-0"

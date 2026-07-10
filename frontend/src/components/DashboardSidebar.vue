@@ -11,7 +11,7 @@
 								hideLabel: true,
 								items: [
 									{
-										label: 'New Page',
+										label: __('New Page'),
 										onClick: () => (showTemplatesDialog = true),
 										icon: 'lucide-plus',
 									},
@@ -22,17 +22,17 @@
 								hideLabel: true,
 								items: [
 									{
-										label: 'Apps',
+										label: __('Apps'),
 										icon: 'lucide-grid',
 										submenu: appsSubmenu,
 									},
 									{
-										label: 'Toggle Theme',
+										label: __('Toggle Theme'),
 										onClick: () => toggleDark(),
 										icon: isDark ? 'lucide-sun' : 'lucide-moon',
 									},
 									{
-										label: 'Settings',
+										label: __('Settings'),
 										onClick: () => (showSettingsDialog = true),
 										icon: 'lucide-settings',
 									},
@@ -43,7 +43,7 @@
 								hideLabel: true,
 								items: [
 									{
-										label: 'Help',
+										label: __('Help'),
 										onClick: () => {
 											// @ts-ignore
 											window.open('https://t.me/frappebuilder');
@@ -64,7 +64,7 @@
 								<div class="flex w-full cursor-pointer items-center gap-2">
 									<img src="/builder_logo.png" alt="logo" class="h-7" />
 									<h1 class="mt-[2px] text-md font-semibold leading-5 text-gray-800 dark:text-gray-200">
-										Builder
+										{{ __("Builder") }}
 									</h1>
 								</div>
 								<span
@@ -88,16 +88,16 @@
 						!builderStore.activeFolder,
 				}">
 				<FilesIcon class="size-4"></FilesIcon>
-				<span>All Pages</span>
+				<span>{{ __("All Pages") }}</span>
 			</span>
 			<span
 				class="flex cursor-pointer gap-2 p-2 text-base text-ink-gray-6"
 				@click="showSettingsDialog = true">
 				<SettingsIcon class="size-4"></SettingsIcon>
-				<span>Settings</span>
+				<span>{{ __("Settings") }}</span>
 			</span>
 			<div class="flex items-center justify-between p-2 pr-0 text-base text-ink-gray-6">
-				<span>Folders</span>
+				<span>{{ __("Folders") }}</span>
 				<Button
 					variant="ghost"
 					icon="lucide-plus"
@@ -105,7 +105,7 @@
 					@click="promptCreateFolder()"></Button>
 			</div>
 			<div class="flex p-2" v-show="!builderProjectFolder.data?.length">
-				<p class="text-sm text-ink-gray-5">No folders yet</p>
+				<p class="text-sm text-ink-gray-5">{{ __("No folders yet") }}</p>
 			</div>
 			<span
 				class="flex h-8 w-full cursor-pointer items-center justify-between gap-2 rounded p-2 py-1 pr-0 text-base text-ink-gray-6"
@@ -138,21 +138,21 @@
 					size="sm"
 					icon="lucide-info"
 					disabled
-					tooltip="System generated folder cannot be edited or deleted"
+					:tooltip="__('System generated folder cannot be edited or deleted')"
 					class="cursor-pointer" />
 				<Dropdown
 					placement="right"
 					v-else-if="isFolderActive(project.folder_name)"
 					:options="[
 						{
-							label: 'Rename',
+							label: __('Rename'),
 							onClick: () => {
 								renamingFolder = project.folder_name;
 							},
 							icon: 'lucide-edit',
 						},
 						{
-							label: 'Delete Folder',
+							label: __('Delete Folder'),
 							onClick: () => deleteFolder(project.folder_name),
 							icon: 'lucide-trash',
 						},
@@ -163,14 +163,14 @@
 				</Dropdown>
 			</span>
 		</div>
-		<p class="mt-2 p-2 text-center text-sm text-ink-gray-4">Version: {{ builderVersion }}</p>
+		<p class="mt-2 p-2 text-center text-sm text-ink-gray-4">{{ __("Version: {0}", [builderVersion]) }}</p>
 		<TrialBanner v-if="builderStore.isFCSite"></TrialBanner>
 	</section>
 	<Dialog v-model="showSettingsDialog" :dismissable="false" size="5xl" bare>
 		<template #default>
-			<DialogTitle class="sr-only">Global Builder Settings</DialogTitle>
+			<DialogTitle class="sr-only">{{ __("Global Builder Settings") }}</DialogTitle>
 			<DialogDescription class="sr-only">
-				Configure global settings for this builder project.
+				{{ __("Configure global settings for this builder project.") }}
 			</DialogDescription>
 			<BuilderSettings @close="showSettingsDialog = false" :onlyGlobal="true" bare />
 		</template>
@@ -245,7 +245,9 @@ const renameFolder = async (newFolderName: string, targetFolder: BuilderProjectF
 
 const deleteFolder = async (folderName: string) => {
 	const confirmed = await confirm(
-		'Are you sure you want to delete this folder? All the pages under this folder will be visible under "All Pages"',
+		__(
+			'Are you sure you want to delete this folder? All the pages under this folder will be visible under "All Pages"',
+		),
 	);
 	if (!confirmed) return;
 	await createResource({

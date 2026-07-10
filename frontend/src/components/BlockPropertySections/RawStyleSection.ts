@@ -8,7 +8,7 @@ const rawStyleSectionProperties = [
 		getProps: () => {
 			return {
 				obj: blockController.getRawStyles() as Record<string, string>,
-				description: `
+				description: __(`
 					<b>Note:</b>
 					<br />
 					<br />
@@ -19,7 +19,7 @@ const rawStyleSectionProperties = [
 					Syntax: hover:color, focus:color, etc.
 					<br />
 					• State styles are only activated in preview mode
-				`,
+				`),
 			};
 		},
 		searchKeyWords: "Raw, RawStyle, Raw Style, CSS, Style, Styles",
@@ -30,7 +30,7 @@ const rawStyleSectionProperties = [
 ];
 
 export default {
-	name: "Raw Style",
+	name: __("Raw Style"),
 	properties: rawStyleSectionProperties,
 	collapsed: computed(() => {
 		return Object.keys(blockController.getRawStyles()).length === 0;

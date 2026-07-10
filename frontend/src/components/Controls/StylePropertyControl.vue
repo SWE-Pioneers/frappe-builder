@@ -50,9 +50,9 @@ const props = withDefaults(
 );
 
 const stateLabels: Record<string, string> = {
-	hover: "On Hover",
-	active: "On Active",
-	focus: "On Focus",
+	hover: __("On Hover"),
+	active: __("On Active"),
+	focus: __("On Focus"),
 };
 
 const stateVariants = computed(() =>

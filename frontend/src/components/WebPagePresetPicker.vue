@@ -290,7 +290,7 @@ interface Preset {
 const PRESETS: Preset[] = [
 	{
 		id: "aurora-glass",
-		name: "Aurora Glass",
+		name: __("Aurora Glass"),
 		category: "modern",
 		description:
 			"Deep dark backgrounds with vibrant aurora-inspired gradients, glassmorphism cards with blur/translucency, and glowing blobs. Ultra-modern and immersive.",
@@ -303,7 +303,7 @@ const PRESETS: Preset[] = [
 	},
 	{
 		id: "neo-brutalist",
-		name: "Neo-Brutalist",
+		name: __("Neo-Brutalist"),
 		category: "retro",
 		description:
 			"Raw, unapologetic design with heavy borders, bold offset shadows, and chunky typography. Intentionally rough and high-contrast. No gradients, no subtlety.",
@@ -314,7 +314,7 @@ const PRESETS: Preset[] = [
 	},
 	{
 		id: "minimal-ink",
-		name: "Minimal Ink",
+		name: __("Minimal Ink"),
 		category: "minimal",
 		description:
 			"Absolute restraint — hairline borders, sparse layout. Typography does all the work. Inspired by Swiss editorial design and Japanese stationery brands. Zero decoration.",
@@ -325,7 +325,7 @@ const PRESETS: Preset[] = [
 	},
 	{
 		id: "earthy",
-		name: "Earthy Organic",
+		name: __("Earthy Organic"),
 		category: "other",
 		description:
 			"Organic shapes, natural textures, and rounded asymmetric forms. Grounded and tactile — ideal for wellness, food, craft, and sustainability brands.",
@@ -336,7 +336,7 @@ const PRESETS: Preset[] = [
 	},
 	{
 		id: "tech-terminal",
-		name: "Tech Terminal",
+		name: __("Tech Terminal"),
 		category: "tech",
 		description:
 			"Dark background with monospace typography, terminal-style chrome, and code-aesthetic UI. Think developer tools, CLI apps, and hacker-culture interfaces.",
@@ -347,7 +347,7 @@ const PRESETS: Preset[] = [
 	},
 	{
 		id: "luxe-editorial",
-		name: "Luxe Editorial",
+		name: __("Luxe Editorial"),
 		category: "other",
 		description:
 			"Thin serif typefaces, and refined negative space. Understated luxury — think high-fashion magazines and premium brand campaigns.",
@@ -358,7 +358,7 @@ const PRESETS: Preset[] = [
 	},
 	{
 		id: "bold-retro",
-		name: "Bold Retro",
+		name: __("Bold Retro"),
 		category: "retro",
 		description:
 			"Thick borders, chunky chart bars, flat graphic shapes, and retro poster energy. Bold and high-contrast, inspired by 90s print graphics and risograph aesthetics.",
@@ -369,7 +369,7 @@ const PRESETS: Preset[] = [
 	},
 	{
 		id: "paper-print",
-		name: "Paper & Ink",
+		name: __("Paper & Ink"),
 		category: "minimal",
 		description:
 			"Warm, textured paper backgrounds with high-contrast ink-like typography. Tactile and organic, inspired by letterpress printing and boutique stationery.",
@@ -380,7 +380,7 @@ const PRESETS: Preset[] = [
 	},
 	{
 		id: "playful-pastel",
-		name: "Playful Pastel",
+		name: __("Playful Pastel"),
 		category: "modern",
 		description:
 			"Soft candy-colored palettes, organic wiggly shapes, and pill-shaped rounded buttons. Bouncy, cheerful, and approachable for consumer-friendly apps.",
@@ -391,7 +391,7 @@ const PRESETS: Preset[] = [
 	},
 	{
 		id: "industrial-mono",
-		name: "Industrial Mono",
+		name: __("Industrial Mono"),
 		category: "tech",
 		description:
 			"Raw, high-contrast monochrome with technical grid backgrounds and utility-first layouts. Rugged, functional, and inspired by architectural blueprints.",
@@ -402,7 +402,7 @@ const PRESETS: Preset[] = [
 	},
 	{
 		id: "synthwave",
-		name: "Synthwave Neon",
+		name: __("Synthwave Neon"),
 		category: "retro",
 		description:
 			"80s retro-futurism with glowing grid floors, vibrant sun-gradient headers, and high-contrast pink and purple neon accents. Retro-digital aesthetic.",
@@ -413,7 +413,7 @@ const PRESETS: Preset[] = [
 	},
 	{
 		id: "sketch-book",
-		name: "Sketch Book",
+		name: __("Sketch Book"),
 		category: "minimal",
 		description:
 			"Hand-drawn pencil lines, rough scribbled borders, and graphite textures. Creative and raw artistic feel, as if sketched in a physical notebook.",
@@ -424,7 +424,7 @@ const PRESETS: Preset[] = [
 	},
 	{
 		id: "claymorphism",
-		name: "Organic Clay",
+		name: __("Organic Clay"),
 		category: "modern",
 		description:
 			"Soft, pillowy surfaces with deep inner shadows and outer glows. Friendly, tactile, and highly rounded shapes. Modern 3D 'clay' look.",
@@ -435,7 +435,7 @@ const PRESETS: Preset[] = [
 	},
 	{
 		id: "blueprint",
-		name: "Tech Blueprint",
+		name: __("Tech Blueprint"),
 		category: "tech",
 		description:
 			"Deep architectural blue backgrounds with fine white grid lines and technical drafting annotations. Precise, structural, and professional.",
@@ -450,11 +450,11 @@ import TabButtons from "@/components/Controls/TabButtons.vue";
 import { computed, ref } from "vue";
 
 const CATEGORIES = [
-	{ label: "Minimal", value: "minimal" },
-	{ label: "Technical", value: "tech" },
-	{ label: "Modern", value: "modern" },
-	{ label: "Retro", value: "retro" },
-	{ label: "Other", value: "other" },
+	{ label: __("Minimal"), value: "minimal" },
+	{ label: __("Technical"), value: "tech" },
+	{ label: __("Modern"), value: "modern" },
+	{ label: __("Retro"), value: "retro" },
+	{ label: __("Other"), value: "other" },
 ];
 
 const selectedCategory = ref("minimal");

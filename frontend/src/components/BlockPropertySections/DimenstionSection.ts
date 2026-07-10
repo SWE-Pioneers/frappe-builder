@@ -6,7 +6,7 @@ const dimensionSectionProperties = [
 		searchKeyWords: "Width",
 		getProps: () => {
 			return {
-				label: "Width",
+				label: __("Width"),
 				property: "width",
 			};
 		},
@@ -16,7 +16,7 @@ const dimensionSectionProperties = [
 		searchKeyWords: "Min, Width, MinWidth, Min Width",
 		getProps: () => {
 			return {
-				label: "Min Width",
+				label: __("Min Width"),
 				property: "minWidth",
 			};
 		},
@@ -26,7 +26,7 @@ const dimensionSectionProperties = [
 		searchKeyWords: "Max, Width, MaxWidth, Max Width",
 		getProps: () => {
 			return {
-				label: "Max Width",
+				label: __("Max Width"),
 				property: "maxWidth",
 			};
 		},
@@ -45,7 +45,7 @@ const dimensionSectionProperties = [
 		searchKeyWords: "Height",
 		getProps: () => {
 			return {
-				label: "Height",
+				label: __("Height"),
 				property: "height",
 			};
 		},
@@ -55,7 +55,7 @@ const dimensionSectionProperties = [
 		searchKeyWords: "Min, Height, MinHeight, Min Height",
 		getProps: () => {
 			return {
-				label: "Min Height",
+				label: __("Min Height"),
 				property: "minHeight",
 			};
 		},
@@ -65,7 +65,7 @@ const dimensionSectionProperties = [
 		searchKeyWords: "Max, Height, MaxHeight, Max Height",
 		getProps: () => {
 			return {
-				label: "Max Height",
+				label: __("Max Height"),
 				property: "maxHeight",
 			};
 		},
@@ -73,6 +73,6 @@ const dimensionSectionProperties = [
 ];
 
 export default {
-	name: "Dimension",
+	name: __("Dimension"),
 	properties: dimensionSectionProperties,
 };

@@ -37,7 +37,7 @@
 			@click="emit('save', editor.getEditorValue())"
 			class="mt-3"
 			:disabled="!isDirty || readonly">
-			Save
+			{{ __("Save") }}
 		</Button>
 	</div>
 </template>

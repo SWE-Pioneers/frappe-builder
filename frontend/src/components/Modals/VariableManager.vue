@@ -12,10 +12,10 @@
 		v-if="modelValue"
 		:placement-offset-top="8"
 		:placement-offset-left="65"
-		action-label="Add Variable"
+		:action-label="__('Add Variable')"
 		:action-handler="addNewVariable"
 		placement="top-left">
-		<template #header><h2 class="text-lg-semibold py-2">Manage Variables</h2></template>
+		<template #header><h2 class="text-lg-semibold py-2">{{ __("Manage Variables") }}</h2></template>
 		<template #content>
 			<div @keydown.esc="clearSelection">
 				<div class="mb-3">
@@ -24,7 +24,7 @@
 						@input="(val: string) => (searchQuery = val)"
 						@update:modelValue="(val: string) => (searchQuery = val)"
 						type="text"
-						placeholder="Search variables"
+						:placeholder="__('Search variables')"
 						class="w-full"
 						icon-left="search" />
 				</div>
@@ -34,9 +34,9 @@
 					<div
 						class="sticky top-0 z-10 border-b border-outline-gray-1 bg-surface-base pb-2 pt-1 text-sm text-ink-gray-5"
 						:class="rowGridClass">
-						<div class="pl-2">Name</div>
-						<div class="border-l border-outline-gray-1 pl-2">Light</div>
-						<div class="border-l border-outline-gray-1 pl-2">Dark</div>
+						<div class="pl-2">{{ __("Name") }}</div>
+						<div class="border-l border-outline-gray-1 pl-2">{{ __("Light") }}</div>
+						<div class="border-l border-outline-gray-1 pl-2">{{ __("Dark") }}</div>
 					</div>
 
 					<template v-for="group in displayGroups" :key="group.group ?? '__flat__'">
@@ -60,7 +60,7 @@
 									<input
 										type="text"
 										:value="row.variable_name"
-										placeholder="Variable name"
+										:placeholder="__('Variable name')"
 										:class="[cellBoxClass, editableInputClass]"
 										data-new-name
 										@mousedown.stop
@@ -81,7 +81,7 @@
 												<button
 													class="h-4 w-4 shrink-0 rounded-full border border-outline-gray-2"
 													:style="{ backgroundColor: resolveVariableValue(row.value || '') }"
-													title="Pick color"
+													:title="__('Pick color')"
 													@mousedown.stop
 													@click="togglePopover"></button>
 											</template>
@@ -110,7 +110,7 @@
 													:style="{
 														backgroundColor: resolveVariableValue(row.dark_value || row.value || ''),
 													}"
-													title="Pick color"
+													:title="__('Pick color')"
 													@mousedown.stop
 													@click="togglePopover"></button>
 											</template>
@@ -146,7 +146,7 @@
 									<div class="flex min-w-0 items-center gap-1.5">
 										<Tooltip
 											v-if="row.is_standard"
-											text="This is a standard variable. It cannot be modified or deleted."
+											:text="__('This is a standard variable. It cannot be modified or deleted.')"
 											placement="top">
 											<span
 												class="lucide-info ml-1 h-3.5 w-3.5 shrink-0 text-ink-gray-5"
@@ -167,7 +167,7 @@
 											v-else
 											:class="[cellBoxClass, cellTextClass(row), row.variable_name ? '' : 'text-ink-gray-4']"
 											@dblclick="startEdit(row, 'variable_name')">
-											{{ row.variable_name || "unnamed" }}
+											{{ row.variable_name || __("unnamed") }}
 										</div>
 									</div>
 									<!-- Light -->
@@ -190,7 +190,7 @@
 												<button
 													class="h-4 w-4 shrink-0 rounded-full border border-outline-gray-2"
 													:style="{ backgroundColor: resolveVariableValue(row.value || '') }"
-													title="Pick color"
+													:title="__('Pick color')"
 													@mousedown.stop
 													@dblclick.stop
 													@click="togglePopover"></button>
@@ -235,7 +235,7 @@
 													:style="{
 														backgroundColor: resolveVariableValue(row.dark_value || row.value || ''),
 													}"
-													title="Pick color"
+													:title="__('Pick color')"
 													@mousedown.stop
 													@dblclick.stop
 													@click="togglePopover"></button>
@@ -269,13 +269,13 @@
 					</template>
 					<div v-if="!hasRows" class="py-10 text-center">
 						<div class="text-base-medium text-ink-gray-7">
-							{{ searchQuery.trim() ? "No Variables Found" : "No Variables" }}
+							{{ searchQuery.trim() ? __("No Variables Found") : __("No Variables") }}
 						</div>
 						<div class="mt-1 text-sm text-ink-gray-5">
 							{{
 								searchQuery.trim()
-									? `No variables match "${searchQuery}". Try a different search term.`
-									: "No variables found. Click 'Add Variable' to create your first one."
+									? __('No variables match "{0}". Try a different search term.', [searchQuery])
+									: __("No variables found. Click 'Add Variable' to create your first one.")
 							}}
 						</div>
 					</div>
@@ -285,14 +285,14 @@
 
 				<Dialog
 					v-model="showGroupDialog"
-					title="Move to group"
+					:title="__('Move to group')"
 					size="sm"
-					:actions="[{ label: 'Move', variant: 'solid', onClick: confirmGroupDialog }]">
+					:actions="[{ label: __('Move'), variant: 'solid', onClick: confirmGroupDialog }]">
 					<template #default>
 						<Autocomplete
 							:modelValue="moveTargetGroup"
 							:options="groupOptions"
-							placeholder="Select or type a group name"
+							:placeholder="__('Select or type a group name')"
 							@update:modelValue="(val: string | null) => (moveTargetGroup = val || '')" />
 					</template>
 				</Dialog>
@@ -300,13 +300,13 @@
 				<div class="flex items-center pt-4">
 					<input ref="csvFileInput" type="file" accept=".csv" @change="handleCSVUpload" class="hidden" />
 					<Button @click="triggerCSVUpload" variant="outline" theme="gray" size="sm" icon-left="upload">
-						Upload CSV
+						{{ __("Upload CSV") }}
 					</Button>
 					<button
 						@click="downloadSampleCSV"
 						variant="subtle"
 						class="ml-2 text-xs text-blue-600 underline hover:text-blue-700">
-						Download sample
+						{{ __("Download sample") }}
 					</button>
 				</div>
 			</div>
@@ -368,7 +368,7 @@ type Row = Partial<BuilderVariable> & { id: string; isNew: boolean };
 type RowGroup = { group: string | null; open: boolean; rows: Row[] };
 type EditableField = "variable_name" | "group" | "value" | "dark_value";
 
-const UNGROUPED_LABEL = "Ungrouped";
+const UNGROUPED_LABEL = __("Ungrouped");
 
 // row objects are reused across recomputes so that an open cell editor is never
 // rebuilt or stomped by a save round-trip
@@ -594,7 +594,9 @@ const moveSelectedToGroup = async (group: string) => {
 		await saveVariable(row);
 	}
 	toast.success(
-		group ? `Moved ${rows.length} variable(s) to "${group}"` : `Ungrouped ${rows.length} variable(s)`,
+		group
+			? __('Moved {0} variable(s) to "{1}"', [rows.length, group])
+			: __("Ungrouped {0} variable(s)", [rows.length]),
 	);
 };
 
@@ -609,7 +611,7 @@ const uniqueCopyName = (name: string) => {
 const deleteSelected = async () => {
 	const rows = selectedRows();
 	if (!rows.length) return;
-	const confirmed = await confirm(`Are you sure you want to delete ${rows.length} variable(s)?`);
+	const confirmed = await confirm(__("Are you sure you want to delete {0} variable(s)?", [rows.length]));
 	if (!confirmed) return;
 
 	let deleted = 0;
@@ -619,24 +621,24 @@ const deleteSelected = async () => {
 			rowObjects.delete(row.name!);
 			deleted++;
 		} catch (error) {
-			toast.error(`Failed to delete "${row.variable_name}"`);
+			toast.error(__('Failed to delete "{0}"', [row.variable_name]));
 		}
 	}
-	if (deleted) toast.success(`Deleted ${deleted} variable(s)`);
+	if (deleted) toast.success(__("Deleted {0} variable(s)", [deleted]));
 	clearSelection();
 };
 
 const contextMenuOptions = computed(() => {
 	const count = selectedIds.value.size;
-	const suffix = count > 1 ? ` ${count} variables` : " variable";
+	const suffix = count > 1 ? __(" {0} variables", [count]) : __(" variable");
 	return [
-		{ label: "Move to group", action: openGroupDialog },
+		{ label: __("Move to group"), action: openGroupDialog },
 		{
-			label: "Remove from group",
+			label: __("Remove from group"),
 			action: () => moveSelectedToGroup(""),
 			condition: () => selectedRows().some((row) => row.group),
 		},
-		{ label: `Delete${suffix}`, action: deleteSelected },
+		{ label: __("Delete") + suffix, action: deleteSelected },
 	];
 });
 
@@ -707,10 +709,10 @@ const createVariable = async (row: Row) => {
 		});
 		newVariable.value = null;
 		await nextTick();
-		toast.success("Variable created successfully");
+		toast.success(__("Variable created successfully"));
 		return createdVariable;
 	} catch (error) {
-		toast.error((error as Error).message || "Failed to create variable");
+		toast.error((error as Error).message || __("Failed to create variable"));
 	} finally {
 		isCreating.value = false;
 	}
@@ -729,7 +731,7 @@ const saveVariable = async (row: Row) => {
 			type: row.type || "Color",
 		});
 	} catch (error) {
-		toast.error((error as Error).message || "Failed to update variable");
+		toast.error((error as Error).message || __("Failed to update variable"));
 	}
 };
 
@@ -746,7 +748,7 @@ const handleCSVUpload = (event: Event) => {
 			const csvText = e.target?.result as string;
 			parseCSVAndAddVariables(csvText);
 		} catch (error) {
-			toast.error("Failed to read CSV file");
+			toast.error(__("Failed to read CSV file"));
 		}
 	};
 	reader.readAsText(file);
@@ -755,7 +757,7 @@ const handleCSVUpload = (event: Event) => {
 const parseCSVAndAddVariables = async (csvText: string) => {
 	const lines = csvText.trim().split("\n");
 	if (lines.length < 2) {
-		toast.error("CSV must have at least a header row and one data row");
+		toast.error(__("CSV must have at least a header row and one data row"));
 		return;
 	}
 
@@ -766,7 +768,7 @@ const parseCSVAndAddVariables = async (csvText: string) => {
 	const groupIndex = headers.findIndex((h) => h.includes("group"));
 
 	if (nameIndex === -1 || lightIndex === -1) {
-		toast.error("CSV must contain 'Variable Name' and 'Light Mode' columns");
+		toast.error(__("CSV must contain 'Variable Name' and 'Light Mode' columns"));
 		return;
 	}
 
@@ -813,24 +815,24 @@ const parseCSVAndAddVariables = async (csvText: string) => {
 	}
 
 	if (newVariables.length === 0 && updateVariables.length === 0) {
-		if (invalidCount > 0) toast.error(`${invalidCount} entries were invalid`);
+		if (invalidCount > 0) toast.error(__("{0} entries were invalid", [invalidCount]));
 		if (csvFileInput.value) csvFileInput.value.value = "";
 		return;
 	}
 
 	// Warn user that existing variables will be updated
 	const skippedNotes = [
-		invalidCount > 0 ? `${invalidCount} invalid entries skipped` : "",
-		standardCount > 0 ? `${standardCount} standard variable(s) skipped` : "",
+		invalidCount > 0 ? __("{0} invalid entries skipped", [invalidCount]) : "",
+		standardCount > 0 ? __("{0} standard variable(s) skipped", [standardCount]) : "",
 	]
 		.filter(Boolean)
 		.join(", ");
 	const confirmed = await confirm(
-		`Create ${newVariables.length} new variable(s) and update ${
-			updateVariables.length
-		} existing variable(s)?${
-			skippedNotes ? ` (${skippedNotes})` : ""
-		}\n\nWARNING: Updating will overwrite the existing values for the listed variables.`,
+		__("Create {0} new variable(s) and update {1} existing variable(s)?{2}", [
+			newVariables.length,
+			updateVariables.length,
+			skippedNotes ? ` (${skippedNotes})` : "",
+		]) + __("\n\nWARNING: Updating will overwrite the existing values for the listed variables."),
 	);
 
 	if (!confirmed) {
@@ -879,12 +881,12 @@ const parseCSVAndAddVariables = async (csvText: string) => {
 	// CSV import mutates variables outside the table; rebuild rows from fresh store data
 	resetRowObjects();
 
-	if (createdCount > 0) toast.success(`Successfully created ${createdCount} variable(s)`);
-	if (updatedCount > 0) toast.success(`Successfully updated ${updatedCount} variable(s)`);
-	if (createErrors > 0) toast.error(`Failed to create ${createErrors} variable(s)`);
-	if (updateErrors > 0) toast.error(`Failed to update ${updateErrors} variable(s)`);
-	if (invalidCount > 0) toast.warning(`Skipped ${invalidCount} invalid entries`);
-	if (standardCount > 0) toast.warning(`Skipped ${standardCount} standard variable(s) (read-only)`);
+	if (createdCount > 0) toast.success(__("Successfully created {0} variable(s)", [createdCount]));
+	if (updatedCount > 0) toast.success(__("Successfully updated {0} variable(s)", [updatedCount]));
+	if (createErrors > 0) toast.error(__("Failed to create {0} variable(s)", [createErrors]));
+	if (updateErrors > 0) toast.error(__("Failed to update {0} variable(s)", [updateErrors]));
+	if (invalidCount > 0) toast.warning(__("Skipped {0} invalid entries", [invalidCount]));
+	if (standardCount > 0) toast.warning(__("Skipped {0} standard variable(s) (read-only)", [standardCount]));
 
 	if (csvFileInput.value) csvFileInput.value.value = "";
 };
@@ -909,6 +911,6 @@ const downloadSampleCSV = () => {
 	document.body.appendChild(link);
 	link.click();
 	document.body.removeChild(link);
-	toast.success("Sample CSV downloaded");
+	toast.success(__("Sample CSV downloaded"));
 };
 </script>

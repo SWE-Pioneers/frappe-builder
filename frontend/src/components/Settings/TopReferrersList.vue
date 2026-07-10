@@ -1,15 +1,15 @@
 <template>
 	<div>
-		<h3 class="text-lg-medium mb-4 text-ink-gray-7">Top Referrers</h3>
+		<h3 class="text-lg-medium mb-4 text-ink-gray-7">{{ __("Top Referrers") }}</h3>
 		<div v-if="loading" class="flex h-[200px] items-center justify-center py-8 text-sm text-ink-gray-4">
-			Loading...
+			{{ __("Loading...") }}
 		</div>
 		<ListView
 			v-else-if="rows?.length"
 			class="!w-auto"
 			:columns="[
 				{
-					label: 'Domain',
+					label: __('Domain'),
 					key: 'domain',
 					width: '60%',
 					prefix: ({ row }: { row: any }) => {
@@ -26,12 +26,12 @@
 						});
 					},
 				},
-				{ label: 'Count', key: 'count', align: 'right' },
+				{ label: __('Count'), key: 'count', align: 'right' },
 			]"
 			:options="{ selectable: false, emptyState: {} }"
 			:rows="rows"
 			row-key="domain" />
-		<AnalyticsEmptyState v-else title="No referrers yet" />
+		<AnalyticsEmptyState v-else :title="__('No referrers yet')" />
 	</div>
 </template>
 

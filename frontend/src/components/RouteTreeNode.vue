@@ -39,16 +39,16 @@
 						{{ node.page.page_title }}
 					</span>
 					<span class="ml-auto mr-1 flex shrink-0 items-center gap-1">
-						<Tooltip v-if="isHomePage(node.page)" text="Home page" :hoverDelay="0.5">
+						<Tooltip v-if="isHomePage(node.page)" :text="__('Home page')" :hoverDelay="0.5">
 							<HomeIcon class="size-3.5 text-ink-green-6" />
 						</Tooltip>
 						<Tooltip
 							v-if="node.page.authenticated_access"
-							text="This page has limited access"
+							:text="__('This page has limited access')"
 							:hoverDelay="0.5">
 							<span class="lucide-shield-user size-3.5 text-ink-amber-6" />
 						</Tooltip>
-						<Tooltip v-if="!node.page.published" text="Not published" :hoverDelay="0.5">
+						<Tooltip v-if="!node.page.published" :text="__('Not published')" :hoverDelay="0.5">
 							<span class="lucide-globe-x size-3.5 text-ink-gray-4" />
 						</Tooltip>
 					</span>
@@ -89,8 +89,10 @@
 					class="flex items-center gap-1 text-xs text-ink-gray-4 hover:text-ink-gray-7"
 					@click="onLoadMore(node.id, node.loadedCount)">
 					<span class="lucide-more-horizontal size-3" aria-hidden="true" />
-					Load {{ Math.min(PAGE_LIMIT_PER_NODE, node.totalCount - node.loadedCount) }} more
-					<span class="ml-0.5 text-ink-gray-3">({{ node.totalCount - node.loadedCount }} remaining)</span>
+					{{ __("Load {0} more", [Math.min(PAGE_LIMIT_PER_NODE, node.totalCount - node.loadedCount)]) }}
+					<span class="ml-0.5 text-ink-gray-3">
+						{{ __("({0} remaining)", [node.totalCount - node.loadedCount]) }}
+					</span>
 				</button>
 			</div>
 		</section>

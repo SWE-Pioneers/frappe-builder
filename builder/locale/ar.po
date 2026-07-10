@@ -1,0 +1,3737 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: frappe\n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+
+#. ai-translated; needs-native-review
+msgid ""
+"\n"
+"\n"
+"WARNING: Updating will overwrite the existing values for the listed variables."
+msgstr "تحذير: التحديث سيستبدل القيم الحالية للمتغيرات المذكورة."
+
+#. ai-translated; needs-native-review
+msgid " variable"
+msgstr "متغير"
+
+#. ai-translated; needs-native-review
+msgid " {0} variables"
+msgstr "{0} متغيرات"
+
+#. ai-translated; needs-native-review
+msgid "({0} remaining)"
+msgstr "({0} متبقي)"
+
+msgid "..."
+msgstr ""
+
+#. ai-translated; needs-native-review
+msgid "AI"
+msgstr "الذكاء الاصطناعي"
+
+#. ai-translated; needs-native-review
+msgid "AI Generator is not available"
+msgstr "مولد الذكاء الاصطناعي غير متوفر"
+
+#. ai-translated; needs-native-review
+msgid "AI Settings"
+msgstr "إعدادات الذكاء الاصطناعي"
+
+#. ai-translated; needs-native-review
+msgid "API key is valid"
+msgstr "مفتاح API صالح"
+
+#. ai-translated; needs-native-review
+msgid "Accessibility"
+msgstr "إمكانية الوصول"
+
+#. ai-translated; needs-native-review
+msgid "Add Script"
+msgstr "إضافة سكربت"
+
+#. ai-translated; needs-native-review
+msgid "Add Shadow Layer"
+msgstr "إضافة طبقة ظل"
+
+#. ai-translated; needs-native-review
+msgid "Add Variable"
+msgstr "إضافة متغير"
+
+#. ai-translated; needs-native-review
+msgid "Add a block to repeat"
+msgstr "أضف كتلة للتكرار"
+
+#. ai-translated; needs-native-review
+msgid "Adding all pages..."
+msgstr "جاري إضافة كل الصفحات..."
+
+#. ai-translated; needs-native-review
+msgid "Agency / Freelancer"
+msgstr "وكالة / مستقل"
+
+#. ai-translated; needs-native-review
+msgid "Alert"
+msgstr "تنبيه"
+
+#. ai-translated; needs-native-review
+msgid "Align"
+msgstr "محاذاة"
+
+#. ai-translated; needs-native-review
+msgid "All"
+msgstr "الكل"
+
+#. ai-translated; needs-native-review
+msgid "All Pages"
+msgstr "كل الصفحات"
+
+#. ai-translated; needs-native-review
+msgid "All client scripts are executed in preview mode and on published pages."
+msgstr "يتم تنفيذ كل سكربتات العميل في وضع المعاينة وعلى الصفحات المنشورة."
+
+#. ai-translated; needs-native-review
+msgid "All pages added"
+msgstr "تمت إضافة كل الصفحات"
+
+#. ai-translated; needs-native-review
+msgid "Alphabetically (A-Z)"
+msgstr "أبجديا (A-Z)"
+
+#. ai-translated; needs-native-review
+msgid "Alphabetically (Z-A)"
+msgstr "أبجديا (Z-A)"
+
+#. ai-translated; needs-native-review
+msgid "Alt Text"
+msgstr "نص بديل"
+
+#. ai-translated; needs-native-review
+msgid "An error occurred while {0}"
+msgstr "حدث خطأ أثناء {0}"
+
+#. ai-translated; needs-native-review
+msgid "Analytics"
+msgstr "التحليلات"
+
+#. ai-translated; needs-native-review
+msgid "Apps"
+msgstr "التطبيقات"
+
+#. ai-translated; needs-native-review
+msgid "Are you sure you want to delete component: {0}?"
+msgstr "هل أنت متأكد أنك تريد حذف المكوّن: {0}؟"
+
+#. ai-translated; needs-native-review
+msgid "Are you sure you want to delete page: {0}?"
+msgstr "هل أنت متأكد أنك تريد حذف الصفحة: {0}؟"
+
+#. ai-translated; needs-native-review
+msgid "Are you sure you want to delete this folder? All the pages under this folder will be visible under \"All Pages\""
+msgstr "هل أنت متأكد أنك تريد حذف هذا المجلد؟ كل الصفحات تحت هذا المجلد ستظهر تحت \"كل الصفحات\""
+
+#. ai-translated; needs-native-review
+msgid "Are you sure you want to delete {0} variable(s)?"
+msgstr "هل أنت متأكد أنك تريد حذف {0} متغير؟"
+
+#. ai-translated; needs-native-review
+msgid "Are you sure you want to replace {0} with {1}?"
+msgstr "هل أنت متأكد أنك تريد استبدال {0} بـ {1}؟"
+
+#. ai-translated; needs-native-review
+msgid "Are you sure you want to reset?"
+msgstr "هل أنت متأكد أنك تريد إعادة التعيين؟"
+
+#. ai-translated; needs-native-review
+msgid "Are you sure you want to unpublish \"{0}\"? It will no longer be accessible on the website."
+msgstr "هل أنت متأكد أنك تريد إلغاء نشر \"{0}\"؟ لن يعود متاحا على الموقع."
+
+#. ai-translated; needs-native-review
+msgid "Aria Label"
+msgstr "تسمية Aria"
+
+#. ai-translated; needs-native-review
+msgid "Attach Script"
+msgstr "إرفاق سكربت"
+
+#. ai-translated; needs-native-review
+msgid "Attributes"
+msgstr "السمات"
+
+#. ai-translated; needs-native-review
+msgid "Aurora Glass"
+msgstr "زجاج الشفق"
+
+#. ai-translated; needs-native-review
+msgid "Auto"
+msgstr "تلقائي"
+
+#. ai-translated; needs-native-review
+msgid "Back"
+msgstr "رجوع"
+
+#. ai-translated; needs-native-review
+msgid "Back to Dashboard"
+msgstr "الرجوع إلى لوحة المعلومات"
+
+#. ai-translated; needs-native-review
+msgid "Back to Home"
+msgstr "الرجوع إلى الرئيسية"
+
+#. ai-translated; needs-native-review
+msgid "Back to all templates"
+msgstr "الرجوع إلى كل القوالب"
+
+#. ai-translated; needs-native-review
+msgid "Back to builder"
+msgstr "الرجوع إلى Builder"
+
+#. ai-translated; needs-native-review
+msgid "Background"
+msgstr "الخلفية"
+
+#. ai-translated; needs-native-review
+msgid "Block Client Script"
+msgstr "سكربت عميل الكتلة"
+
+#. ai-translated; needs-native-review
+msgid "Block template saved!"
+msgstr "تم حفظ قالب الكتلة!"
+
+#. ai-translated; needs-native-review
+msgid "Blur"
+msgstr "تمويه"
+
+#. ai-translated; needs-native-review
+msgid "Bold Retro"
+msgstr "ريترو جريء"
+
+#. ai-translated; needs-native-review
+msgid "Border Color"
+msgstr "لون الحدود"
+
+#. ai-translated; needs-native-review
+msgid "Border Style"
+msgstr "نمط الحدود"
+
+#. ai-translated; needs-native-review
+msgid "Border Width"
+msgstr "عرض الحدود"
+
+#. ai-translated; needs-native-review
+msgid "Bottom"
+msgstr "أسفل"
+
+msgid "Builder"
+msgstr ""
+
+#. ai-translated; needs-native-review
+msgid "Builder Settings"
+msgstr "إعدادات Builder"
+
+msgid "CSS"
+msgstr ""
+
+#. ai-translated; needs-native-review
+msgid "CSS Classes"
+msgstr "فئات CSS"
+
+#. ai-translated; needs-native-review
+msgid "CSV must contain 'Variable Name' and 'Light Mode' columns"
+msgstr "يجب أن يحتوي ملف CSV على عمودي 'Variable Name' و 'Light Mode'"
+
+#. ai-translated; needs-native-review
+msgid "CSV must have at least a header row and one data row"
+msgstr "يجب أن يحتوي ملف CSV على صف ترويسة واحد وصف بيانات واحد على الأقل"
+
+#. ai-translated; needs-native-review
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. ai-translated; needs-native-review
+msgid "Cannot delete root block"
+msgstr "لا يمكن حذف الكتلة الجذرية"
+
+#. ai-translated; needs-native-review
+msgid "Capitalize"
+msgstr "تكبير أول حرف"
+
+#. ai-translated; needs-native-review
+msgid "Category"
+msgstr "الفئة"
+
+#. ai-translated; needs-native-review
+msgid "Center"
+msgstr "توسيط"
+
+#. ai-translated; needs-native-review
+msgid "Change"
+msgstr "تغيير"
+
+#. ai-translated; needs-native-review
+msgid "Checked"
+msgstr "محدد"
+
+#. ai-translated; needs-native-review
+msgid "Choose a template to get a head start, or start from scratch. You can always change direction later."
+msgstr "اختر قالبا للبدء بسرعة، أو ابدأ من الصفر. يمكنك دائما تغيير الاتجاه لاحقا."
+
+#. ai-translated; needs-native-review
+msgid "Clean Mirror"
+msgstr "مرآة نظيفة"
+
+#. ai-translated; needs-native-review
+msgid "Clear Gradient"
+msgstr "مسح التدرج"
+
+#. ai-translated; needs-native-review
+msgid "Clear Image"
+msgstr "مسح الصورة"
+
+#. ai-translated; needs-native-review
+msgid "Clear Selection"
+msgstr "مسح التحديد"
+
+#. ai-translated; needs-native-review
+msgid "Clear all filters"
+msgstr "مسح كل عوامل التصفية"
+
+#. ai-translated; needs-native-review
+msgid "Clip Background to Text"
+msgstr "قص الخلفية على النص"
+
+#. ai-translated; needs-native-review
+msgid "Close (Esc)"
+msgstr "إغلاق (Esc)"
+
+#. ai-translated; needs-native-review
+msgid "Code"
+msgstr "الكود"
+
+#. ai-translated; needs-native-review
+msgid "Col Span"
+msgstr "امتداد العمود"
+
+#. ai-translated; needs-native-review
+msgid "Collapse"
+msgstr "طي"
+
+#. ai-translated; needs-native-review
+msgid "Collapse node or move up in page tree"
+msgstr "طي العقدة أو التحرك لأعلى في شجرة الصفحة"
+
+#. ai-translated; needs-native-review
+msgid "Collection"
+msgstr "مجموعة"
+
+#. ai-translated; needs-native-review
+msgid "Columns"
+msgstr "الأعمدة"
+
+#. ai-translated; needs-native-review
+msgid "Component draft is unavailable."
+msgstr "مسودة المكوّن غير متوفرة."
+
+#. ai-translated; needs-native-review
+msgid "Component is used in current page. You cannot delete it."
+msgstr "المكوّن مستخدم في الصفحة الحالية. لا يمكنك حذفه."
+
+#. ai-translated; needs-native-review
+msgid "Component replaced successfully"
+msgstr "تم استبدال المكوّن بنجاح"
+
+#. ai-translated; needs-native-review
+msgid "Component saved!"
+msgstr "تم حفظ المكوّن!"
+
+#. ai-translated; needs-native-review
+msgid "Component synced in all the pages!"
+msgstr "تمت مزامنة المكوّن في كل الصفحات!"
+
+#. ai-translated; needs-native-review
+msgid "Components"
+msgstr "المكوّنات"
+
+#. ai-translated; needs-native-review
+msgid "Configure global settings for this builder project."
+msgstr "تهيئة الإعدادات العامة لمشروع Builder هذا."
+
+#. ai-translated; needs-native-review
+msgid "Configure page and global settings for this project."
+msgstr "تهيئة إعدادات الصفحة والإعدادات العامة لهذا المشروع."
+
+#. ai-translated; needs-native-review
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. ai-translated; needs-native-review
+msgid "Contain"
+msgstr "احتواء"
+
+#. ai-translated; needs-native-review
+msgid "Container (c)"
+msgstr "حاوية (c)"
+
+#. ai-translated; needs-native-review
+msgid "Content"
+msgstr "المحتوى"
+
+#. ai-translated; needs-native-review
+msgid "Convert To Collection"
+msgstr "تحويل إلى مجموعة"
+
+#. ai-translated; needs-native-review
+msgid "Convert to WebP"
+msgstr "تحويل إلى WebP"
+
+#. ai-translated; needs-native-review
+msgid "Converting..."
+msgstr "جاري التحويل..."
+
+#. ai-translated; needs-native-review
+msgid "Copy"
+msgstr "نسخ"
+
+#. ai-translated; needs-native-review
+msgid "Copy Page"
+msgstr "نسخ الصفحة"
+
+#. ai-translated; needs-native-review
+msgid "Copy Style"
+msgstr "نسخ النمط"
+
+#. ai-translated; needs-native-review
+msgid "Copy entire page?"
+msgstr "نسخ الصفحة بالكامل؟"
+
+#. ai-translated; needs-native-review
+msgid "Cosmic"
+msgstr "كوني"
+
+#. ai-translated; needs-native-review
+msgid "Could not add pages"
+msgstr "تعذر إضافة الصفحات"
+
+#. ai-translated; needs-native-review
+msgid "Could not create page from template"
+msgstr "تعذر إنشاء صفحة من القالب"
+
+#. ai-translated; needs-native-review
+msgid "Cover"
+msgstr "تغطية"
+
+#. ai-translated; needs-native-review
+msgid "Create"
+msgstr "إنشاء"
+
+#. ai-translated; needs-native-review
+msgid "Create New Page"
+msgstr "إنشاء صفحة جديدة"
+
+#. ai-translated; needs-native-review
+msgid "Create a new page"
+msgstr "إنشاء صفحة جديدة"
+
+#. ai-translated; needs-native-review
+msgid "Create {0} new variable(s) and update {1} existing variable(s)?{2}"
+msgstr "إنشاء {0} متغير جديد وتحديث {1} متغير موجود؟{2}"
+
+#. ai-translated; needs-native-review
+msgid "Created by {0}"
+msgstr "أنشئ بواسطة {0}"
+
+#. ai-translated; needs-native-review
+msgid "Creating an editable copy..."
+msgstr "جاري إنشاء نسخة قابلة للتعديل..."
+
+#. ai-translated; needs-native-review
+msgid "Creating page from template..."
+msgstr "جاري إنشاء صفحة من القالب..."
+
+#. ai-translated; needs-native-review
+msgid "Crosshair"
+msgstr "شعيرات متقاطعة"
+
+#. ai-translated; needs-native-review
+msgid "Current Page"
+msgstr "الصفحة الحالية"
+
+#. ai-translated; needs-native-review
+msgid "Cursor"
+msgstr "المؤشر"
+
+#. ai-translated; needs-native-review
+msgid "Custom"
+msgstr "مخصص"
+
+#. ai-translated; needs-native-review
+msgid "Custom Domains"
+msgstr "نطاقات مخصصة"
+
+#. ai-translated; needs-native-review
+msgid "Dark"
+msgstr "داكن"
+
+#. ai-translated; needs-native-review
+msgid "Dark Mode"
+msgstr "الوضع الداكن"
+
+#. ai-translated; needs-native-review
+msgid "Dark Mode Color"
+msgstr "لون الوضع الداكن"
+
+#. ai-translated; needs-native-review
+msgid "Dashboard"
+msgstr "لوحة المعلومات"
+
+#. ai-translated; needs-native-review
+msgid "Dashboard / admin panel"
+msgstr "لوحة المعلومات / لوحة الإدارة"
+
+#. ai-translated; needs-native-review
+msgid "Dashed"
+msgstr "متقطع"
+
+#. ai-translated; needs-native-review
+msgid "Data"
+msgstr "بيانات"
+
+#. ai-translated; needs-native-review
+msgid "Data Key"
+msgstr "مفتاح البيانات"
+
+#. ai-translated; needs-native-review
+msgid "Deep Ocean"
+msgstr "المحيط العميق"
+
+#. ai-translated; needs-native-review
+msgid "Default"
+msgstr "افتراضي"
+
+#. ai-translated; needs-native-review
+msgid "Delete"
+msgstr "حذف"
+
+#. ai-translated; needs-native-review
+msgid "Delete Folder"
+msgstr "حذف المجلد"
+
+#. ai-translated; needs-native-review
+msgid "Delete Page"
+msgstr "حذف الصفحة"
+
+#. ai-translated; needs-native-review
+msgid "Deleted {0} variable(s)"
+msgstr "تم حذف {0} متغير"
+
+#. ai-translated; needs-native-review
+msgid "Deleting page"
+msgstr "جاري حذف الصفحة"
+
+#. ai-translated; needs-native-review
+msgid "Describe how you want to modify this section…"
+msgstr "صف كيف تريد تعديل هذا القسم…"
+
+#. ai-translated; needs-native-review
+msgid "Describe the page you want to create…"
+msgstr "صف الصفحة التي تريد إنشاءها…"
+
+#. ai-translated; needs-native-review
+msgid "Deselect pages"
+msgstr "إلغاء تحديد الصفحات"
+
+#. ai-translated; needs-native-review
+msgid "Designer"
+msgstr "مصمم"
+
+#. ai-translated; needs-native-review
+msgid "Desktop"
+msgstr "سطح المكتب"
+
+#. ai-translated; needs-native-review
+msgid "Developer"
+msgstr "مطور"
+
+#. ai-translated; needs-native-review
+msgid "Developer Settings"
+msgstr "إعدادات المطور"
+
+#. ai-translated; needs-native-review
+msgid "Dimension"
+msgstr "البعد"
+
+#. ai-translated; needs-native-review
+msgid "Direction"
+msgstr "الاتجاه"
+
+#. ai-translated; needs-native-review
+msgid "Distribution"
+msgstr "التوزيع"
+
+#. ai-translated; needs-native-review
+msgid "Do you want to copy the entire page including settings and scripts?"
+msgstr "هل تريد نسخ الصفحة بالكامل بما في ذلك الإعدادات والسكربتات؟"
+
+#. ai-translated; needs-native-review
+msgid "Do you want to upload the font \"{0}\"?"
+msgstr "هل تريد رفع الخط \"{0}\"؟"
+
+#. ai-translated; needs-native-review
+msgid "Domains"
+msgstr "النطاقات"
+
+#. ai-translated; needs-native-review
+msgid "Done"
+msgstr "تم"
+
+#. ai-translated; needs-native-review
+msgid "Dotted"
+msgstr "منقط"
+
+#. ai-translated; needs-native-review
+msgid "Download sample"
+msgstr "تنزيل عينة"
+
+#. ai-translated; needs-native-review
+msgid "Draft"
+msgstr "مسودة"
+
+#. ai-translated; needs-native-review
+msgid "Drop image to attach"
+msgstr "أفلت الصورة للإرفاق"
+
+#. ai-translated; needs-native-review
+msgid "Duplicate"
+msgstr "تكرار"
+
+#. ai-translated; needs-native-review
+msgid "Duplicate Page"
+msgstr "تكرار الصفحة"
+
+#. ai-translated; needs-native-review
+msgid "Duplicate to edit"
+msgstr "كرر للتعديل"
+
+#. ai-translated; needs-native-review
+msgid "Duplicating page"
+msgstr "جاري تكرار الصفحة"
+
+#. ai-translated; needs-native-review
+msgid "Dusk"
+msgstr "الغسق"
+
+#. ai-translated; needs-native-review
+msgid "Earthy Organic"
+msgstr "ترابي عضوي"
+
+#. ai-translated; needs-native-review
+msgid "Edit"
+msgstr "تعديل"
+
+#. ai-translated; needs-native-review
+msgid "Edit Block Client Script"
+msgstr "تعديل سكربت عميل الكتلة"
+
+#. ai-translated; needs-native-review
+msgid "Edit CSS"
+msgstr "تعديل CSS"
+
+#. ai-translated; needs-native-review
+msgid "Edit HTML"
+msgstr "تعديل HTML"
+
+#. ai-translated; needs-native-review
+msgid "Edit Variable"
+msgstr "تعديل المتغير"
+
+#. ai-translated; needs-native-review
+msgid "Edit block with AI"
+msgstr "تعديل الكتلة بالذكاء الاصطناعي"
+
+#. ai-translated; needs-native-review
+msgid "Edit template"
+msgstr "تعديل القالب"
+
+#. ai-translated; needs-native-review
+msgid "Edit with AI"
+msgstr "التعديل بالذكاء الاصطناعي"
+
+#. ai-translated; needs-native-review
+msgid "Edited {0}"
+msgstr "تم تعديل {0}"
+
+#. ai-translated; needs-native-review
+msgid "Editor Config"
+msgstr "إعدادات المحرر"
+
+#. ai-translated; needs-native-review
+msgid "Error syncing component in all the pages!"
+msgstr "خطأ في مزامنة المكوّن في كل الصفحات!"
+
+#. ai-translated; needs-native-review
+msgid "Expand"
+msgstr "توسيع"
+
+#. ai-translated; needs-native-review
+msgid "Expand node or move down in page tree"
+msgstr "توسيع العقدة أو التحرك لأسفل في شجرة الصفحة"
+
+#. ai-translated; needs-native-review
+msgid "Failed to convert image to WebP"
+msgstr "فشل تحويل الصورة إلى WebP"
+
+#. ai-translated; needs-native-review
+msgid "Failed to create variable"
+msgstr "فشل إنشاء المتغير"
+
+#. ai-translated; needs-native-review
+msgid "Failed to create {0} variable(s)"
+msgstr "فشل إنشاء {0} متغير"
+
+#. ai-translated; needs-native-review
+msgid "Failed to delete \"{0}\""
+msgstr "فشل حذف \"{0}\""
+
+#. ai-translated; needs-native-review
+msgid "Failed to pull image to local"
+msgstr "فشل سحب الصورة إلى المحلي"
+
+#. ai-translated; needs-native-review
+msgid "Failed to read CSV file"
+msgstr "فشل قراءة ملف CSV"
+
+#. ai-translated; needs-native-review
+msgid "Failed to save component"
+msgstr "فشل حفظ المكوّن"
+
+#. ai-translated; needs-native-review
+msgid "Failed to update variable"
+msgstr "فشل تحديث المتغير"
+
+#. ai-translated; needs-native-review
+msgid "Failed to update {0} variable(s)"
+msgstr "فشل تحديث {0} متغير"
+
+#. ai-translated; needs-native-review
+msgid "Failed to upload"
+msgstr "فشل الرفع"
+
+#. ai-translated; needs-native-review
+msgid "Failed to upload font"
+msgstr "فشل رفع الخط"
+
+#. ai-translated; needs-native-review
+msgid "Failed to {0} Variable"
+msgstr "فشل {0} المتغير"
+
+#. ai-translated; needs-native-review
+msgid "Family"
+msgstr "العائلة"
+
+#. ai-translated; needs-native-review
+msgid "Filter by route"
+msgstr "تصفية حسب المسار"
+
+#. ai-translated; needs-native-review
+msgid "Filter by title or route"
+msgstr "تصفية حسب العنوان أو المسار"
+
+#. ai-translated; needs-native-review
+msgid "Filter search results by:"
+msgstr "تصفية نتائج البحث حسب:"
+
+#. ai-translated; needs-native-review
+msgid "Filters"
+msgstr "عوامل التصفية"
+
+#. ai-translated; needs-native-review
+msgid "Find"
+msgstr "بحث"
+
+#. ai-translated; needs-native-review
+msgid "Find & Replace"
+msgstr "بحث واستبدال"
+
+#. ai-translated; needs-native-review
+msgid "Find Next (Enter)"
+msgstr "بحث عن التالي (Enter)"
+
+#. ai-translated; needs-native-review
+msgid "Find Previous (Shift+Enter)"
+msgstr "بحث عن السابق (Shift+Enter)"
+
+#. ai-translated; needs-native-review
+msgid "Find..."
+msgstr "بحث..."
+
+#. ai-translated; needs-native-review
+msgid "Fit Content"
+msgstr "ملاءمة المحتوى"
+
+#. ai-translated; needs-native-review
+msgid "Fixed"
+msgstr "ثابت"
+
+#. ai-translated; needs-native-review
+msgid "Folders"
+msgstr "المجلدات"
+
+#. ai-translated; needs-native-review
+msgid "Font \"{0}\" already exists in the project"
+msgstr "الخط \"{0}\" موجود بالفعل في المشروع"
+
+#. ai-translated; needs-native-review
+msgid "Font \"{0}\" uploaded successfully"
+msgstr "تم رفع الخط \"{0}\" بنجاح"
+
+#. ai-translated; needs-native-review
+msgid "Found in: {0}"
+msgstr "وجد في: {0}"
+
+#. ai-translated; needs-native-review
+msgid "Founder / Business owner"
+msgstr "مؤسس / صاحب عمل"
+
+msgid "Frappe / ERPNext"
+msgstr ""
+
+#. ai-translated; needs-native-review
+msgid "Frappe Builder - Get Started"
+msgstr "Frappe Builder - البدء"
+
+#. ai-translated; needs-native-review
+msgid "Free"
+msgstr "مجاني"
+
+#. ai-translated; needs-native-review
+msgid "Friend / colleague"
+msgstr "صديق / زميل"
+
+#. ai-translated; needs-native-review
+msgid "Gap"
+msgstr "الفجوة"
+
+#. ai-translated; needs-native-review
+msgid "General"
+msgstr "عام"
+
+#. ai-translated; needs-native-review
+msgid "Generate"
+msgstr "توليد"
+
+#. ai-translated; needs-native-review
+msgid "Generate with AI"
+msgstr "التوليد بالذكاء الاصطناعي"
+
+#. ai-translated; needs-native-review
+msgid "Generating page…"
+msgstr "جاري توليد الصفحة…"
+
+#. ai-translated; needs-native-review
+msgid "Get Started"
+msgstr "ابدأ"
+
+#. ai-translated; needs-native-review
+msgid "Global"
+msgstr "عام"
+
+#. ai-translated; needs-native-review
+msgid "Global Builder Settings"
+msgstr "إعدادات Builder العامة"
+
+#. ai-translated; needs-native-review
+msgid "Global Code"
+msgstr "كود عام"
+
+#. ai-translated; needs-native-review
+msgid "Gradient"
+msgstr "تدرج"
+
+#. ai-translated; needs-native-review
+msgid "Grid"
+msgstr "شبكة"
+
+#. ai-translated; needs-native-review
+msgid "Grid Type"
+msgstr "نوع الشبكة"
+
+#. ai-translated; needs-native-review
+msgid "Group name for this radio button. Radio buttons with the same name are grouped together."
+msgstr "اسم المجموعة لزر الاختيار هذا. أزرار الاختيار التي تحمل نفس الاسم يتم تجميعها معا."
+
+#. ai-translated; needs-native-review
+msgid "Grow"
+msgstr "تمدد"
+
+msgid "HTML"
+msgstr ""
+
+#. ai-translated; needs-native-review
+msgid "HTML Attributes"
+msgstr "سمات HTML"
+
+#. ai-translated; needs-native-review
+msgid "HTML Options"
+msgstr "خيارات HTML"
+
+#. ai-translated; needs-native-review
+msgid "Height"
+msgstr "الارتفاع"
+
+#. ai-translated; needs-native-review
+msgid "Help"
+msgstr "مساعدة"
+
+#. ai-translated; needs-native-review
+msgid "Hidden"
+msgstr "مخفي"
+
+#. ai-translated; needs-native-review
+msgid "Hide"
+msgstr "إخفاء"
+
+#. ai-translated; needs-native-review
+msgid "Hide Replace"
+msgstr "إخفاء الاستبدال"
+
+#. ai-translated; needs-native-review
+msgid "Hold for move mode"
+msgstr "اضغط باستمرار لوضع التحريك"
+
+#. ai-translated; needs-native-review
+msgid "Home page"
+msgstr "الصفحة الرئيسية"
+
+#. ai-translated; needs-native-review
+msgid "Homepage set successfully"
+msgstr "تم تعيين الصفحة الرئيسية بنجاح"
+
+#. ai-translated; needs-native-review
+msgid "Horizontal"
+msgstr "أفقي"
+
+#. ai-translated; needs-native-review
+msgid "How did you hear about Builder?"
+msgstr "كيف سمعت عن Builder؟"
+
+#. ai-translated; needs-native-review
+msgid "Hyper"
+msgstr "هايبر"
+
+#. ai-translated; needs-native-review
+msgid "Image"
+msgstr "صورة"
+
+#. ai-translated; needs-native-review
+msgid "Image (i)"
+msgstr "صورة (i)"
+
+#. ai-translated; needs-native-review
+msgid "Image Options"
+msgstr "خيارات الصورة"
+
+#. ai-translated; needs-native-review
+msgid "Image URL"
+msgstr "رابط الصورة"
+
+#. ai-translated; needs-native-review
+msgid "Image converted to WebP"
+msgstr "تم تحويل الصورة إلى WebP"
+
+#. ai-translated; needs-native-review
+msgid "Image is too large. Please use an image smaller than 5 MB."
+msgstr "الصورة كبيرة جدا. يرجى استخدام صورة أصغر من 5 ميجابايت."
+
+#. ai-translated; needs-native-review
+msgid "Image must be smaller than 5 MB."
+msgstr "يجب أن تكون الصورة أصغر من 5 ميجابايت."
+
+#. ai-translated; needs-native-review
+msgid "Image pulled to local"
+msgstr "تم سحب الصورة إلى المحلي"
+
+#. ai-translated; needs-native-review
+msgid "Improve this text"
+msgstr "تحسين هذا النص"
+
+#. ai-translated; needs-native-review
+msgid "Industrial Mono"
+msgstr "مونو صناعي"
+
+#. ai-translated; needs-native-review
+msgid "Initializing…"
+msgstr "جاري التهيئة…"
+
+#. ai-translated; needs-native-review
+msgid "Input Options"
+msgstr "خيارات الإدخال"
+
+#. ai-translated; needs-native-review
+msgid "Insert"
+msgstr "إدراج"
+
+#. ai-translated; needs-native-review
+msgid "Inset Shadow"
+msgstr "ظل داخلي"
+
+#. ai-translated; needs-native-review
+msgid "Internal tool"
+msgstr "أداة داخلية"
+
+#. ai-translated; needs-native-review
+msgid "Invalid block context JSON"
+msgstr "سياق JSON للكتلة غير صالح"
+
+#. ai-translated; needs-native-review
+msgid "Invalid image data: must be a base64-encoded data URL"
+msgstr "بيانات صورة غير صالحة: يجب أن تكون رابط بيانات مشفر بـ base64"
+
+#. ai-translated; needs-native-review
+msgid "Invalid image data: must be a base64-encoded image data URL"
+msgstr "بيانات صورة غير صالحة: يجب أن تكون رابط بيانات صورة مشفر بـ base64"
+
+#. ai-translated; needs-native-review
+msgid "Item Width"
+msgstr "عرض العنصر"
+
+msgid "JavaScript"
+msgstr ""
+
+#. ai-translated; needs-native-review
+msgid "Just exploring"
+msgstr "مجرد استكشاف"
+
+#. ai-translated; needs-native-review
+msgid "Justify"
+msgstr "ضبط"
+
+#. ai-translated; needs-native-review
+msgid "Key"
+msgstr "المفتاح"
+
+#. ai-translated; needs-native-review
+msgid "Large"
+msgstr "كبير"
+
+#. ai-translated; needs-native-review
+msgid "Last Created"
+msgstr "آخر إنشاء"
+
+#. ai-translated; needs-native-review
+msgid "Last Modified"
+msgstr "آخر تعديل"
+
+#. ai-translated; needs-native-review
+msgid "Last updated {0} by {1}"
+msgstr "آخر تحديث {0} بواسطة {1}"
+
+#. ai-translated; needs-native-review
+msgid "Layer Icon"
+msgstr "أيقونة الطبقة"
+
+#. ai-translated; needs-native-review
+msgid "Layer {0}"
+msgstr "الطبقة {0}"
+
+#. ai-translated; needs-native-review
+msgid "Layers"
+msgstr "الطبقات"
+
+#. ai-translated; needs-native-review
+msgid "Layout"
+msgstr "التخطيط"
+
+#. ai-translated; needs-native-review
+msgid "Left"
+msgstr "يسار"
+
+#. ai-translated; needs-native-review
+msgid "Letter"
+msgstr "حرف"
+
+#. ai-translated; needs-native-review
+msgid "Light"
+msgstr "فاتح"
+
+#. ai-translated; needs-native-review
+msgid "Light Mode Color"
+msgstr "لون الوضع الفاتح"
+
+#. ai-translated; needs-native-review
+msgid "Limited access"
+msgstr "وصول محدود"
+
+#. ai-translated; needs-native-review
+msgid "Linear"
+msgstr "خطي"
+
+#. ai-translated; needs-native-review
+msgid "Link"
+msgstr "رابط"
+
+#. ai-translated; needs-native-review
+msgid "Link To"
+msgstr "ربط إلى"
+
+#. ai-translated; needs-native-review
+msgid "List"
+msgstr "قائمة"
+
+#. ai-translated; needs-native-review
+msgid "Load More"
+msgstr "تحميل المزيد"
+
+#. ai-translated; needs-native-review
+msgid "Load {0} more"
+msgstr "تحميل {0} إضافية"
+
+#. ai-translated; needs-native-review
+msgid "Loading pages…"
+msgstr "جاري تحميل الصفحات…"
+
+#. ai-translated; needs-native-review
+msgid "Loading..."
+msgstr "جاري التحميل..."
+
+#. ai-translated; needs-native-review
+msgid "Lowercase"
+msgstr "أحرف صغيرة"
+
+#. ai-translated; needs-native-review
+msgid "Lush"
+msgstr "وارف"
+
+#. ai-translated; needs-native-review
+msgid "Luxe Editorial"
+msgstr "تحريري فاخر"
+
+#. ai-translated; needs-native-review
+msgid "Made {0} replacements across {1} blocks"
+msgstr "تم إجراء {0} استبدال عبر {1} كتلة"
+
+#. ai-translated; needs-native-review
+msgid "Manage Variables"
+msgstr "إدارة المتغيرات"
+
+#. ai-translated; needs-native-review
+msgid "Margin"
+msgstr "الهامش"
+
+#. ai-translated; needs-native-review
+msgid "Marketer"
+msgstr "مسوق"
+
+#. ai-translated; needs-native-review
+msgid "Marketing / landing site"
+msgstr "تسويق / صفحة هبوط"
+
+#. ai-translated; needs-native-review
+msgid "Match Case"
+msgstr "مطابقة حالة الأحرف"
+
+#. ai-translated; needs-native-review
+msgid "Match Whole Word"
+msgstr "مطابقة الكلمة بالكامل"
+
+#. ai-translated; needs-native-review
+msgid "Max Height"
+msgstr "أقصى ارتفاع"
+
+#. ai-translated; needs-native-review
+msgid "Max Width"
+msgstr "أقصى عرض"
+
+#. ai-translated; needs-native-review
+msgid "Medium"
+msgstr "متوسط"
+
+msgid "Meta"
+msgstr ""
+
+#. ai-translated; needs-native-review
+msgid "Min Height"
+msgstr "أدنى ارتفاع"
+
+#. ai-translated; needs-native-review
+msgid "Min Width"
+msgstr "أدنى عرض"
+
+#. ai-translated; needs-native-review
+msgid "Minimal"
+msgstr "بسيط"
+
+#. ai-translated; needs-native-review
+msgid "Minimal Ink"
+msgstr "حبر بسيط"
+
+#. ai-translated; needs-native-review
+msgid "Mobile"
+msgstr "الجوال"
+
+#. ai-translated; needs-native-review
+msgid "Model"
+msgstr "النموذج"
+
+#. ai-translated; needs-native-review
+msgid "Modern"
+msgstr "عصري"
+
+#. ai-translated; needs-native-review
+msgid "Modify"
+msgstr "تعديل"
+
+#. ai-translated; needs-native-review
+msgid "Modify with AI"
+msgstr "التعديل بالذكاء الاصطناعي"
+
+#. ai-translated; needs-native-review
+msgid "Modifying section…"
+msgstr "جاري تعديل القسم…"
+
+#. ai-translated; needs-native-review
+msgid "Move"
+msgstr "تحريك"
+
+#. ai-translated; needs-native-review
+msgid "Move To Folder"
+msgstr "نقل إلى مجلد"
+
+#. ai-translated; needs-native-review
+msgid "Move down in page tree"
+msgstr "التحرك لأسفل في شجرة الصفحة"
+
+#. ai-translated; needs-native-review
+msgid "Move to group"
+msgstr "النقل إلى مجموعة"
+
+#. ai-translated; needs-native-review
+msgid "Move up in page tree"
+msgstr "التحرك لأعلى في شجرة الصفحة"
+
+#. ai-translated; needs-native-review
+msgid "Moved {0} variable(s) to \"{1}\""
+msgstr "تم نقل {0} متغير إلى \"{1}\""
+
+#. ai-translated; needs-native-review
+msgid "My Page"
+msgstr "صفحتي"
+
+#. ai-translated; needs-native-review
+msgid "Name"
+msgstr "الاسم"
+
+#. ai-translated; needs-native-review
+msgid "Navigation"
+msgstr "التنقل"
+
+#. ai-translated; needs-native-review
+msgid "Neo-Brutalist"
+msgstr "نيو بروتاليست"
+
+#. ai-translated; needs-native-review
+msgid "Neon Glow"
+msgstr "توهج نيون"
+
+#. ai-translated; needs-native-review
+msgid "New"
+msgstr "جديد"
+
+#. ai-translated; needs-native-review
+msgid "New Page"
+msgstr "صفحة جديدة"
+
+#. ai-translated; needs-native-review
+msgid "New Script"
+msgstr "سكربت جديد"
+
+#. ai-translated; needs-native-review
+msgid "New Tab"
+msgstr "علامة تبويب جديدة"
+
+#. ai-translated; needs-native-review
+msgid "New Variable"
+msgstr "متغير جديد"
+
+#. ai-translated; needs-native-review
+msgid "New Variable created"
+msgstr "تم إنشاء متغير جديد"
+
+#. ai-translated; needs-native-review
+msgid "New page"
+msgstr "صفحة جديدة"
+
+#. ai-translated; needs-native-review
+msgid "Next"
+msgstr "التالي"
+
+#. ai-translated; needs-native-review
+msgid "No"
+msgstr "لا"
+
+#. ai-translated; needs-native-review
+msgid "No Repeat"
+msgstr "بدون تكرار"
+
+#. ai-translated; needs-native-review
+msgid "No Style"
+msgstr "بدون نمط"
+
+#. ai-translated; needs-native-review
+msgid "No Value Set"
+msgstr "لم يتم تعيين قيمة"
+
+#. ai-translated; needs-native-review
+msgid "No Variables"
+msgstr "لا توجد متغيرات"
+
+#. ai-translated; needs-native-review
+msgid "No Variables Found"
+msgstr "لم يتم العثور على متغيرات"
+
+#. ai-translated; needs-native-review
+msgid "No Wrap"
+msgstr "بدون التفاف"
+
+#. ai-translated; needs-native-review
+msgid "No dynamic values found. Please add using"
+msgstr "لم يتم العثور على قيم ديناميكية. يرجى الإضافة باستخدام"
+
+#. ai-translated; needs-native-review
+msgid "No folders yet"
+msgstr "لا توجد مجلدات بعد"
+
+#. ai-translated; needs-native-review
+msgid "No matching pages found."
+msgstr "لم يتم العثور على صفحات مطابقة."
+
+#. ai-translated; needs-native-review
+msgid "No pages found."
+msgstr "لم يتم العثور على صفحات."
+
+#. ai-translated; needs-native-review
+msgid "No replacements made"
+msgstr "لم يتم إجراء أي استبدال"
+
+#. ai-translated; needs-native-review
+msgid "No results found"
+msgstr "لم يتم العثور على نتائج"
+
+#. ai-translated; needs-native-review
+msgid "No variables found. Click 'Add Variable' to create your first one."
+msgstr "لم يتم العثور على متغيرات. انقر على 'إضافة متغير' لإنشاء أول متغير لك."
+
+#. ai-translated; needs-native-review
+msgid "No variables match \"{0}\". Try a different search term."
+msgstr "لا توجد متغيرات تطابق \"{0}\". جرب مصطلح بحث مختلف."
+
+#. ai-translated; needs-native-review
+msgid "No, just blocks"
+msgstr "لا، مجرد كتل"
+
+#. ai-translated; needs-native-review
+msgid "None"
+msgstr "لا شيء"
+
+#. ai-translated; needs-native-review
+msgid "Not Allowed"
+msgstr "غير مسموح"
+
+#. ai-translated; needs-native-review
+msgid "Not Found"
+msgstr "غير موجود"
+
+#. ai-translated; needs-native-review
+msgid "Not published"
+msgstr "غير منشور"
+
+#. ai-translated; needs-native-review
+msgid "Not used in any page"
+msgstr "غير مستخدم في أي صفحة"
+
+#. ai-translated; needs-native-review
+msgid "Note:"
+msgstr "ملاحظة:"
+
+#. ai-translated; needs-native-review
+msgid "Ocean"
+msgstr "المحيط"
+
+#. ai-translated; needs-native-review
+msgid "Ok"
+msgstr "موافق"
+
+#. ai-translated; needs-native-review
+msgid "On Active"
+msgstr "عند التنشيط"
+
+#. ai-translated; needs-native-review
+msgid "On Focus"
+msgstr "عند التركيز"
+
+#. ai-translated; needs-native-review
+msgid "On Hover"
+msgstr "عند التمرير"
+
+#. ai-translated; needs-native-review
+msgid "Opacity"
+msgstr "العتامة"
+
+#. ai-translated; needs-native-review
+msgid "Open Code Tab"
+msgstr "فتح علامة تبويب الكود"
+
+#. ai-translated; needs-native-review
+msgid "Open in Builder"
+msgstr "فتح في Builder"
+
+#. ai-translated; needs-native-review
+msgid "Open page or toggle folder in page tree"
+msgstr "فتح الصفحة أو تبديل المجلد في شجرة الصفحة"
+
+#. ai-translated; needs-native-review
+msgid "Opens in"
+msgstr "يفتح في"
+
+#. ai-translated; needs-native-review
+msgid "Operation completed"
+msgstr "اكتملت العملية"
+
+#. ai-translated; needs-native-review
+msgid "Order"
+msgstr "الترتيب"
+
+#. ai-translated; needs-native-review
+msgid "Organic Clay"
+msgstr "طين عضوي"
+
+#. ai-translated; needs-native-review
+msgid "Other"
+msgstr "أخرى"
+
+#. ai-translated; needs-native-review
+msgid "Outset Shadow"
+msgstr "ظل خارجي"
+
+#. ai-translated; needs-native-review
+msgid "Overflow X"
+msgstr "تجاوز X"
+
+#. ai-translated; needs-native-review
+msgid "Overflow Y"
+msgstr "تجاوز Y"
+
+#. ai-translated; needs-native-review
+msgid "Padding"
+msgstr "التباعد الداخلي"
+
+#. ai-translated; needs-native-review
+msgid "Page"
+msgstr "صفحة"
+
+#. ai-translated; needs-native-review
+msgid "Page Analytics"
+msgstr "تحليلات الصفحة"
+
+#. ai-translated; needs-native-review
+msgid "Page Code"
+msgstr "كود الصفحة"
+
+#. ai-translated; needs-native-review
+msgid "Page Copied"
+msgstr "تم نسخ الصفحة"
+
+#. ai-translated; needs-native-review
+msgid "Page Data Script"
+msgstr "سكربت بيانات الصفحة"
+
+#. ai-translated; needs-native-review
+msgid "Page Title"
+msgstr "عنوان الصفحة"
+
+#. ai-translated; needs-native-review
+msgid "Page Tree"
+msgstr "شجرة الصفحة"
+
+#. ai-translated; needs-native-review
+msgid "Page created"
+msgstr "تم إنشاء الصفحة"
+
+#. ai-translated; needs-native-review
+msgid "Page deleted"
+msgstr "تم حذف الصفحة"
+
+#. ai-translated; needs-native-review
+msgid "Page deletion failed"
+msgstr "فشل حذف الصفحة"
+
+#. ai-translated; needs-native-review
+msgid "Page duplicated"
+msgstr "تم تكرار الصفحة"
+
+#. ai-translated; needs-native-review
+msgid "Page not found"
+msgstr "الصفحة غير موجودة"
+
+#. ai-translated; needs-native-review
+msgid "Page unpublished"
+msgstr "تم إلغاء نشر الصفحة"
+
+#. ai-translated; needs-native-review
+msgid "Paper & Ink"
+msgstr "ورق وحبر"
+
+#. ai-translated; needs-native-review
+msgid "Paste Style"
+msgstr "لصق النمط"
+
+#. ai-translated; needs-native-review
+msgid "Paste or drop image"
+msgstr "الصق أو أفلت الصورة"
+
+#. ai-translated; needs-native-review
+msgid "Pasting a page!"
+msgstr "جاري لصق صفحة!"
+
+#. ai-translated; needs-native-review
+msgid "Pasting..."
+msgstr "جاري اللصق..."
+
+#. ai-translated; needs-native-review
+msgid "Pick a starting point"
+msgstr "اختر نقطة البداية"
+
+#. ai-translated; needs-native-review
+msgid "Pick color"
+msgstr "اختر لونا"
+
+#. ai-translated; needs-native-review
+msgid "Placeholder"
+msgstr "نص نائب"
+
+#. ai-translated; needs-native-review
+msgid "Placement"
+msgstr "الموضع"
+
+#. ai-translated; needs-native-review
+msgid "Playful Pastel"
+msgstr "باستيل مرح"
+
+#. ai-translated; needs-native-review
+msgid "Please configure an OpenRouter API key in Settings → AI"
+msgstr "يرجى تهيئة مفتاح API لـ OpenRouter في الإعدادات → AI"
+
+#. ai-translated; needs-native-review
+msgid "Please paste a valid image."
+msgstr "يرجى لصق صورة صالحة."
+
+#. ai-translated; needs-native-review
+msgid "Please select a collection"
+msgstr "يرجى اختيار مجموعة"
+
+#. ai-translated; needs-native-review
+msgid "Please set an OpenRouter API key"
+msgstr "يرجى تعيين مفتاح API لـ OpenRouter"
+
+#. ai-translated; needs-native-review
+msgid "Please switch to a larger screen to edit"
+msgstr "يرجى التبديل إلى شاشة أكبر للتعديل"
+
+#. ai-translated; needs-native-review
+msgid "Pointer"
+msgstr "مؤشر"
+
+#. ai-translated; needs-native-review
+msgid "Portfolio / personal site"
+msgstr "معرض أعمال / موقع شخصي"
+
+#. ai-translated; needs-native-review
+msgid "Position"
+msgstr "الموضع"
+
+#. ai-translated; needs-native-review
+msgid "Presets"
+msgstr "الإعدادات المسبقة"
+
+#. ai-translated; needs-native-review
+msgid "Press \"shift\" key to apply padding to all sides and \"alt\" key to apply padding on either sides."
+msgstr "اضغط مفتاح \"shift\" لتطبيق التباعد الداخلي على كل الجهات ومفتاح \"alt\" لتطبيقه على الجهتين."
+
+#. ai-translated; needs-native-review
+msgid "Preview"
+msgstr "معاينة"
+
+#. ai-translated; needs-native-review
+msgid "Preview Image"
+msgstr "صورة المعاينة"
+
+#. ai-translated; needs-native-review
+msgid "Preview Image is mandatory"
+msgstr "صورة المعاينة إلزامية"
+
+#. ai-translated; needs-native-review
+msgid "Property"
+msgstr "الخاصية"
+
+#. ai-translated; needs-native-review
+msgid "Publicly accessible"
+msgstr "متاح للعامة"
+
+#. ai-translated; needs-native-review
+msgid "Publish"
+msgstr "نشر"
+
+#. ai-translated; needs-native-review
+msgid "Publish Changes"
+msgstr "نشر التغييرات"
+
+#. ai-translated; needs-native-review
+msgid "Published"
+msgstr "منشور"
+
+#. ai-translated; needs-native-review
+msgid "Pulling..."
+msgstr "جاري السحب..."
+
+#. ai-translated; needs-native-review
+msgid "Purple Bliss"
+msgstr "نعيم بنفسجي"
+
+#. ai-translated; needs-native-review
+msgid "Radial"
+msgstr "شعاعي"
+
+#. ai-translated; needs-native-review
+msgid "Radius"
+msgstr "نصف القطر"
+
+#. ai-translated; needs-native-review
+msgid "Read Only"
+msgstr "للقراءة فقط"
+
+#. ai-translated; needs-native-review
+msgid "Read-only preview · Use <b>Restore</b> to load this version."
+msgstr "معاينة للقراءة فقط · استخدم <b>استعادة</b> لتحميل هذا الإصدار."
+
+#. ai-translated; needs-native-review
+msgid "Redirects"
+msgstr "عمليات إعادة التوجيه"
+
+#. ai-translated; needs-native-review
+msgid "Reference image"
+msgstr "صورة مرجعية"
+
+#. ai-translated; needs-native-review
+msgid "Relative"
+msgstr "نسبي"
+
+#. ai-translated; needs-native-review
+msgid "Remove"
+msgstr "إزالة"
+
+#. ai-translated; needs-native-review
+msgid "Remove Collection"
+msgstr "إزالة المجموعة"
+
+#. ai-translated; needs-native-review
+msgid "Remove Script"
+msgstr "إزالة السكربت"
+
+#. ai-translated; needs-native-review
+msgid "Remove Stop"
+msgstr "إزالة نقطة التوقف"
+
+#. ai-translated; needs-native-review
+msgid "Remove from group"
+msgstr "الإزالة من المجموعة"
+
+#. ai-translated; needs-native-review
+msgid "Remove image"
+msgstr "إزالة الصورة"
+
+#. ai-translated; needs-native-review
+msgid "Rename"
+msgstr "إعادة تسمية"
+
+#. ai-translated; needs-native-review
+msgid "Repeat"
+msgstr "تكرار"
+
+#. ai-translated; needs-native-review
+msgid "Repeat Block"
+msgstr "تكرار الكتلة"
+
+#. ai-translated; needs-native-review
+msgid "Repeat X"
+msgstr "تكرار X"
+
+#. ai-translated; needs-native-review
+msgid "Repeat Y"
+msgstr "تكرار Y"
+
+#. ai-translated; needs-native-review
+msgid "Replace"
+msgstr "استبدال"
+
+#. ai-translated; needs-native-review
+msgid "Replace All"
+msgstr "استبدال الكل"
+
+#. ai-translated; needs-native-review
+msgid "Replace All ({0} matches)"
+msgstr "استبدال الكل ({0} تطابق)"
+
+#. ai-translated; needs-native-review
+msgid "Replace Component"
+msgstr "استبدال المكوّن"
+
+#. ai-translated; needs-native-review
+msgid "Replace Image (AI)"
+msgstr "استبدال الصورة (AI)"
+
+#. ai-translated; needs-native-review
+msgid "Replace Next"
+msgstr "استبدال التالي"
+
+#. ai-translated; needs-native-review
+msgid "Replace With"
+msgstr "استبدال بـ"
+
+#. ai-translated; needs-native-review
+msgid "Replace image"
+msgstr "استبدال الصورة"
+
+#. ai-translated; needs-native-review
+msgid "Replace with..."
+msgstr "استبدال بـ..."
+
+#. ai-translated; needs-native-review
+msgid "Replaced in {0}"
+msgstr "تم الاستبدال في {0}"
+
+#. ai-translated; needs-native-review
+msgid "Reset Changes"
+msgstr "إعادة تعيين التغييرات"
+
+#. ai-translated; needs-native-review
+msgid "Reset Component"
+msgstr "إعادة تعيين المكوّن"
+
+#. ai-translated; needs-native-review
+msgid "Reset Overrides"
+msgstr "إعادة تعيين التجاوزات"
+
+#. ai-translated; needs-native-review
+msgid "Reset changes in child blocks as well?"
+msgstr "إعادة تعيين التغييرات في الكتل الفرعية أيضا؟"
+
+#. ai-translated; needs-native-review
+msgid "Retro"
+msgstr "ريترو"
+
+#. ai-translated; needs-native-review
+msgid "Rewrite (AI)"
+msgstr "إعادة كتابة (AI)"
+
+#. ai-translated; needs-native-review
+msgid "Right"
+msgstr "يمين"
+
+msgid "Robots"
+msgstr ""
+
+msgid "Robots.txt"
+msgstr ""
+
+#. ai-translated; needs-native-review
+msgid "Role"
+msgstr "الدور"
+
+#. ai-translated; needs-native-review
+msgid "Route"
+msgstr "المسار"
+
+#. ai-translated; needs-native-review
+msgid "Route Tree"
+msgstr "شجرة المسار"
+
+#. ai-translated; needs-native-review
+msgid "Row Height"
+msgstr "ارتفاع الصف"
+
+#. ai-translated; needs-native-review
+msgid "Row Span"
+msgstr "امتداد الصف"
+
+#. ai-translated; needs-native-review
+msgid "Rows"
+msgstr "الصفوف"
+
+#. ai-translated; needs-native-review
+msgid "Royal"
+msgstr "ملكي"
+
+#. ai-translated; needs-native-review
+msgid "SVG with inlined image in it is not supported. Please paste it as PNG instead."
+msgstr "SVG مع صورة مضمنة بداخله غير مدعوم. يرجى لصقه كـ PNG بدلا من ذلك."
+
+#. ai-translated; needs-native-review
+msgid "Same Tab"
+msgstr "نفس علامة التبويب"
+
+#. ai-translated; needs-native-review
+msgid "Sample CSV downloaded"
+msgstr "تم تنزيل عينة CSV"
+
+#. ai-translated; needs-native-review
+msgid "Save"
+msgstr "حفظ"
+
+#. ai-translated; needs-native-review
+msgid "Save Component"
+msgstr "حفظ المكوّن"
+
+#. ai-translated; needs-native-review
+msgid "Save Template"
+msgstr "حفظ القالب"
+
+#. ai-translated; needs-native-review
+msgid "Save as Block Template"
+msgstr "الحفظ كقالب كتلة"
+
+#. ai-translated; needs-native-review
+msgid "Save as Variable"
+msgstr "الحفظ كمتغير"
+
+#. ai-translated; needs-native-review
+msgid "Saving template"
+msgstr "جاري حفظ القالب"
+
+#. ai-translated; needs-native-review
+msgid "Screen too small"
+msgstr "الشاشة صغيرة جدا"
+
+#. ai-translated; needs-native-review
+msgid "Script cannot be empty"
+msgstr "لا يمكن أن يكون السكربت فارغا"
+
+#. ai-translated; needs-native-review
+msgid "Scroll"
+msgstr "تمرير"
+
+#. ai-translated; needs-native-review
+msgid "Search"
+msgstr "بحث"
+
+#. ai-translated; needs-native-review
+msgid "Search (Google)"
+msgstr "بحث (Google)"
+
+#. ai-translated; needs-native-review
+msgid "Search Block"
+msgstr "البحث عن كتلة"
+
+#. ai-translated; needs-native-review
+msgid "Search blocks..."
+msgstr "البحث في الكتل..."
+
+#. ai-translated; needs-native-review
+msgid "Search inside selected block only"
+msgstr "البحث داخل الكتلة المحددة فقط"
+
+#. ai-translated; needs-native-review
+msgid "Search properties"
+msgstr "البحث في الخصائص"
+
+#. ai-translated; needs-native-review
+msgid "Search variables"
+msgstr "البحث في المتغيرات"
+
+#. ai-translated; needs-native-review
+msgid "Search your blocks"
+msgstr "البحث في كتلك"
+
+#. ai-translated; needs-native-review
+msgid "Search..."
+msgstr "بحث..."
+
+#. ai-translated; needs-native-review
+msgid "Select (v)"
+msgstr "تحديد (v)"
+
+#. ai-translated; needs-native-review
+msgid "Select All Matches (Alt+Enter)"
+msgstr "تحديد كل التطابقات (Alt+Enter)"
+
+#. ai-translated; needs-native-review
+msgid "Select Model"
+msgstr "اختيار النموذج"
+
+#. ai-translated; needs-native-review
+msgid "Select Template"
+msgstr "اختيار القالب"
+
+#. ai-translated; needs-native-review
+msgid "Select a block to edit properties"
+msgstr "اختر كتلة لتعديل الخصائص"
+
+#. ai-translated; needs-native-review
+msgid "Select a collection"
+msgstr "اختر مجموعة"
+
+#. ai-translated; needs-native-review
+msgid "Select or type a group name"
+msgstr "اختر أو اكتب اسم مجموعة"
+
+#. ai-translated; needs-native-review
+msgid "Serve Locally"
+msgstr "التقديم محليا"
+
+#. ai-translated; needs-native-review
+msgid "Set Background"
+msgstr "تعيين الخلفية"
+
+#. ai-translated; needs-native-review
+msgid "Set Color"
+msgstr "تعيين اللون"
+
+#. ai-translated; needs-native-review
+msgid "Set Dynamic Value"
+msgstr "تعيين قيمة ديناميكية"
+
+#. ai-translated; needs-native-review
+msgid "Settings"
+msgstr "الإعدادات"
+
+#. ai-translated; needs-native-review
+msgid "Shadow"
+msgstr "الظل"
+
+#. ai-translated; needs-native-review
+msgid "Shadow Color"
+msgstr "لون الظل"
+
+#. ai-translated; needs-native-review
+msgid "Shortcuts"
+msgstr "الاختصارات"
+
+#. ai-translated; needs-native-review
+msgid "Show"
+msgstr "إظهار"
+
+#. ai-translated; needs-native-review
+msgid "Show Children"
+msgstr "إظهار العناصر الفرعية"
+
+#. ai-translated; needs-native-review
+msgid "Show Replace"
+msgstr "إظهار الاستبدال"
+
+#. ai-translated; needs-native-review
+msgid "Show keyboard shortcuts"
+msgstr "إظهار اختصارات لوحة المفاتيح"
+
+#. ai-translated; needs-native-review
+msgid "Shrink"
+msgstr "تقليص"
+
+#. ai-translated; needs-native-review
+msgid "Site Analytics"
+msgstr "تحليلات الموقع"
+
+#. ai-translated; needs-native-review
+msgid "Size"
+msgstr "الحجم"
+
+#. ai-translated; needs-native-review
+msgid "Sketch Book"
+msgstr "دفتر رسم"
+
+#. ai-translated; needs-native-review
+msgid "Skipped {0} invalid entries"
+msgstr "تم تخطي {0} إدخال غير صالح"
+
+#. ai-translated; needs-native-review
+msgid "Skipped {0} standard variable(s) (read-only)"
+msgstr "تم تخطي {0} متغير قياسي (للقراءة فقط)"
+
+#. ai-translated; needs-native-review
+msgid "Skyline"
+msgstr "أفق المدينة"
+
+#. ai-translated; needs-native-review
+msgid "Small"
+msgstr "صغير"
+
+#. ai-translated; needs-native-review
+msgid "Social media"
+msgstr "وسائل التواصل الاجتماعي"
+
+#. ai-translated; needs-native-review
+msgid "Soft Radial"
+msgstr "شعاعي ناعم"
+
+#. ai-translated; needs-native-review
+msgid "Solid"
+msgstr "صلب"
+
+#. ai-translated; needs-native-review
+msgid "Sort"
+msgstr "فرز"
+
+#. ai-translated; needs-native-review
+msgid "Space Around"
+msgstr "مسافة حول"
+
+#. ai-translated; needs-native-review
+msgid "Space Between"
+msgstr "مسافة بين"
+
+#. ai-translated; needs-native-review
+msgid "Space Evenly"
+msgstr "مسافة متساوية"
+
+#. ai-translated; needs-native-review
+msgid "Spacing"
+msgstr "التباعد"
+
+#. ai-translated; needs-native-review
+msgid "Spread"
+msgstr "الانتشار"
+
+#. ai-translated; needs-native-review
+msgid "Stack"
+msgstr "تكديس"
+
+#. ai-translated; needs-native-review
+msgid "Standard folders cannot be modified. Please enable developer mode to edit standard folders."
+msgstr "لا يمكن تعديل المجلدات القياسية. يرجى تفعيل وضع المطور لتعديل المجلدات القياسية."
+
+#. ai-translated; needs-native-review
+msgid "Start from a blank page or pick a page from a template."
+msgstr "ابدأ من صفحة فارغة أو اختر صفحة من قالب."
+
+#. ai-translated; needs-native-review
+msgid "Start from a blank page or pick a template."
+msgstr "ابدأ من صفحة فارغة أو اختر قالبا."
+
+#. ai-translated; needs-native-review
+msgid "Start from scratch"
+msgstr "ابدأ من الصفر"
+
+#. ai-translated; needs-native-review
+msgid "Step {0} of {1}"
+msgstr "الخطوة {0} من {1}"
+
+#. ai-translated; needs-native-review
+msgid "Sticky"
+msgstr "ملتصق"
+
+#. ai-translated; needs-native-review
+msgid "Stretch"
+msgstr "تمدد"
+
+#. ai-translated; needs-native-review
+msgid "Style"
+msgstr "نمط"
+
+#. ai-translated; needs-native-review
+msgid "Styles"
+msgstr "الأنماط"
+
+#. ai-translated; needs-native-review
+msgid "Successfully created {0} variable(s)"
+msgstr "تم إنشاء {0} متغير بنجاح"
+
+#. ai-translated; needs-native-review
+msgid "Successfully updated {0} variable(s)"
+msgstr "تم تحديث {0} متغير بنجاح"
+
+#. ai-translated; needs-native-review
+msgid "Sunkist"
+msgstr "مشمس"
+
+#. ai-translated; needs-native-review
+msgid "Sunset"
+msgstr "غروب"
+
+#. ai-translated; needs-native-review
+msgid "Sync Component"
+msgstr "مزامنة المكوّن"
+
+#. ai-translated; needs-native-review
+msgid "Sync in all pages"
+msgstr "المزامنة في كل الصفحات"
+
+#. ai-translated; needs-native-review
+msgid "Syncing component in all the pages..."
+msgstr "جاري مزامنة المكوّن في كل الصفحات..."
+
+#. ai-translated; needs-native-review
+msgid "Synthwave Neon"
+msgstr "سينثويف نيون"
+
+#. ai-translated; needs-native-review
+msgid "System generated folder cannot be edited or deleted"
+msgstr "لا يمكن تعديل أو حذف المجلد المنشأ من النظام"
+
+#. ai-translated; needs-native-review
+msgid "Tab Index"
+msgstr "ترتيب التبويب"
+
+#. ai-translated; needs-native-review
+msgid "Tablet"
+msgstr "الجهاز اللوحي"
+
+#. ai-translated; needs-native-review
+msgid "Tag"
+msgstr "الوسم"
+
+#. ai-translated; needs-native-review
+msgid "Target Component"
+msgstr "المكوّن الهدف"
+
+#. ai-translated; needs-native-review
+msgid "Tech Blueprint"
+msgstr "مخطط تقني"
+
+#. ai-translated; needs-native-review
+msgid "Tech Terminal"
+msgstr "طرفية تقنية"
+
+#. ai-translated; needs-native-review
+msgid "Technical"
+msgstr "تقني"
+
+#. ai-translated; needs-native-review
+msgid "Template"
+msgstr "قالب"
+
+#. ai-translated; needs-native-review
+msgid "Template Name"
+msgstr "اسم القالب"
+
+#. ai-translated; needs-native-review
+msgid "Text"
+msgstr "نص"
+
+#. ai-translated; needs-native-review
+msgid "Text (t)"
+msgstr "نص (t)"
+
+#. ai-translated; needs-native-review
+msgid "Text Color"
+msgstr "لون النص"
+
+#. ai-translated; needs-native-review
+msgid "The URL path for this page. For variables, use colon (e.g. /users/:id)"
+msgstr "مسار الرابط لهذه الصفحة. للمتغيرات، استخدم النقطتين (مثال /users/:id)"
+
+#. ai-translated; needs-native-review
+msgid "The component you are trying to replace with does not exist"
+msgstr "المكوّن الذي تحاول الاستبدال به غير موجود"
+
+#. ai-translated; needs-native-review
+msgid "There was an error while fetching page data"
+msgstr "حدث خطأ أثناء جلب بيانات الصفحة"
+
+#. ai-translated; needs-native-review
+msgid "This is a standard variable. It cannot be modified or deleted."
+msgstr "هذا متغير قياسي. لا يمكن تعديله أو حذفه."
+
+#. ai-translated; needs-native-review
+msgid "This is the homepage for your site"
+msgstr "هذه هي الصفحة الرئيسية لموقعك"
+
+#. ai-translated; needs-native-review
+msgid "This page has limited access"
+msgstr "هذه الصفحة لها وصول محدود"
+
+#. ai-translated; needs-native-review
+msgid "This page will no longer be the homepage"
+msgstr "لن تعود هذه الصفحة الصفحة الرئيسية"
+
+#. ai-translated; needs-native-review
+msgid "This will revert all changes made to the page since the last publish. Are you sure you want to continue?"
+msgstr "سيؤدي هذا إلى التراجع عن كل التغييرات التي أجريت على الصفحة منذ آخر نشر. هل أنت متأكد أنك تريد المتابعة؟"
+
+#. ai-translated; needs-native-review
+msgid "Toggle Canvas Dark Mode"
+msgstr "تبديل الوضع الداكن للوحة الرسم"
+
+#. ai-translated; needs-native-review
+msgid "Toggle Dark Mode"
+msgstr "تبديل الوضع الداكن"
+
+#. ai-translated; needs-native-review
+msgid "Toggle Theme"
+msgstr "تبديل السمة"
+
+#. ai-translated; needs-native-review
+msgid "Tools"
+msgstr "الأدوات"
+
+#. ai-translated; needs-native-review
+msgid "Top"
+msgstr "أعلى"
+
+#. ai-translated; needs-native-review
+msgid "Track Clicks"
+msgstr "تتبع النقرات"
+
+#. ai-translated; needs-native-review
+msgid "Transform"
+msgstr "تحويل"
+
+#. ai-translated; needs-native-review
+msgid "Try different keywords or adjust your filters"
+msgstr "جرب كلمات مفتاحية مختلفة أو عدل عوامل التصفية"
+
+#. ai-translated; needs-native-review
+msgid "Type"
+msgstr "النوع"
+
+#. ai-translated; needs-native-review
+msgid "Typography"
+msgstr "الطباعة"
+
+#. ai-translated; needs-native-review
+msgid "URL Variables"
+msgstr "متغيرات الرابط"
+
+#. ai-translated; needs-native-review
+msgid "Ungrouped"
+msgstr "غير مجمع"
+
+#. ai-translated; needs-native-review
+msgid "Ungrouped {0} variable(s)"
+msgstr "تم إلغاء تجميع {0} متغير"
+
+#. ai-translated; needs-native-review
+msgid "Unpublish"
+msgstr "إلغاء النشر"
+
+#. ai-translated; needs-native-review
+msgid "Unpublished"
+msgstr "غير منشور"
+
+#. ai-translated; needs-native-review
+msgid "Unset"
+msgstr "غير معين"
+
+#. ai-translated; needs-native-review
+msgid "Update"
+msgstr "تحديث"
+
+#. ai-translated; needs-native-review
+msgid "Update Current Page"
+msgstr "تحديث الصفحة الحالية"
+
+#. ai-translated; needs-native-review
+msgid "Update to Latest Component"
+msgstr "التحديث إلى أحدث مكوّن"
+
+#. ai-translated; needs-native-review
+msgid "Upload"
+msgstr "رفع"
+
+#. ai-translated; needs-native-review
+msgid "Upload CSV"
+msgstr "رفع CSV"
+
+#. ai-translated; needs-native-review
+msgid "Upload Font"
+msgstr "رفع خط"
+
+#. ai-translated; needs-native-review
+msgid "Uploaded"
+msgstr "تم الرفع"
+
+#. ai-translated; needs-native-review
+msgid "Uploading font..."
+msgstr "جاري رفع الخط..."
+
+#. ai-translated; needs-native-review
+msgid "Uploading {0}%"
+msgstr "جاري الرفع {0}%"
+
+#. ai-translated; needs-native-review
+msgid "Uploading..."
+msgstr "جاري الرفع..."
+
+#. ai-translated; needs-native-review
+msgid "Uppercase"
+msgstr "أحرف كبيرة"
+
+#. ai-translated; needs-native-review
+msgid "Use Regular Expression"
+msgstr "استخدام التعبير النمطي"
+
+#. ai-translated; needs-native-review
+msgid "Use all {0} pages"
+msgstr "استخدام كل {0} صفحة"
+
+#. ai-translated; needs-native-review
+msgid "Use template"
+msgstr "استخدام القالب"
+
+#. ai-translated; needs-native-review
+msgid "Used in 1 page"
+msgstr "مستخدم في صفحة واحدة"
+
+#. ai-translated; needs-native-review
+msgid "Used in following pages"
+msgstr "مستخدم في الصفحات التالية"
+
+#. ai-translated; needs-native-review
+msgid "Used in {0} pages"
+msgstr "مستخدم في {0} صفحة"
+
+#. ai-translated; needs-native-review
+msgid "Value"
+msgstr "القيمة"
+
+#. ai-translated; needs-native-review
+msgid "Value submitted with the form when this radio button is selected."
+msgstr "القيمة التي يتم إرسالها مع النموذج عند تحديد زر الاختيار هذا."
+
+#. ai-translated; needs-native-review
+msgid "Variable Name"
+msgstr "اسم المتغير"
+
+#. ai-translated; needs-native-review
+msgid "Variable created successfully"
+msgstr "تم إنشاء المتغير بنجاح"
+
+#. ai-translated; needs-native-review
+msgid "Variable name"
+msgstr "اسم المتغير"
+
+#. ai-translated; needs-native-review
+msgid "Variable updated"
+msgstr "تم تحديث المتغير"
+
+#. ai-translated; needs-native-review
+msgid "Variables"
+msgstr "المتغيرات"
+
+#. ai-translated; needs-native-review
+msgid "Version History"
+msgstr "سجل الإصدارات"
+
+#. ai-translated; needs-native-review
+msgid "Version restored"
+msgstr "تمت استعادة الإصدار"
+
+#. ai-translated; needs-native-review
+msgid "Version: {0}"
+msgstr "الإصدار: {0}"
+
+#. ai-translated; needs-native-review
+msgid "Vertical"
+msgstr "عمودي"
+
+#. ai-translated; needs-native-review
+msgid "View Page"
+msgstr "عرض الصفحة"
+
+#. ai-translated; needs-native-review
+msgid "View in Desk"
+msgstr "العرض في Desk"
+
+#. ai-translated; needs-native-review
+msgid "Visible"
+msgstr "مرئي"
+
+#. ai-translated; needs-native-review
+msgid "Warning"
+msgstr "تحذير"
+
+#. ai-translated; needs-native-review
+msgid "Web app UI"
+msgstr "واجهة تطبيق ويب"
+
+#. ai-translated; needs-native-review
+msgid "Weight"
+msgstr "الوزن"
+
+#. ai-translated; needs-native-review
+msgid "What do you want to build first?"
+msgstr "ما الذي تريد بناءه أولا؟"
+
+#. ai-translated; needs-native-review
+msgid "Which one best describes you?"
+msgstr "أي وصف ينطبق عليك أكثر؟"
+
+#. ai-translated; needs-native-review
+msgid "Width"
+msgstr "العرض"
+
+#. ai-translated; needs-native-review
+msgid "Wrap"
+msgstr "التفاف"
+
+#. ai-translated; needs-native-review
+msgid "Wrap In Container"
+msgstr "التغليف في حاوية"
+
+#. ai-translated; needs-native-review
+msgid "X Offset"
+msgstr "إزاحة X"
+
+#. ai-translated; needs-native-review
+msgid "Y Offset"
+msgstr "إزاحة Y"
+
+#. ai-translated; needs-native-review
+msgid "Yes"
+msgstr "نعم"
+
+#. ai-translated; needs-native-review
+msgid "You are about to paste a page with settings and scripts. Do you want to update the current page or create a new one?"
+msgstr "أنت على وشك لصق صفحة تحتوي على إعدادات وسكربتات. هل تريد تحديث الصفحة الحالية أم إنشاء صفحة جديدة؟"
+
+#. ai-translated; needs-native-review
+msgid "You do not have permission to access this page"
+msgstr "ليس لديك إذن للوصول إلى هذه الصفحة"
+
+#. ai-translated; needs-native-review
+msgid "You do not have permission to modify pages"
+msgstr "ليس لديك إذن لتعديل الصفحات"
+
+#. ai-translated; needs-native-review
+msgid "You have unsaved changes. Are you sure you want to leave?"
+msgstr "لديك تغييرات غير محفوظة. هل أنت متأكد أنك تريد المغادرة؟"
+
+#. ai-translated; needs-native-review
+msgid "You have unsaved changes. Please save before leaving."
+msgstr "لديك تغييرات غير محفوظة. يرجى الحفظ قبل المغادرة."
+
+#. ai-translated; needs-native-review
+msgid "You're all set{0}. Pick a starting point"
+msgstr "أنت جاهز{0}. اختر نقطة البداية"
+
+msgid "YouTube"
+msgstr ""
+
+msgid "Z-Index"
+msgstr ""
+
+#. ai-translated; needs-native-review
+msgid "e.g. play-circle"
+msgstr "مثال play-circle"
+
+#. ai-translated; needs-native-review
+msgid "e.g., primary, accent, background"
+msgstr "مثال، primary, accent, background"
+
+#. ai-translated; needs-native-review
+msgid "generating"
+msgstr "التوليد"
+
+#. ai-translated; needs-native-review
+msgid "generating the page"
+msgstr "توليد الصفحة"
+
+#. ai-translated; needs-native-review
+msgid "modifying"
+msgstr "التعديل"
+
+#. ai-translated; needs-native-review
+msgid "modifying the section"
+msgstr "تعديل القسم"
+
+#. ai-translated; needs-native-review
+msgid "not used in any pages"
+msgstr "غير مستخدم في أي صفحات"
+
+#. ai-translated; needs-native-review
+msgid "page"
+msgstr "صفحة"
+
+#. ai-translated; needs-native-review
+msgid "pages"
+msgstr "صفحات"
+
+#. ai-translated; needs-native-review
+msgid "this page"
+msgstr "هذه الصفحة"
+
+#. ai-translated; needs-native-review
+msgid "unnamed"
+msgstr "بدون اسم"
+
+#. ai-translated; needs-native-review
+msgid "unset"
+msgstr "غير معين"
+
+#. ai-translated; needs-native-review
+msgid "used in 1 page"
+msgstr "مستخدم في صفحة واحدة"
+
+#. ai-translated; needs-native-review
+msgid "used in {0} pages"
+msgstr "مستخدم في {0} صفحة"
+
+#. ai-translated; needs-native-review
+msgid "{0} & {1} others"
+msgstr "{0} و {1} آخرون"
+
+#. ai-translated; needs-native-review
+msgid "{0} entries were invalid"
+msgstr "{0} إدخال كان غير صالح"
+
+#. ai-translated; needs-native-review
+msgid "{0} invalid entries skipped"
+msgstr "تم تخطي {0} إدخال غير صالح"
+
+#. ai-translated; needs-native-review
+msgid "{0} replacements made"
+msgstr "تم إجراء {0} استبدال"
+
+#. ai-translated; needs-native-review
+msgid "{0} standard variable(s) skipped"
+msgstr "تم تخطي {0} متغير قياسي"
+
+#. ai-translated; needs-native-review
+msgid " · forwards query parameters"
+msgstr "· يمرر معلمات الاستعلام"
+
+#. ai-translated; needs-native-review
+msgid "301 - Moved Permanently"
+msgstr "301 - نقل دائم"
+
+#. ai-translated; needs-native-review
+msgid "302 - Found (Temporary)"
+msgstr "302 - موجود (مؤقت)"
+
+#. ai-translated; needs-native-review
+msgid "307 - Temporary Redirect"
+msgstr "307 - إعادة توجيه مؤقتة"
+
+#. ai-translated; needs-native-review
+msgid "308 - Permanent Redirect"
+msgstr "308 - إعادة توجيه دائمة"
+
+#. ai-translated; needs-native-review
+msgid "<body> HTML"
+msgstr "HTML لـ <body>"
+
+#. ai-translated; needs-native-review
+msgid "<head> HTML"
+msgstr "HTML لـ <head>"
+
+#. ai-translated; needs-native-review
+msgid "A record points to wrong IP: {0}"
+msgstr "سجل A يشير إلى IP خاطئ: {0}"
+
+#. ai-translated; needs-native-review
+msgid "API key is valid!"
+msgstr "مفتاح API صالح!"
+
+#. ai-translated; needs-native-review
+msgid "API key test failed"
+msgstr "فشل اختبار مفتاح API"
+
+#. ai-translated; needs-native-review
+msgid "Add"
+msgstr "إضافة"
+
+#. ai-translated; needs-native-review
+msgid "Add Domain"
+msgstr "إضافة نطاق"
+
+#. ai-translated; needs-native-review
+msgid "Add Redirect"
+msgstr "إضافة إعادة توجيه"
+
+#. ai-translated; needs-native-review
+msgid "Add meta tags, styles, and scripts to page head"
+msgstr "إضافة وسوم وصفية وأنماط وسكربتات إلى رأس الصفحة"
+
+#. ai-translated; needs-native-review
+msgid "Add scripts to page body"
+msgstr "إضافة سكربتات إلى جسم الصفحة"
+
+#. ai-translated; needs-native-review
+msgid "Added to end of body. For adding scripts."
+msgstr "يضاف إلى نهاية الجسم. لإضافة السكربتات."
+
+#. ai-translated; needs-native-review
+msgid "Added to end of head. For meta tags, styles, and scripts."
+msgstr "يضاف إلى نهاية الرأس. للوسوم الوصفية والأنماط والسكربتات."
+
+#. ai-translated; needs-native-review
+msgid "Adding redirect..."
+msgstr "جاري إضافة إعادة التوجيه..."
+
+#. ai-translated; needs-native-review
+msgid "Adding {0}…"
+msgstr "جاري إضافة {0}…"
+
+#. ai-translated; needs-native-review
+msgid "Advanced"
+msgstr "متقدم"
+
+#. ai-translated; needs-native-review
+msgid "All Properties"
+msgstr "كل الخصائص"
+
+#. ai-translated; needs-native-review
+msgid "All the images uploaded via Builder will be converted to WebP for better page performance"
+msgstr "كل الصور المرفوعة عبر Builder سيتم تحويلها إلى WebP لأداء أفضل للصفحة"
+
+#. ai-translated; needs-native-review
+msgid "App"
+msgstr "تطبيق"
+
+#. ai-translated; needs-native-review
+msgid "Appears next to the title in your browser tab. Recommended size is 32x32 px in PNG or ICO"
+msgstr "يظهر بجانب العنوان في علامة تبويب المتصفح. الحجم الموصى به هو 32x32 بكسل بصيغة PNG أو ICO"
+
+#. ai-translated; needs-native-review
+msgid "Append the original query string to the target URL"
+msgstr "إلحاق سلسلة الاستعلام الأصلية برابط الوجهة"
+
+#. ai-translated; needs-native-review
+msgid "Applies to all pages"
+msgstr "ينطبق على كل الصفحات"
+
+#. ai-translated; needs-native-review
+msgid "Are you sure you want to delete the redirect from \"{0}\" to \"{1}\"?"
+msgstr "هل أنت متأكد أنك تريد حذف إعادة التوجيه من \"{0}\" إلى \"{1}\"؟"
+
+#. ai-translated; needs-native-review
+msgid "Are you sure you want to delete this redirect?"
+msgstr "هل أنت متأكد أنك تريد حذف إعادة التوجيه هذه؟"
+
+#. ai-translated; needs-native-review
+msgid "Are you sure you want to exit without saving?"
+msgstr "هل أنت متأكد أنك تريد الخروج دون حفظ؟"
+
+#. ai-translated; needs-native-review
+msgid "Array"
+msgstr "مصفوفة"
+
+#. ai-translated; needs-native-review
+msgid "Array Items:"
+msgstr "عناصر المصفوفة:"
+
+#. ai-translated; needs-native-review
+msgid "Auto convert images to WebP"
+msgstr "التحويل التلقائي للصور إلى WebP"
+
+#. ai-translated; needs-native-review
+msgid "Automatically follows server IP changes. Best choice for subdomains."
+msgstr "يتابع تلقائيا تغييرات IP الخادم. الخيار الأفضل للنطاقات الفرعية."
+
+#. ai-translated; needs-native-review
+msgid "Autoplay"
+msgstr "تشغيل تلقائي"
+
+#. ai-translated; needs-native-review
+msgid "Background Only"
+msgstr "الخلفية فقط"
+
+#. ai-translated; needs-native-review
+msgid "Block CSS"
+msgstr "CSS الكتلة"
+
+#. ai-translated; needs-native-review
+msgid "Block JavaScript"
+msgstr "JavaScript الكتلة"
+
+#. ai-translated; needs-native-review
+msgid "Block Options"
+msgstr "خيارات الكتلة"
+
+#. ai-translated; needs-native-review
+msgid "Block Props"
+msgstr "خصائص الكتلة"
+
+#. ai-translated; needs-native-review
+msgid "Block Template"
+msgstr "قالب الكتلة"
+
+#. ai-translated; needs-native-review
+msgid "Boolean"
+msgstr "منطقي"
+
+#. ai-translated; needs-native-review
+msgid "Browse all settings"
+msgstr "تصفح كل الإعدادات"
+
+#. ai-translated; needs-native-review
+msgid "CNAME record points to wrong destination: {0}"
+msgstr "سجل CNAME يشير إلى وجهة خاطئة: {0}"
+
+msgid "CTR"
+msgstr ""
+
+#. ai-translated; needs-native-review
+msgid "Canonical URL"
+msgstr "الرابط الأساسي"
+
+#. ai-translated; needs-native-review
+msgid "Class"
+msgstr "الفئة"
+
+#. ai-translated; needs-native-review
+msgid "Click-through Rate"
+msgstr "معدل النقر إلى الظهور"
+
+#. ai-translated; needs-native-review
+msgid "Clicks"
+msgstr "النقرات"
+
+#. ai-translated; needs-native-review
+msgid "Client Script"
+msgstr "سكربت العميل"
+
+#. ai-translated; needs-native-review
+msgid "Close"
+msgstr "إغلاق"
+
+#. ai-translated; needs-native-review
+msgid "Collapse All Layers"
+msgstr "طي كل الطبقات"
+
+#. ai-translated; needs-native-review
+msgid "Color"
+msgstr "اللون"
+
+#. ai-translated; needs-native-review
+msgid "Colors Only"
+msgstr "الألوان فقط"
+
+#. ai-translated; needs-native-review
+msgid "Command Palette"
+msgstr "لوحة الأوامر"
+
+#. ai-translated; needs-native-review
+msgid "Commands"
+msgstr "الأوامر"
+
+#. ai-translated; needs-native-review
+msgid "Component Data Preview"
+msgstr "معاينة بيانات المكوّن"
+
+#. ai-translated; needs-native-review
+msgid "Component Props"
+msgstr "خصائص المكوّن"
+
+#. ai-translated; needs-native-review
+msgid "Component updates"
+msgstr "تحديثات المكوّن"
+
+#. ai-translated; needs-native-review
+msgid "Component updates available"
+msgstr "تحديثات المكوّن متوفرة"
+
+#. ai-translated; needs-native-review
+msgid "Condition"
+msgstr "الشرط"
+
+#. ai-translated; needs-native-review
+msgid "Controls"
+msgstr "عناصر التحكم"
+
+#. ai-translated; needs-native-review
+msgid "Copied to clipboard"
+msgstr "تم النسخ إلى الحافظة"
+
+#. ai-translated; needs-native-review
+msgid "Count"
+msgstr "العدد"
+
+#. ai-translated; needs-native-review
+msgid "Current version"
+msgstr "الإصدار الحالي"
+
+#. ai-translated; needs-native-review
+msgid "DNS is verified but SSL certificate provisioning failed. Please retry."
+msgstr "تم التحقق من DNS لكن فشل توفير شهادة SSL. يرجى إعادة المحاولة."
+
+#. ai-translated; needs-native-review
+msgid "DNS not yet propagated. Make sure the record is set correctly and try again."
+msgstr "لم ينتشر DNS بعد. تأكد من تعيين السجل بشكل صحيح وحاول مرة أخرى."
+
+#. ai-translated; needs-native-review
+msgid "Data Preview"
+msgstr "معاينة البيانات"
+
+#. ai-translated; needs-native-review
+msgid "Data Script"
+msgstr "سكربت البيانات"
+
+#. ai-translated; needs-native-review
+msgid "Data script saved"
+msgstr "تم حفظ سكربت البيانات"
+
+#. ai-translated; needs-native-review
+msgid "Default HTML lang code (e.g., en, es, fr)"
+msgstr "رمز لغة HTML الافتراضي (مثال en, es, fr)"
+
+#. ai-translated; needs-native-review
+msgid "Default Items"
+msgstr "العناصر الافتراضية"
+
+#. ai-translated; needs-native-review
+msgid "Default Value"
+msgstr "القيمة الافتراضية"
+
+#. ai-translated; needs-native-review
+msgid "Deleting redirect..."
+msgstr "جاري حذف إعادة التوجيه..."
+
+#. ai-translated; needs-native-review
+msgid "Description"
+msgstr "الوصف"
+
+#. ai-translated; needs-native-review
+msgid "Detach Component"
+msgstr "فصل المكوّن"
+
+#. ai-translated; needs-native-review
+msgid "Disable Auto Dark Mode"
+msgstr "تعطيل الوضع الداكن التلقائي"
+
+#. ai-translated; needs-native-review
+msgid "Disable Indexing"
+msgstr "تعطيل الفهرسة"
+
+#. ai-translated; needs-native-review
+msgid "Disable Redirect"
+msgstr "تعطيل إعادة التوجيه"
+
+#. ai-translated; needs-native-review
+msgid "Disabling redirect…"
+msgstr "جاري تعطيل إعادة التوجيه…"
+
+#. ai-translated; needs-native-review
+msgid "Domain"
+msgstr "النطاق"
+
+#. ai-translated; needs-native-review
+msgid "Domain setup failed. Please retry or contact support."
+msgstr "فشل إعداد النطاق. يرجى إعادة المحاولة أو الاتصال بالدعم."
+
+#. ai-translated; needs-native-review
+msgid "Domain verification failed"
+msgstr "فشل التحقق من النطاق"
+
+#. ai-translated; needs-native-review
+msgid "Don't Execute"
+msgstr "عدم التنفيذ"
+
+#. ai-translated; needs-native-review
+msgid "Ease In"
+msgstr "تسارع البداية"
+
+#. ai-translated; needs-native-review
+msgid "Ease In Out"
+msgstr "تسارع البداية والنهاية"
+
+#. ai-translated; needs-native-review
+msgid "Ease Out"
+msgstr "تسارع النهاية"
+
+#. ai-translated; needs-native-review
+msgid "Edit Component"
+msgstr "تعديل المكوّن"
+
+#. ai-translated; needs-native-review
+msgid "Edit Redirect"
+msgstr "تعديل إعادة التوجيه"
+
+#. ai-translated; needs-native-review
+msgid "Enable View Tracking"
+msgstr "تفعيل تتبع المشاهدات"
+
+#. ai-translated; needs-native-review
+msgid "Enable click tracking on a block, then clicks on it will appear here."
+msgstr "فعل تتبع النقرات على كتلة، ثم ستظهر النقرات عليها هنا."
+
+#. ai-translated; needs-native-review
+msgid "Enabling redirect…"
+msgstr "جاري تفعيل إعادة التوجيه…"
+
+#. ai-translated; needs-native-review
+msgid "Enter default value"
+msgstr "أدخل القيمة الافتراضية"
+
+#. ai-translated; needs-native-review
+msgid "Enter false label display"
+msgstr "أدخل تسمية القيمة الخاطئة"
+
+#. ai-translated; needs-native-review
+msgid "Enter image URL or upload one"
+msgstr "أدخل رابط الصورة أو ارفع واحدة"
+
+#. ai-translated; needs-native-review
+msgid "Enter max number of items"
+msgstr "أدخل أقصى عدد للعناصر"
+
+#. ai-translated; needs-native-review
+msgid "Enter max value"
+msgstr "أدخل أقصى قيمة"
+
+#. ai-translated; needs-native-review
+msgid "Enter min number of items"
+msgstr "أدخل أدنى عدد للعناصر"
+
+#. ai-translated; needs-native-review
+msgid "Enter min value"
+msgstr "أدخل أدنى قيمة"
+
+#. ai-translated; needs-native-review
+msgid "Enter prop key"
+msgstr "أدخل مفتاح الخاصية"
+
+#. ai-translated; needs-native-review
+msgid "Enter prop label"
+msgstr "أدخل تسمية الخاصية"
+
+#. ai-translated; needs-native-review
+msgid "Enter true label display"
+msgstr "أدخل تسمية القيمة الصحيحة"
+
+#. ai-translated; needs-native-review
+msgid "Enter value"
+msgstr "أدخل القيمة"
+
+#. ai-translated; needs-native-review
+msgid "Enter your domain"
+msgstr "أدخل نطاقك"
+
+#. ai-translated; needs-native-review
+msgid "Error adding redirect"
+msgstr "خطأ في إضافة إعادة التوجيه"
+
+#. ai-translated; needs-native-review
+msgid "Error deleting redirect"
+msgstr "خطأ في حذف إعادة التوجيه"
+
+#. ai-translated; needs-native-review
+msgid "Error updating redirect"
+msgstr "خطأ في تحديث إعادة التوجيه"
+
+#. ai-translated; needs-native-review
+msgid "Exact path"
+msgstr "مسار دقيق"
+
+#. ai-translated; needs-native-review
+msgid "Examples"
+msgstr "أمثلة"
+
+#. ai-translated; needs-native-review
+msgid "Execute Block Client Scripts in Editor"
+msgstr "تنفيذ سكربتات عميل الكتلة في المحرر"
+
+#. ai-translated; needs-native-review
+msgid "Expand All Layers"
+msgstr "توسيع كل الطبقات"
+
+#. ai-translated; needs-native-review
+msgid "External URL"
+msgstr "رابط خارجي"
+
+#. ai-translated; needs-native-review
+msgid "Failed to copy"
+msgstr "فشل النسخ"
+
+#. ai-translated; needs-native-review
+msgid "Failed to rename"
+msgstr "فشل إعادة التسمية"
+
+#. ai-translated; needs-native-review
+msgid "Failed to save script"
+msgstr "فشل حفظ السكربت"
+
+#. ai-translated; needs-native-review
+msgid "Failed to test API key"
+msgstr "فشل اختبار مفتاح API"
+
+#. ai-translated; needs-native-review
+msgid "Failed to update script order"
+msgstr "فشل تحديث ترتيب السكربتات"
+
+#. ai-translated; needs-native-review
+msgid "False"
+msgstr "خطأ"
+
+#. ai-translated; needs-native-review
+msgid "False Label"
+msgstr "تسمية القيمة الخاطئة"
+
+#. ai-translated; needs-native-review
+msgid "Fast"
+msgstr "سريع"
+
+#. ai-translated; needs-native-review
+msgid "Favicon"
+msgstr "أيقونة الموقع"
+
+#. ai-translated; needs-native-review
+msgid "Fill & Crop"
+msgstr "ملء وقص"
+
+#. ai-translated; needs-native-review
+msgid "Fit Inside"
+msgstr "احتواء بالداخل"
+
+#. ai-translated; needs-native-review
+msgid "Folder"
+msgstr "مجلد"
+
+#. ai-translated; needs-native-review
+msgid "Forward query parameters"
+msgstr "تمرير معلمات الاستعلام"
+
+msgid "Frappe Builder"
+msgstr ""
+
+#. ai-translated; needs-native-review
+msgid "Get API key from"
+msgstr "احصل على مفتاح API من"
+
+#. ai-translated; needs-native-review
+msgid "Go to Dashboard"
+msgstr "الذهاب إلى لوحة المعلومات"
+
+msgid "HTTP {0}{1}"
+msgstr ""
+
+#. ai-translated; needs-native-review
+msgid "Hide Left Panel"
+msgstr "إخفاء اللوحة اليسرى"
+
+#. ai-translated; needs-native-review
+msgid "Hide Right Panel"
+msgstr "إخفاء اللوحة اليمنى"
+
+#. ai-translated; needs-native-review
+msgid "Home"
+msgstr "الرئيسية"
+
+#. ai-translated; needs-native-review
+msgid "Homepage"
+msgstr "الصفحة الرئيسية"
+
+#. ai-translated; needs-native-review
+msgid "Image Fit"
+msgstr "ملاءمة الصورة"
+
+#. ai-translated; needs-native-review
+msgid "Invalid option configuration!"
+msgstr "تهيئة خيار غير صالحة!"
+
+#. ai-translated; needs-native-review
+msgid "Is Required"
+msgstr "مطلوب"
+
+#. ai-translated; needs-native-review
+msgid "Keyboard Shortcuts"
+msgstr "اختصارات لوحة المفاتيح"
+
+#. ai-translated; needs-native-review
+msgid "Label"
+msgstr "التسمية"
+
+#. ai-translated; needs-native-review
+msgid "Language"
+msgstr "اللغة"
+
+#. ai-translated; needs-native-review
+msgid "Language code for HTML (e.g., en, es, fr, de). Uses default if unset."
+msgstr "رمز اللغة لـ HTML (مثال en, es, fr, de). يستخدم الافتراضي إذا لم يعين."
+
+#. ai-translated; needs-native-review
+msgid "Last 30 Days"
+msgstr "آخر 30 يوما"
+
+#. ai-translated; needs-native-review
+msgid "Last 7 Days"
+msgstr "آخر 7 أيام"
+
+#. ai-translated; needs-native-review
+msgid "Loading domains…"
+msgstr "جاري تحميل النطاقات…"
+
+#. ai-translated; needs-native-review
+msgid "Loop"
+msgstr "تكرار"
+
+#. ai-translated; needs-native-review
+msgid "Make this page a standard page that can be exported to an app"
+msgstr "اجعل هذه الصفحة صفحة قياسية يمكن تصديرها إلى تطبيق"
+
+#. ai-translated; needs-native-review
+msgid "Max. Items"
+msgstr "أقصى عدد للعناصر"
+
+#. ai-translated; needs-native-review
+msgid "Max. Value"
+msgstr "أقصى قيمة"
+
+#. ai-translated; needs-native-review
+msgid "Meta Image"
+msgstr "صورة التعريف"
+
+#. ai-translated; needs-native-review
+msgid "Min. Items"
+msgstr "أدنى عدد للعناصر"
+
+#. ai-translated; needs-native-review
+msgid "Min. Value"
+msgstr "أدنى قيمة"
+
+#. ai-translated; needs-native-review
+msgid "Muted"
+msgstr "مكتوم"
+
+#. ai-translated; needs-native-review
+msgid "Name already exists"
+msgstr "الاسم موجود بالفعل"
+
+#. ai-translated; needs-native-review
+msgid "Name this version (optional)"
+msgstr "سم هذا الإصدار (اختياري)"
+
+#. ai-translated; needs-native-review
+msgid "Navigate"
+msgstr "التنقل"
+
+#. ai-translated; needs-native-review
+msgid "No DNS record found for this domain."
+msgstr "لم يتم العثور على سجل DNS لهذا النطاق."
+
+#. ai-translated; needs-native-review
+msgid "No Default Value"
+msgstr "لا توجد قيمة افتراضية"
+
+#. ai-translated; needs-native-review
+msgid "No clicks tracked yet"
+msgstr "لم يتم تتبع أي نقرات بعد"
+
+#. ai-translated; needs-native-review
+msgid "No commands found"
+msgstr "لم يتم العثور على أوامر"
+
+#. ai-translated; needs-native-review
+msgid "No components saved"
+msgstr "لم يتم حفظ أي مكوّنات"
+
+#. ai-translated; needs-native-review
+msgid "No custom domains added yet."
+msgstr "لم تتم إضافة أي نطاقات مخصصة بعد."
+
+#. ai-translated; needs-native-review
+msgid "No page views yet"
+msgstr "لا توجد مشاهدات للصفحة بعد"
+
+#. ai-translated; needs-native-review
+msgid "No redirects match \"{0}\""
+msgstr "لا توجد عمليات إعادة توجيه تطابق \"{0}\""
+
+#. ai-translated; needs-native-review
+msgid "No referrers yet"
+msgstr "لا توجد مصادر إحالة بعد"
+
+#. ai-translated; needs-native-review
+msgid "No results for \"{0}\""
+msgstr "لا توجد نتائج لـ \"{0}\""
+
+#. ai-translated; needs-native-review
+msgid "No saved versions yet. A version is captured every time you publish, or when you save one manually."
+msgstr "لا توجد إصدارات محفوظة بعد. يتم التقاط إصدار في كل مرة تنشر فيها، أو عند حفظ واحد يدويا."
+
+#. ai-translated; needs-native-review
+msgid "No views in this period"
+msgstr "لا توجد مشاهدات في هذه الفترة"
+
+#. ai-translated; needs-native-review
+msgid "Normal"
+msgstr "عادي"
+
+#. ai-translated; needs-native-review
+msgid "Note: Block Scripts are executed in a sandboxed environment. This may have limitations and might not perfectly replicate live site behavior. Executing untrusted scripts could be unsafe."
+msgstr "ملاحظة: يتم تنفيذ سكربتات الكتلة في بيئة معزولة. قد يكون لهذا قيود وقد لا يحاكي سلوك الموقع المباشر بشكل مثالي. تنفيذ سكربتات غير موثوقة قد يكون غير آمن."
+
+#. ai-translated; needs-native-review
+msgid "Number"
+msgstr "رقم"
+
+#. ai-translated; needs-native-review
+msgid "Object"
+msgstr "كائن"
+
+#. ai-translated; needs-native-review
+msgid "Object Items:"
+msgstr "عناصر الكائن:"
+
+#. ai-translated; needs-native-review
+msgid "Only logged-in users can access this page"
+msgstr "يمكن فقط للمستخدمين المسجلين الدخول الوصول إلى هذه الصفحة"
+
+#. ai-translated; needs-native-review
+msgid "Opacity Only"
+msgstr "العتامة فقط"
+
+#. ai-translated; needs-native-review
+msgid "Open Command Palette"
+msgstr "فتح لوحة الأوامر"
+
+#. ai-translated; needs-native-review
+msgid "Open Global Settings"
+msgstr "فتح الإعدادات العامة"
+
+#. ai-translated; needs-native-review
+msgid "Open in New Tab"
+msgstr "فتح في علامة تبويب جديدة"
+
+#. ai-translated; needs-native-review
+msgid "OpenRouter API Key"
+msgstr "مفتاح API لـ OpenRouter"
+
+#. ai-translated; needs-native-review
+msgid "Optional. Set this to specify a preferred version of this page for search engines."
+msgstr "اختياري. عين هذا لتحديد نسخة مفضلة من هذه الصفحة لمحركات البحث."
+
+#. ai-translated; needs-native-review
+msgid "Options"
+msgstr "الخيارات"
+
+#. ai-translated; needs-native-review
+msgid "Original Size"
+msgstr "الحجم الأصلي"
+
+#. ai-translated; needs-native-review
+msgid "Overview"
+msgstr "نظرة عامة"
+
+#. ai-translated; needs-native-review
+msgid "Page Data Preview"
+msgstr "معاينة بيانات الصفحة"
+
+#. ai-translated; needs-native-review
+msgid "Page Route"
+msgstr "مسار الصفحة"
+
+#. ai-translated; needs-native-review
+msgid "Pages"
+msgstr "الصفحات"
+
+#. ai-translated; needs-native-review
+msgid "Pick a wider date range, or share your page to start collecting data."
+msgstr "اختر نطاقا زمنيا أوسع، أو شارك صفحتك لبدء جمع البيانات."
+
+#. ai-translated; needs-native-review
+msgid "Please select an app for this standard page"
+msgstr "يرجى اختيار تطبيق لهذه الصفحة القياسية"
+
+#. ai-translated; needs-native-review
+msgid "Points your root domain directly to the server. Use @ as the host name."
+msgstr "يوجه نطاقك الجذري مباشرة إلى الخادم. استخدم @ كاسم المضيف."
+
+#. ai-translated; needs-native-review
+msgid "Poster"
+msgstr "صورة الملصق"
+
+#. ai-translated; needs-native-review
+msgid "Prevent Click Emulation"
+msgstr "منع محاكاة النقر"
+
+#. ai-translated; needs-native-review
+msgid "Prevent search engines from indexing this page"
+msgstr "منع محركات البحث من فهرسة هذه الصفحة"
+
+#. ai-translated; needs-native-review
+msgid "Prevent the site from automatically switching to dark mode"
+msgstr "منع الموقع من التبديل تلقائيا إلى الوضع الداكن"
+
+#. ai-translated; needs-native-review
+msgid "Prevents click events from being emulated in the editor for blocks with Block Client Scripts."
+msgstr "يمنع محاكاة أحداث النقر في المحرر للكتل التي تحتوي على سكربتات عميل الكتلة."
+
+#. ai-translated; needs-native-review
+msgid "Preview Page"
+msgstr "معاينة الصفحة"
+
+#. ai-translated; needs-native-review
+msgid "Primary"
+msgstr "أساسي"
+
+#. ai-translated; needs-native-review
+msgid "Properties"
+msgstr "الخصائص"
+
+#. ai-translated; needs-native-review
+msgid "Protected Page"
+msgstr "صفحة محمية"
+
+#. ai-translated; needs-native-review
+msgid "Publish Page"
+msgstr "نشر الصفحة"
+
+#. ai-translated; needs-native-review
+msgid "Published with limited access"
+msgstr "منشور بوصول محدود"
+
+#. ai-translated; needs-native-review
+msgid "Raw Style"
+msgstr "النمط الخام"
+
+#. ai-translated; needs-native-review
+msgid "Recent"
+msgstr "الأخيرة"
+
+#. ai-translated; needs-native-review
+msgid "Redirect added"
+msgstr "تمت إضافة إعادة التوجيه"
+
+#. ai-translated; needs-native-review
+msgid "Redirect deleted"
+msgstr "تم حذف إعادة التوجيه"
+
+#. ai-translated; needs-native-review
+msgid "Redirect disabled for {0}"
+msgstr "تم تعطيل إعادة التوجيه لـ {0}"
+
+#. ai-translated; needs-native-review
+msgid "Redirect enabled for {0}"
+msgstr "تم تفعيل إعادة التوجيه لـ {0}"
+
+#. ai-translated; needs-native-review
+msgid "Redirect status"
+msgstr "حالة إعادة التوجيه"
+
+#. ai-translated; needs-native-review
+msgid "Redirect to Primary"
+msgstr "إعادة التوجيه إلى الأساسي"
+
+#. ai-translated; needs-native-review
+msgid "Redirect updated"
+msgstr "تم تحديث إعادة التوجيه"
+
+#. ai-translated; needs-native-review
+msgid "Redirects to primary"
+msgstr "يعيد التوجيه إلى الأساسي"
+
+#. ai-translated; needs-native-review
+msgid "Regex capture"
+msgstr "التقاط بتعبير نمطي"
+
+#. ai-translated; needs-native-review
+msgid "Remove Domain"
+msgstr "إزالة النطاق"
+
+#. ai-translated; needs-native-review
+msgid "Removing {0}…"
+msgstr "جاري إزالة {0}…"
+
+#. ai-translated; needs-native-review
+msgid "Restore this version as your draft"
+msgstr "استعادة هذا الإصدار كمسودة لك"
+
+#. ai-translated; needs-native-review
+msgid "Restricted"
+msgstr "مقيد"
+
+#. ai-translated; needs-native-review
+msgid "Retry"
+msgstr "إعادة المحاولة"
+
+#. ai-translated; needs-native-review
+msgid "Retrying {0}"
+msgstr "جاري إعادة محاولة {0}"
+
+#. ai-translated; needs-native-review
+msgid "Retrying {0}…"
+msgstr "جاري إعادة محاولة {0}…"
+
+#. ai-translated; needs-native-review
+msgid "Save As Component"
+msgstr "الحفظ كمكوّن"
+
+#. ai-translated; needs-native-review
+msgid "Save current version"
+msgstr "حفظ الإصدار الحالي"
+
+#. ai-translated; needs-native-review
+msgid "Script order updated"
+msgstr "تم تحديث ترتيب السكربتات"
+
+#. ai-translated; needs-native-review
+msgid "Script saved successfully"
+msgstr "تم حفظ السكربت بنجاح"
+
+#. ai-translated; needs-native-review
+msgid "Search Page"
+msgstr "البحث عن صفحة"
+
+#. ai-translated; needs-native-review
+msgid "Search Template"
+msgstr "البحث عن قالب"
+
+#. ai-translated; needs-native-review
+msgid "Search by name or route..."
+msgstr "البحث بالاسم أو المسار..."
+
+#. ai-translated; needs-native-review
+msgid "Search commands..."
+msgstr "البحث في الأوامر..."
+
+#. ai-translated; needs-native-review
+msgid "Search component"
+msgstr "البحث عن مكوّن"
+
+#. ai-translated; needs-native-review
+msgid "Search redirects"
+msgstr "البحث في عمليات إعادة التوجيه"
+
+#. ai-translated; needs-native-review
+msgid "Search settings..."
+msgstr "البحث في الإعدادات..."
+
+#. ai-translated; needs-native-review
+msgid "Searching..."
+msgstr "جاري البحث..."
+
+#. ai-translated; needs-native-review
+msgid "Select"
+msgstr "تحديد"
+
+#. ai-translated; needs-native-review
+msgid "Select App"
+msgstr "اختيار التطبيق"
+
+#. ai-translated; needs-native-review
+msgid "Select date range"
+msgstr "اختيار النطاق الزمني"
+
+#. ai-translated; needs-native-review
+msgid "Select default color"
+msgstr "اختيار اللون الافتراضي"
+
+#. ai-translated; needs-native-review
+msgid "Select the app for this standard page"
+msgstr "اختر التطبيق لهذه الصفحة القياسية"
+
+#. ai-translated; needs-native-review
+msgid "Set As Homepage"
+msgstr "التعيين كصفحة رئيسية"
+
+#. ai-translated; needs-native-review
+msgid "Set Image"
+msgstr "تعيين الصورة"
+
+#. ai-translated; needs-native-review
+msgid "Set as Primary"
+msgstr "التعيين كأساسي"
+
+#. ai-translated; needs-native-review
+msgid "Set current page as Homepage"
+msgstr "تعيين الصفحة الحالية كصفحة رئيسية"
+
+#. ai-translated; needs-native-review
+msgid "Set folder to organize your page"
+msgstr "عين مجلدا لتنظيم صفحتك"
+
+#. ai-translated; needs-native-review
+msgid "Show Left Panel"
+msgstr "إظهار اللوحة اليسرى"
+
+#. ai-translated; needs-native-review
+msgid "Show Right Panel"
+msgstr "إظهار اللوحة اليمنى"
+
+#. ai-translated; needs-native-review
+msgid "Site Favicon"
+msgstr "أيقونة الموقع"
+
+#. ai-translated; needs-native-review
+msgid "Slow"
+msgstr "بطيء"
+
+#. ai-translated; needs-native-review
+msgid "Smooth"
+msgstr "سلس"
+
+#. ai-translated; needs-native-review
+msgid "Social Preview"
+msgstr "معاينة اجتماعية"
+
+#. ai-translated; needs-native-review
+msgid "Something went wrong"
+msgstr "حدث خطأ ما"
+
+#. ai-translated; needs-native-review
+msgid "Source"
+msgstr "المصدر"
+
+#. ai-translated; needs-native-review
+msgid "Speed"
+msgstr "السرعة"
+
+#. ai-translated; needs-native-review
+msgid "Standard Page"
+msgstr "صفحة قياسية"
+
+#. ai-translated; needs-native-review
+msgid "Start typing to search pages"
+msgstr "ابدأ الكتابة للبحث في الصفحات"
+
+#. ai-translated; needs-native-review
+msgid "Status"
+msgstr "الحالة"
+
+#. ai-translated; needs-native-review
+msgid "String"
+msgstr "سلسلة نصية"
+
+#. ai-translated; needs-native-review
+msgid "Switch to Dark Mode"
+msgstr "التبديل إلى الوضع الداكن"
+
+#. ai-translated; needs-native-review
+msgid "Switch to Light Mode"
+msgstr "التبديل إلى الوضع الفاتح"
+
+#. ai-translated; needs-native-review
+msgid "Target"
+msgstr "الهدف"
+
+#. ai-translated; needs-native-review
+msgid "Test Key"
+msgstr "اختبار المفتاح"
+
+#. ai-translated; needs-native-review
+msgid "Testing..."
+msgstr "جاري الاختبار..."
+
+#. ai-translated; needs-native-review
+msgid "These components changed since this page was last updated. Update to use the latest."
+msgstr "تغيرت هذه المكوّنات منذ آخر تحديث لهذه الصفحة. حدث لاستخدام الأحدث."
+
+#. ai-translated; needs-native-review
+msgid "This Year"
+msgstr "هذه السنة"
+
+#. ai-translated; needs-native-review
+msgid "This page will be exported to {0} app as standard page"
+msgstr "سيتم تصدير هذه الصفحة إلى تطبيق {0} كصفحة قياسية"
+
+#. ai-translated; needs-native-review
+msgid "This script will be executed on all the pages of your website."
+msgstr "سيتم تنفيذ هذا السكربت على كل صفحات موقعك."
+
+#. ai-translated; needs-native-review
+msgid "This will load this version into the editor as your current draft. Your live page won't change until you publish. Continue?"
+msgstr "سيؤدي هذا إلى تحميل هذا الإصدار في المحرر كمسودتك الحالية. لن تتغير صفحتك المباشرة حتى تنشر. هل تريد المتابعة؟"
+
+#. ai-translated; needs-native-review
+msgid "Timing"
+msgstr "التوقيت"
+
+#. ai-translated; needs-native-review
+msgid "Title"
+msgstr "العنوان"
+
+#. ai-translated; needs-native-review
+msgid "Today"
+msgstr "اليوم"
+
+#. ai-translated; needs-native-review
+msgid "Top Clicks"
+msgstr "أعلى النقرات"
+
+#. ai-translated; needs-native-review
+msgid "Top Pages"
+msgstr "أعلى الصفحات"
+
+#. ai-translated; needs-native-review
+msgid "Top Referrers"
+msgstr "أعلى مصادر الإحالة"
+
+#. ai-translated; needs-native-review
+msgid "Total Pageviews"
+msgstr "إجمالي مشاهدات الصفحة"
+
+#. ai-translated; needs-native-review
+msgid "Track the number of views on each page of your website"
+msgstr "تتبع عدد المشاهدات على كل صفحة من موقعك"
+
+#. ai-translated; needs-native-review
+msgid "Transform Only"
+msgstr "التحويل فقط"
+
+#. ai-translated; needs-native-review
+msgid "Transition"
+msgstr "الانتقال"
+
+#. ai-translated; needs-native-review
+msgid "True"
+msgstr "صحيح"
+
+#. ai-translated; needs-native-review
+msgid "True Label"
+msgstr "تسمية القيمة الصحيحة"
+
+#. ai-translated; needs-native-review
+msgid "Turn on view tracking to start collecting page views, clicks and click-through rates for your published pages."
+msgstr "فعل تتبع المشاهدات لبدء جمع مشاهدات الصفحة والنقرات ومعدلات النقر إلى الظهور لصفحاتك المنشورة."
+
+msgid "URL"
+msgstr ""
+
+#. ai-translated; needs-native-review
+msgid "Unique Visitors"
+msgstr "الزوار الفريدون"
+
+#. ai-translated; needs-native-review
+msgid "Unrestricted"
+msgstr "غير مقيد"
+
+#. ai-translated; needs-native-review
+msgid "Unset Homepage"
+msgstr "إلغاء تعيين الصفحة الرئيسية"
+
+#. ai-translated; needs-native-review
+msgid "Untitled"
+msgstr "بدون عنوان"
+
+#. ai-translated; needs-native-review
+msgid "Update all"
+msgstr "تحديث الكل"
+
+#. ai-translated; needs-native-review
+msgid "Updating primary domain…"
+msgstr "جاري تحديث النطاق الأساسي…"
+
+#. ai-translated; needs-native-review
+msgid "Updating redirect..."
+msgstr "جاري تحديث إعادة التوجيه..."
+
+#. ai-translated; needs-native-review
+msgid "Upload Meta Image"
+msgstr "رفع صورة التعريف"
+
+#. ai-translated; needs-native-review
+msgid "Use this if your DNS provider doesn't support CNAME for subdomains."
+msgstr "استخدم هذا إذا كان مزود DNS الخاص بك لا يدعم CNAME للنطاقات الفرعية."
+
+#. ai-translated; needs-native-review
+msgid "Verifying DNS for {0}…"
+msgstr "جاري التحقق من DNS لـ {0}…"
+
+#. ai-translated; needs-native-review
+msgid "Version"
+msgstr "الإصدار"
+
+#. ai-translated; needs-native-review
+msgid "Version saved"
+msgstr "تم حفظ الإصدار"
+
+#. ai-translated; needs-native-review
+msgid "Very Slow"
+msgstr "بطيء جدا"
+
+#. ai-translated; needs-native-review
+msgid "Video Options"
+msgstr "خيارات الفيديو"
+
+#. ai-translated; needs-native-review
+msgid "Video URL"
+msgstr "رابط الفيديو"
+
+#. ai-translated; needs-native-review
+msgid "View"
+msgstr "عرض"
+
+#. ai-translated; needs-native-review
+msgid "View tracking is off"
+msgstr "تتبع المشاهدات معطل"
+
+#. ai-translated; needs-native-review
+msgid "Views"
+msgstr "المشاهدات"
+
+#. ai-translated; needs-native-review
+msgid "Visibility condition to show/hide the block based on a condition. Pass a boolean variable created in your Data Script.<br><b>Note:</b> This is only evaluated in the preview mode."
+msgstr "شرط الرؤية لإظهار/إخفاء الكتلة بناء على شرط. مرر متغيرا منطقيا تم إنشاؤه في سكربت البيانات الخاص بك.<br><b>ملاحظة:</b> يتم تقييم هذا في وضع المعاينة فقط."
+
+#. ai-translated; needs-native-review
+msgid "Working draft · unpublished changes"
+msgstr "مسودة العمل · تغييرات غير منشورة"
+
+#. ai-translated; needs-native-review
+msgid "You cannot add link inside a button block"
+msgstr "لا يمكنك إضافة رابط داخل كتلة زر"
+
+#. ai-translated; needs-native-review
+msgid "You cannot add link inside a link block"
+msgstr "لا يمكنك إضافة رابط داخل كتلة رابط"
+
+#. ai-translated; needs-native-review
+msgid "You cannot make heading a link"
+msgstr "لا يمكنك جعل العنوان رابطا"
+
+#. ai-translated; needs-native-review
+msgid "e.g. yourdomain.com"
+msgstr "مثال yourdomain.com"
+
+#. ai-translated; needs-native-review
+msgid "instance"
+msgstr "نسخة"
+
+#. ai-translated; needs-native-review
+msgid "instances"
+msgstr "نسخ"
+
+#. ai-translated; needs-native-review
+msgid "loading…"
+msgstr "جاري التحميل…"
+
+#. ai-translated; needs-native-review
+msgid "or"
+msgstr "أو"
+
+msgid "robot.txt"
+msgstr ""
+
+#. ai-translated; needs-native-review
+msgid "unknown"
+msgstr "غير معروف"
+
+#. ai-translated; needs-native-review
+msgid "{0} Client Script"
+msgstr "سكربت عميل {0}"
+
+#. ai-translated; needs-native-review
+msgid "{0} Data Script"
+msgstr "سكربت بيانات {0}"
+
+#. ai-translated; needs-native-review
+msgid "{0} added successfully"
+msgstr "تمت إضافة {0} بنجاح"
+
+#. ai-translated; needs-native-review
+msgid "{0} record"
+msgstr "سجل {0}"
+
+#. ai-translated; needs-native-review
+msgid "{0} removed"
+msgstr "تمت إزالة {0}"
+
+#. ai-translated; needs-native-review
+msgid "{0} set as primary"
+msgstr "تم تعيين {0} كأساسي"
+
+#. ai-translated; needs-native-review
+msgid "— supports Claude, Gemini, GPT and more under one key."
+msgstr "— يدعم Claude وGemini وGPT والمزيد بمفتاح واحد."

@@ -20,7 +20,7 @@
 			v-if="showDropdown"
 			:options="[
 				{
-					label: 'Version History',
+					label: __('Version History'),
 					onClick: () => {
 						builderStore.showRightPanel = true;
 						builderStore.showVersionHistory = true;
@@ -28,7 +28,7 @@
 					icon: 'lucide-history',
 				},
 				{
-					label: 'Unpublish',
+					label: __('Unpublish'),
 					onClick: () => pageStore.unpublishPage(),
 					condition: () => Boolean(pageStore.activePage?.published),
 					icon: 'lucide-cloud-off',
@@ -73,9 +73,9 @@ const publishButtonLabel = computed(() => {
 		(pageStore.activePage?.draft_blocks && !pageStore.activePage?.published) ||
 		!pageStore.activePage?.draft_blocks
 	) {
-		return "Publish";
+		return __("Publish");
 	} else {
-		return "Publish Changes";
+		return __("Publish Changes");
 	}
 });
 </script>

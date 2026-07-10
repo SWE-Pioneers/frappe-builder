@@ -8,7 +8,7 @@
 				variant="ghost"
 				class="-ml-3 mb-5"
 				@click="selectedGroup = ''">
-				Back to all templates
+				{{ __("Back to all templates") }}
 			</Button>
 			<div class="mb-2 flex flex-col gap-2">
 				<div class="flex items-center justify-between">
@@ -19,7 +19,7 @@
 						:loading="importingAll"
 						icon-left="lucide-copy-plus"
 						@click="importAll">
-						Use all {{ activeGroup?.pages.length }} pages
+						{{ __("Use all {0} pages", [activeGroup?.pages.length]) }}
 					</Button>
 				</div>
 				<p v-if="activeGroup?.description" class="max-w-2xl text-sm leading-relaxed text-ink-gray-5">
@@ -54,7 +54,7 @@
 					@click="createBlankPage('gallery')">
 					<span class="flex aspect-video w-full flex-col items-center justify-center gap-2">
 						<PlusIcon class="size-5" />
-						<span class="text-sm">Start from scratch</span>
+						<span class="text-sm">{{ __("Start from scratch") }}</span>
 					</span>
 				</button>
 				<TemplateGroupCard
@@ -89,8 +89,8 @@ const props = withDefaults(
 		maxGroups?: number;
 	}>(),
 	{
-		heading: "New page",
-		subtitle: "Start from a blank page or pick a template.",
+		heading: __("New page"),
+		subtitle: __("Start from a blank page or pick a template."),
 		maxGroups: 0,
 	},
 );
@@ -149,9 +149,9 @@ const useTemplate = (page: TemplatePageSummary) => {
 			pageStore.setPage(newPageName);
 		});
 	toast.promise(promise, {
-		loading: "Creating page from template...",
-		success: () => "Page created",
-		error: () => "Could not create page from template",
+		loading: __("Creating page from template..."),
+		success: () => __("Page created"),
+		error: () => __("Could not create page from template"),
 	});
 	promise.finally(() => {
 		creatingPage.value = false;
@@ -181,9 +181,9 @@ const importAll = () => {
 			router.push({ name: "home" });
 		});
 	toast.promise(promise, {
-		loading: "Adding all pages...",
-		success: () => "All pages added",
-		error: () => "Could not add pages",
+		loading: __("Adding all pages..."),
+		success: () => __("All pages added"),
+		error: () => __("Could not add pages"),
 	});
 	promise.finally(() => {
 		importingAll.value = false;
