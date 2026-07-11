@@ -9,7 +9,7 @@
 				class="mx-auto h-full w-full max-w-3xl"
 				:max-groups="8"
 				:heading="templateHeading"
-				subtitle="Choose a template to get a head start, or start from scratch. You can always change direction later." />
+				:subtitle="__('Choose a template to get a head start, or start from scratch. You can always change direction later.')" />
 		</div>
 	</div>
 
@@ -39,7 +39,7 @@
 			</div>
 
 			<div class="flex items-center justify-between">
-				<span class="text-xs text-ink-gray-4">Step {{ stepIndex + 1 }} of {{ totalSteps }}</span>
+				<span class="text-xs text-ink-gray-4">{{ __("Step {0} of {1}", [stepIndex + 1, totalSteps]) }}</span>
 				<div class="flex items-center gap-2">
 					<!-- kept mounted (invisible on step 1) so the footer width/height stays fixed and nothing shifts -->
 					<Button
@@ -47,14 +47,14 @@
 						icon-left="lucide-arrow-left"
 						:class="{ invisible: isFirst }"
 						@click="goBack">
-						Back
+						{{ __("Back") }}
 					</Button>
 					<Button
 						variant="solid"
 						icon-right="lucide-arrow-right"
 						:disabled="!answers[activeQuestion.key]"
 						@click="goNext">
-						Next
+						{{ __("Next") }}
 					</Button>
 				</div>
 			</div>
@@ -87,38 +87,38 @@ const questions: {
 }[] = [
 	{
 		key: "use_case",
-		heading: "What do you want to build first?",
+		heading: __("What do you want to build first?"),
 		options: [
-			{ value: "marketing_site", label: "Marketing / landing site" },
-			{ value: "web_app_ui", label: "Web app UI" },
-			{ value: "internal_tool", label: "Internal tool" },
-			{ value: "dashboard", label: "Dashboard / admin panel" },
-			{ value: "portfolio", label: "Portfolio / personal site" },
-			{ value: "exploring", label: "Just exploring" },
+			{ value: "marketing_site", label: __("Marketing / landing site") },
+			{ value: "web_app_ui", label: __("Web app UI") },
+			{ value: "internal_tool", label: __("Internal tool") },
+			{ value: "dashboard", label: __("Dashboard / admin panel") },
+			{ value: "portfolio", label: __("Portfolio / personal site") },
+			{ value: "exploring", label: __("Just exploring") },
 		],
 	},
 	{
 		key: "role",
-		heading: "Which one best describes you?",
+		heading: __("Which one best describes you?"),
 		options: [
-			{ value: "designer", label: "Designer" },
-			{ value: "developer", label: "Developer" },
-			{ value: "founder", label: "Founder / Business owner" },
-			{ value: "marketer", label: "Marketer" },
-			{ value: "agency_freelancer", label: "Agency / Freelancer" },
-			{ value: "other", label: "Other" },
+			{ value: "designer", label: __("Designer") },
+			{ value: "developer", label: __("Developer") },
+			{ value: "founder", label: __("Founder / Business owner") },
+			{ value: "marketer", label: __("Marketer") },
+			{ value: "agency_freelancer", label: __("Agency / Freelancer") },
+			{ value: "other", label: __("Other") },
 		],
 	},
 	{
 		key: "source",
-		heading: "How did you hear about Builder?",
+		heading: __("How did you hear about Builder?"),
 		options: [
-			{ value: "search", label: "Search (Google)" },
-			{ value: "youtube", label: "YouTube" },
-			{ value: "friend", label: "Friend / colleague" },
-			{ value: "frappe_ecosystem", label: "Frappe / ERPNext" },
-			{ value: "social", label: "Social media" },
-			{ value: "other", label: "Other" },
+			{ value: "search", label: __("Search (Google)") },
+			{ value: "youtube", label: __("YouTube") },
+			{ value: "friend", label: __("Friend / colleague") },
+			{ value: "frappe_ecosystem", label: __("Frappe / ERPNext") },
+			{ value: "social", label: __("Social media") },
+			{ value: "other", label: __("Other") },
 		],
 	},
 ];
@@ -146,7 +146,9 @@ const greetingName = computed(() => {
 	return `, ${fullname.split(" ")[0]}`;
 });
 const templateHeading = computed(() =>
-	greetingName.value ? `You're all set${greetingName.value}. Pick a starting point` : "Pick a starting point",
+	greetingName.value
+		? __("You're all set{0}. Pick a starting point", [greetingName.value])
+		: __("Pick a starting point"),
 );
 
 function select(value: string) {

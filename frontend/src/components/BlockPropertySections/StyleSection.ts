@@ -7,23 +7,23 @@ import ShadowHandler from "@/components/ShadowHandler.vue";
 
 const overflowOptions = [
 	{
-		label: "Unset",
+		label: __("Unset"),
 		value: "unset",
 	},
 	{
-		label: "Auto",
+		label: __("Auto"),
 		value: "auto",
 	},
 	{
-		label: "Visible",
+		label: __("Visible"),
 		value: "visible",
 	},
 	{
-		label: "Hidden",
+		label: __("Hidden"),
 		value: "hidden",
 	},
 	{
-		label: "Scroll",
+		label: __("Scroll"),
 		value: "scroll",
 	},
 ];
@@ -33,7 +33,7 @@ const styleSectionProperties = [
 		component: StylePropertyControl,
 		getProps: () => {
 			return {
-				label: "Opacity",
+				label: __("Opacity"),
 				propertyKey: "opacity",
 				enableSlider: false,
 				component: RangeInput,
@@ -60,7 +60,7 @@ const styleSectionProperties = [
 			return {
 				propertyKey: "color",
 				component: ColorInput,
-				label: "Text Color",
+				label: __("Text Color"),
 				popoverOffset: 120,
 			};
 		},
@@ -73,7 +73,7 @@ const styleSectionProperties = [
 				component: ColorInput,
 				propertyKey: "borderColor",
 				popoverOffset: 120,
-				label: "Border Color",
+				label: __("Border Color"),
 			};
 		},
 		searchKeyWords: "Border, Color, BorderColor, Border Color",
@@ -95,7 +95,7 @@ const styleSectionProperties = [
 		component: StylePropertyControl,
 		getProps: () => {
 			return {
-				label: "Border Width",
+				label: __("Border Width"),
 				propertyKey: "borderWidth",
 				enableSlider: true,
 				unitOptions: ["px", "%", "em", "rem"],
@@ -109,13 +109,13 @@ const styleSectionProperties = [
 		component: StylePropertyControl,
 		getProps: () => {
 			return {
-				label: "Border Style",
+				label: __("Border Style"),
 				propertyKey: "borderStyle",
 				type: "select",
 				options: [
-					{ value: "solid", label: "Solid" },
-					{ value: "dashed", label: "Dashed" },
-					{ value: "dotted", label: "Dotted" },
+					{ value: "solid", label: __("Solid") },
+					{ value: "dashed", label: __("Dashed") },
+					{ value: "dotted", label: __("Dotted") },
 				],
 			};
 		},
@@ -131,7 +131,7 @@ const styleSectionProperties = [
 		component: StylePropertyControl,
 		getProps: () => {
 			return {
-				label: "Radius",
+				label: __("Radius"),
 				propertyKey: "borderRadius",
 				enableSlider: true,
 				unitOptions: ["px", "%"],
@@ -157,7 +157,7 @@ const styleSectionProperties = [
 		component: StylePropertyControl,
 		getProps: () => {
 			return {
-				label: "Z-Index",
+				label: __("Z-Index"),
 				propertyKey: "zIndex",
 			};
 		},
@@ -171,7 +171,7 @@ const styleSectionProperties = [
 		component: StylePropertyControl,
 		getProps: () => {
 			return {
-				label: "Overflow X",
+				label: __("Overflow X"),
 				type: "select",
 				propertyKey: "overflowX",
 				options: overflowOptions,
@@ -190,7 +190,7 @@ const styleSectionProperties = [
 		component: StylePropertyControl,
 		getProps: () => {
 			return {
-				label: "Overflow Y",
+				label: __("Overflow Y"),
 				propertyKey: "overflowY",
 				type: "select",
 				options: overflowOptions,
@@ -209,16 +209,16 @@ const styleSectionProperties = [
 		component: StylePropertyControl,
 		getProps: () => {
 			return {
-				label: "Cursor",
+				label: __("Cursor"),
 				propertyKey: "cursor",
 				type: "select",
 				options: [
-					{ value: null, label: "Default" },
-					{ value: "pointer", label: "Pointer" },
-					{ value: "move", label: "Move" },
-					{ value: "text", label: "Text" },
-					{ value: "crosshair", label: "Crosshair" },
-					{ value: "not-allowed", label: "Not Allowed" },
+					{ value: null, label: __("Default") },
+					{ value: "pointer", label: __("Pointer") },
+					{ value: "move", label: __("Move") },
+					{ value: "text", label: __("Text") },
+					{ value: "crosshair", label: __("Crosshair") },
+					{ value: "not-allowed", label: __("Not Allowed") },
 				],
 			};
 		},
@@ -227,6 +227,6 @@ const styleSectionProperties = [
 ];
 
 export default {
-	name: "Style",
+	name: __("Style"),
 	properties: styleSectionProperties,
 };

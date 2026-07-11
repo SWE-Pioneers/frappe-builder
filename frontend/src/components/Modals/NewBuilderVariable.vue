@@ -2,11 +2,11 @@
 	<Dialog
 		:modelValue="modelValue"
 		@update:modelValue="$emit('update:modelValue', $event)"
-		:title="dialogMode === 'edit' ? 'Edit Variable' : 'New Variable'"
+		:title="dialogMode === 'edit' ? __('Edit Variable') : __('New Variable')"
 		size="sm"
 		:actions="[
 			{
-				label: dialogMode === 'edit' ? 'Update' : 'Create',
+				label: dialogMode === 'edit' ? __('Update') : __('Create'),
 				variant: 'solid',
 				onClick: handleSave,
 			},
@@ -17,21 +17,21 @@
 					type="text"
 					v-model="activeBuilderVariable.variable_name"
 					@input="(val: string) => (activeBuilderVariable.variable_name = val)"
-					label="Variable Name"
+					:label="__('Variable Name')"
 					required
 					:autofocus="true"
-					placeholder="e.g., primary, accent, background"
+					:placeholder="__('e.g., primary, accent, background')"
 					:hideClearButton="true" />
 				<div v-if="activeBuilderVariable.type === 'Color'" class="flex flex-col gap-3">
 					<div class="flex flex-col gap-1.5">
-						<InputLabel>Light Mode Color</InputLabel>
+						<InputLabel>{{ __("Light Mode Color") }}</InputLabel>
 						<ColorInput
 							v-model="activeBuilderVariable.value"
 							class="relative"
 							:show-color-variable-options="false" />
 					</div>
 					<div class="flex flex-col gap-1.5">
-						<InputLabel>Dark Mode Color</InputLabel>
+						<InputLabel>{{ __("Dark Mode Color") }}</InputLabel>
 						<ColorInput
 							:modelValue="activeBuilderVariable.dark_value || activeBuilderVariable.value"
 							:show-color-variable-options="false"
@@ -86,16 +86,16 @@ const handleSave = async () => {
 		let savedVariable;
 		if (dialogMode.value === "edit") {
 			savedVariable = await updateVariable(activeBuilderVariable.value);
-			toast.success("Variable updated");
+			toast.success(__("Variable updated"));
 		} else {
 			savedVariable = await createVariable(activeBuilderVariable.value);
-			toast.success("New Variable created");
+			toast.success(__("New Variable created"));
 		}
 		emit("success", savedVariable);
 		emit("update:modelValue", false);
 	} catch (error) {
 		console.error("Failed to save variable:", error);
-		toast.error((error as Error).message || `Failed to ${dialogMode.value} Variable`);
+		toast.error((error as Error).message || __("Failed to {0} Variable", [dialogMode.value]));
 	}
 };
 </script>

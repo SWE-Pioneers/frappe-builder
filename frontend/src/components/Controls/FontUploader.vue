@@ -3,7 +3,7 @@
 		iconLeft="lucide-plus"
 		class="w-full rounded-none text-xs text-ink-gray-8"
 		@click="openFileSelector">
-		Upload Font
+		{{ __("Upload Font") }}
 	</Button>
 </template>
 <script lang="ts" setup>

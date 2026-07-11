@@ -12,15 +12,15 @@ const layoutSectionProperties = [
 			return {
 				propertyKey: "display",
 				component: OptionToggle,
-				label: "Type",
+				label: __("Type"),
 				enableStates: false,
 				options: [
 					{
-						label: "Stack",
+						label: __("Stack"),
 						value: "flex",
 					},
 					{
-						label: "Grid",
+						label: __("Grid"),
 						value: "grid",
 					},
 				],
@@ -63,7 +63,7 @@ const layoutSectionProperties = [
 ];
 
 export default {
-	name: "Layout",
+	name: __("Layout"),
 	properties: layoutSectionProperties,
 	condition: () => !blockController.multipleBlocksSelected() && !blockController.isHTML(),
 };

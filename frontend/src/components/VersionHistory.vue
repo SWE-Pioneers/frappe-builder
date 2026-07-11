@@ -4,14 +4,14 @@
 		<div class="flex items-center justify-between border-b border-outline-gray-2 px-3 py-2.5">
 			<div class="flex items-center gap-1.5">
 				<Button variant="ghost" size="sm" icon="lucide-chevron-left" @click="close" />
-				<span class="text-base font-medium text-ink-gray-8">Version History</span>
+				<span class="text-base font-medium text-ink-gray-8">{{ __("Version History") }}</span>
 			</div>
 			<Button
 				variant="ghost"
 				size="sm"
 				icon="lucide-bookmark-plus"
 				:loading="saving"
-				tooltip="Save current version"
+				:tooltip="__('Save current version')"
 				@click="toggleSaveRow" />
 		</div>
 
@@ -21,10 +21,10 @@
 				ref="labelInput"
 				v-model="newLabel"
 				type="text"
-				placeholder="Name this version (optional)"
+				:placeholder="__('Name this version (optional)')"
 				class="flex-1"
 				@keydown.enter="saveVersion" />
-			<Button variant="solid" size="sm" :loading="saving" label="Save" @click="saveVersion" />
+			<Button variant="solid" size="sm" :loading="saving" :label="__('Save')" @click="saveVersion" />
 		</div>
 
 		<!-- list -->
@@ -32,7 +32,7 @@
 			<div
 				v-if="!snapshots.data?.length && !snapshots.loading"
 				class="px-2 pt-10 text-center text-p-sm text-ink-gray-4">
-				No saved versions yet. A version is captured every time you publish, or when you save one manually.
+				{{ __("No saved versions yet. A version is captured every time you publish, or when you save one manually.") }}
 			</div>
 
 			<template v-else>
@@ -43,8 +43,8 @@
 					@click="canvasStore.clearVersionPreview()">
 					<span class="mt-1.5 h-2 w-2 shrink-0 self-start rounded-full bg-gray-400" />
 					<div class="flex min-w-0 flex-1 flex-col">
-						<span class="truncate text-p-sm font-medium text-ink-gray-8">Current version</span>
-						<span class="truncate text-p-xs text-ink-gray-5">Working draft · unpublished changes</span>
+						<span class="truncate text-p-sm font-medium text-ink-gray-8">{{ __("Current version") }}</span>
+						<span class="truncate text-p-xs text-ink-gray-5">{{ __("Working draft · unpublished changes") }}</span>
 					</div>
 				</button>
 
@@ -71,7 +71,7 @@
 							<UseTimeAgo v-if="snapshot.label" v-slot="{ timeAgo }" :time="snapshot.creation">
 								{{ timeAgo }}
 							</UseTimeAgo>
-							<template v-else>{{ snapshot.snapshot_type || "Version" }}</template>
+							<template v-else>{{ snapshot.snapshot_type || __("Version") }}</template>
 						</span>
 					</div>
 					<Button
@@ -80,7 +80,7 @@
 						variant="subtle"
 						size="sm"
 						icon="lucide-rotate-ccw"
-						tooltip="Restore this version as your draft"
+						:tooltip="__('Restore this version as your draft')"
 						:loading="restoringName === snapshot.name"
 						@click.stop="restore(snapshot)" />
 					<Avatar
@@ -169,7 +169,7 @@ async function saveVersion() {
 		newLabel.value = "";
 		showSaveRow.value = false;
 		await snapshots.reload();
-		toast.success("Version saved");
+		toast.success(__("Version saved"));
 	} finally {
 		saving.value = false;
 	}
@@ -177,7 +177,9 @@ async function saveVersion() {
 
 async function restore(snapshot: BuilderSnapshot) {
 	const confirmed = await confirm(
-		"This will load this version into the editor as your current draft. Your live page won't change until you publish. Continue?",
+		__(
+			"This will load this version into the editor as your current draft. Your live page won't change until you publish. Continue?",
+		),
 	);
 	if (!confirmed) return;
 	restoringName.value = snapshot.name;

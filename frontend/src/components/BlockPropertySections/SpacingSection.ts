@@ -7,7 +7,7 @@ const spacingSectionProperties = [
 		searchKeyWords: "Margin, Top, MarginTop, Margin Top",
 		getProps: () => {
 			return {
-				label: "Margin",
+				label: __("Margin"),
 				getModelValue: () => blockController.getMargin({ nativeOnly: true }),
 				getPlaceholder: () => blockController.getMargin({ cascading: true }),
 				setModelValue: (val: string) => blockController.setMargin(val),
@@ -26,7 +26,7 @@ const spacingSectionProperties = [
 		searchKeyWords: "Padding, Top, PaddingTop, Padding Top",
 		getProps: () => {
 			return {
-				label: "Padding",
+				label: __("Padding"),
 				enableSlider: true,
 				unitOptions: ["px", "em", "rem"],
 				getModelValue: () => blockController.getPadding({ nativeOnly: true }),
@@ -39,6 +39,6 @@ const spacingSectionProperties = [
 ];
 
 export default {
-	name: "Spacing",
+	name: __("Spacing"),
 	properties: spacingSectionProperties,
 };

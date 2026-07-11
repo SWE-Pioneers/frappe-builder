@@ -98,9 +98,9 @@ const collectionOptions = [
 		component: Autocomplete,
 		getProps: () => {
 			return {
-				label: "Key",
+				label: __("Key"),
 				modelValue: blockController.getDataKey("key"),
-				placeholder: "Select a collection",
+				placeholder: __("Select a collection"),
 				options: keyOptions.value,
 			};
 		},
@@ -121,7 +121,7 @@ const collectionOptions = [
 ];
 
 export default {
-	name: "Collection",
+	name: __("Collection"),
 	properties: collectionOptions,
 	condition: () => blockController.isRepeater(),
 };

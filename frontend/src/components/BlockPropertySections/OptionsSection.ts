@@ -12,7 +12,7 @@ const optionsSectionProperties = [
 		component: InlineInput,
 		getProps: () => {
 			return {
-				label: "Class",
+				label: __("Class"),
 				modelValue: blockController.getClasses().join(", "),
 			};
 		},
@@ -26,14 +26,15 @@ const optionsSectionProperties = [
 		component: VisibilityInput,
 		getProps: () => {
 			return {
-				label: "Condition",
+				label: __("Condition"),
 				property: "visibilityCondition",
 				getModelValue: () => (blockController.getKeyValue("visibilityCondition") as BlockVisibilityCondition).key,
 				setModelValue: (val: BlockVisibilityCondition) => {
 					blockController.setKeyValue("visibilityCondition", val);
 				},
-				description:
+				description: __(
 					"Visibility condition to show/hide the block based on a condition. Pass a boolean variable created in your Data Script.<br><b>Note:</b> This is only evaluated in the preview mode.",
+				),
 			};
 		},
 		searchKeyWords:
@@ -43,6 +44,6 @@ const optionsSectionProperties = [
 ];
 
 export default {
-	name: "Options",
+	name: __("Options"),
 	properties: optionsSectionProperties,
 };

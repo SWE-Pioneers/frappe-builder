@@ -12,7 +12,7 @@ const positionSectionProperties = [
 ];
 
 export default {
-	name: "Position",
+	name: __("Position"),
 	properties: positionSectionProperties,
 	condition: () => !blockController.multipleBlocksSelected() && !blockController.isRoot(),
 	collapsed: computed(() => {

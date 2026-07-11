@@ -3,7 +3,7 @@
 		<div
 			v-if="!block.hasChildren()"
 			class="pointer-events-none flex h-full w-full items-center justify-center font-semibold">
-			Add a block to repeat
+			{{ __("Add a block to repeat") }}
 		</div>
 		<BuilderBlock
 			v-else

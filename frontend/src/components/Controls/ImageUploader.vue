@@ -10,9 +10,9 @@
 		<template v-slot="{ file, progress, uploading, openFileSelector }">
 			<div class="flex items-end gap-2">
 				<Button @click="openFileSelector">
-					{{ uploading ? `Uploading ${progress}%` : image_url ? "Change" : "Upload" }}
+					{{ uploading ? __("Uploading {0}%", [progress]) : image_url ? __("Change") : __("Upload") }}
 				</Button>
-				<Button v-if="image_url" @click="$emit('remove')">Remove</Button>
+				<Button v-if="image_url" @click="$emit('remove')">{{ __("Remove") }}</Button>
 			</div>
 		</template>
 	</FileUploader>

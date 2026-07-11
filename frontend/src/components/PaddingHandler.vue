@@ -282,5 +282,5 @@ const handlePadding = (ev: MouseEvent, position: Position) => {
 };
 
 let showToast = () =>
-	toast('Press "shift" key to apply padding to all sides and "alt" key to apply padding on either sides.');
+	toast(__('Press "shift" key to apply padding to all sides and "alt" key to apply padding on either sides.'));
 </script>

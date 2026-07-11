@@ -9,7 +9,7 @@ function validatePermission(next: NavigationGuardNext) {
 	if (hasPermission) {
 		next();
 	} else {
-		alert("You do not have permission to access this page");
+		alert(__("You do not have permission to access this page"));
 		if (isUserLoggedIn()) {
 			window.location.href = "/app";
 		} else {

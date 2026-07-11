@@ -48,7 +48,7 @@
 													? ["array", "object"].includes(value.propOptions.options.type)
 														? JSON.stringify(value.propOptions?.options?.defaultValue)
 														: value.propOptions?.options?.defaultValue
-													: "No Default Value"
+													: __("No Default Value")
 											}}
 										</p>
 									</div>
@@ -84,7 +84,7 @@
 				<Button
 					class="w-full"
 					variant="subtle"
-					label="Add"
+					:label="__('Add')"
 					@click="
 						() => {
 							popoverContentAddRef?.reset({

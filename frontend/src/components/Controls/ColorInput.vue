@@ -34,7 +34,7 @@
 								:actionButton="
 									modelValue && !isCssVariable && props.showColorVariableOptions
 										? {
-												label: 'Save as Variable',
+												label: __('Save as Variable'),
 												icon: 'lucide-plus',
 												handler: openVariableDialog,
 											}
@@ -167,7 +167,7 @@ const props = withDefaults(
 	}>(),
 	{
 		modelValue: null,
-		placeholder: "Set Color",
+		placeholder: __("Set Color"),
 		placement: "left",
 		showColorVariableOptions: true,
 		showPickerOnMount: false,

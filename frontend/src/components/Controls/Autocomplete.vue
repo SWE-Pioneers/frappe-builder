@@ -155,7 +155,7 @@ interface Props {
 
 const props = withDefaults(defineProps<Props>(), {
 	options: () => [],
-	placeholder: "Search",
+	placeholder: __("Search"),
 	showInputAsOption: false,
 	allowArbitraryValue: true,
 });

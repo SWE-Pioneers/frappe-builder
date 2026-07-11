@@ -137,7 +137,7 @@ export function copyBuilderBlocks(
 		dataToCopy.pageScripts = pageStore.activePageScripts;
 	}
 	copyToClipboard(dataToCopy, e, "builder-copied-blocks");
-	copyEntirePage && toast.success("Page Copied");
+	copyEntirePage && toast.success(__("Page Copied"));
 }
 
 export async function pasteBuilderBlocks(e: ClipboardEvent, currentSiteURL: string): Promise<void> {
@@ -151,7 +151,7 @@ export async function pasteBuilderBlocks(e: ClipboardEvent, currentSiteURL: stri
 		await handlePagePaste(clipboardData, crossSitePaste, currentSiteURL);
 	} else {
 		if (clipboardData.components.length || clipboardData.variables?.length) {
-			toast.loading("Pasting...", {
+			toast.loading(__("Pasting..."), {
 				id: "paste-blocks",
 			});
 			await handleComponents(clipboardData, crossSitePaste);
@@ -161,7 +161,7 @@ export async function pasteBuilderBlocks(e: ClipboardEvent, currentSiteURL: stri
 		}
 		await insertBlocks(clipboardData.blocks);
 		(clipboardData.components.length || clipboardData.variables?.length) &&
-			toast.success("Done", {
+			toast.success(__("Done"), {
 				id: "paste-blocks",
 			});
 	}
@@ -176,15 +176,16 @@ async function handlePagePaste(
 	const pageStore = usePageStore();
 
 	await showDialog({
-		title: "Pasting a page!",
-		message:
+		title: __("Pasting a page!"),
+		message: __(
 			"You are about to paste a page with settings and scripts. Do you want to update the current page or create a new one?",
+		),
 		actions: [
 			{
-				label: "Create New Page",
+				label: __("Create New Page"),
 				variant: "solid",
 				async onClick() {
-					toast.loading("Pasting...", { id: "paste-page" });
+					toast.loading(__("Pasting..."), { id: "paste-page" });
 					await handleComponents(clipboardData, crossSitePaste);
 					await handlePageScripts(clipboardData, currentURL || "");
 					if (clipboardData.pageDoc) {
@@ -193,14 +194,14 @@ async function handlePagePaste(
 					const newPage = await webPages.insert.submit(clipboardData.pageDoc);
 					window.location.href = `/builder/page/${encodeURIComponent(newPage.name)}`;
 					await pageStore.setPage(newPage.name);
-					toast.success("Done", { id: "paste-page" });
+					toast.success(__("Done"), { id: "paste-page" });
 				},
 			},
 			{
-				label: "Update Current Page",
+				label: __("Update Current Page"),
 				variant: "subtle",
 				async onClick() {
-					toast.loading("Pasting...", { id: "paste-page" });
+					toast.loading(__("Pasting..."), { id: "paste-page" });
 					await handleComponents(clipboardData, crossSitePaste);
 					await handlePageScripts(clipboardData, currentURL || "");
 					const currentPage = pageStore.activePage as BuilderPage;
@@ -213,7 +214,7 @@ async function handlePagePaste(
 						canvasStore.pushBlocks(clipboardData.blocks, false);
 						pageStore.savePage();
 					});
-					toast.success("Done", { id: "paste-page" });
+					toast.success(__("Done"), { id: "paste-page" });
 				},
 			},
 		],

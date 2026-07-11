@@ -64,7 +64,7 @@ const duplicateBlock = () => {
 
 const contextMenuOptions: ContextMenuOption[] = [
 	{
-		label: "Edit with AI",
+		label: __("Edit with AI"),
 		action: () => {
 			if (editWithAIFn) {
 				editWithAIFn(block.value);
@@ -74,7 +74,7 @@ const contextMenuOptions: ContextMenuOption[] = [
 		disabled: () => builderStore.readOnlyMode,
 	},
 	{
-		label: "Rewrite (AI)",
+		label: __("Rewrite (AI)"),
 		action: () => {
 			runDirectAI?.(block.value, "rewrite_text", "Rewrite the content");
 		},
@@ -83,7 +83,7 @@ const contextMenuOptions: ContextMenuOption[] = [
 		disabled: () => builderStore.readOnlyMode,
 	},
 	{
-		label: "Replace Image (AI)",
+		label: __("Replace Image (AI)"),
 		action: () => {
 			runDirectAI?.(block.value, "replace_image", "Replace image");
 		},
@@ -92,30 +92,30 @@ const contextMenuOptions: ContextMenuOption[] = [
 		disabled: () => builderStore.readOnlyMode,
 	},
 	{
-		label: "Edit HTML",
+		label: __("Edit HTML"),
 		action: () => {
 			canvasStore.editHTML(block.value);
 		},
 		condition: () => block.value.isHTML(),
 	},
-	{ label: "Copy", action: () => triggerCopyEvent() },
-	{ label: "Copy Style", action: copyStyle },
+	{ label: __("Copy"), action: () => triggerCopyEvent() },
+	{ label: __("Copy Style"), action: copyStyle },
 	{
-		label: "Paste Style",
+		label: __("Paste Style"),
 		action: pasteStyle,
 		condition: () => Boolean(copiedStyle.value.blockId && copiedStyle.value?.blockId !== block.value.blockId),
 		disabled: () => builderStore.readOnlyMode,
 	},
 	{
-		label: "Duplicate",
+		label: __("Duplicate"),
 		action: duplicateBlock,
 		disabled: () => builderStore.readOnlyMode,
 	},
 	{
-		label: "Convert To Collection",
+		label: __("Convert To Collection"),
 		action: () => {
 			block.value.isRepeaterBlock = true;
-			toast.warning("Please select a collection");
+			toast.warning(__("Please select a collection"));
 		},
 		condition: () =>
 			block.value.isContainer() &&
@@ -126,7 +126,7 @@ const contextMenuOptions: ContextMenuOption[] = [
 		disabled: () => builderStore.readOnlyMode,
 	},
 	{
-		label: "Remove Collection",
+		label: __("Remove Collection"),
 		action: () => {
 			block.value.isRepeaterBlock = false;
 			block.value.dataKey = {};
@@ -135,7 +135,7 @@ const contextMenuOptions: ContextMenuOption[] = [
 		disabled: () => builderStore.readOnlyMode,
 	},
 	{
-		label: "Wrap In Container",
+		label: __("Wrap In Container"),
 		action: () => {
 			const newBlockObj = getBlockTemplate("fit-container");
 			const parentBlock = block.value.getParentBlock();
@@ -182,7 +182,7 @@ const contextMenuOptions: ContextMenuOption[] = [
 		disabled: () => builderStore.readOnlyMode,
 	},
 	{
-		label: "Repeat Block",
+		label: __("Repeat Block"),
 		action: () => {
 			const repeaterBlockObj = getBlockTemplate("repeater");
 			const parentBlock = block.value.getParentBlock();
@@ -191,14 +191,14 @@ const contextMenuOptions: ContextMenuOption[] = [
 			repeaterBlock.addChild(getBlockCopy(block.value));
 			parentBlock.removeChild(block.value);
 			repeaterBlock.selectBlock();
-			toast.warning("Please select a collection");
+			toast.warning(__("Please select a collection"));
 		},
 		condition: () =>
 			!block.value.isRoot() && !block.value.isRepeater() && !block.value.isChildOfComponentBlock(),
 		disabled: () => builderStore.readOnlyMode,
 	},
 	{
-		label: "Reset Overrides",
+		label: __("Reset Overrides"),
 		condition: () => canvasStore.activeCanvas?.activeBreakpoint !== "desktop",
 		disabled: () =>
 			builderStore.readOnlyMode ||
@@ -208,10 +208,10 @@ const contextMenuOptions: ContextMenuOption[] = [
 		},
 	},
 	{
-		label: "Reset Changes",
+		label: __("Reset Changes"),
 		action: () => {
 			if (block.value.hasChildren()) {
-				confirm("Reset changes in child blocks as well?").then((confirmed) => {
+				confirm(__("Reset changes in child blocks as well?")).then((confirmed) => {
 					block.value.resetChanges(confirmed);
 				});
 			} else {
@@ -222,7 +222,7 @@ const contextMenuOptions: ContextMenuOption[] = [
 		disabled: () => builderStore.readOnlyMode,
 	},
 	{
-		label: "Sync Component",
+		label: __("Sync Component"),
 		condition: () => Boolean(block.value.extendedFromComponent),
 		action: () => {
 			block.value.syncWithComponent();
@@ -230,10 +230,10 @@ const contextMenuOptions: ContextMenuOption[] = [
 		disabled: () => builderStore.readOnlyMode,
 	},
 	{
-		label: "Reset Component",
+		label: __("Reset Component"),
 		condition: () => Boolean(block.value.extendedFromComponent),
 		action: () => {
-			confirm("Are you sure you want to reset?").then((confirmed) => {
+			confirm(__("Are you sure you want to reset?")).then((confirmed) => {
 				if (confirmed) {
 					block.value.resetWithComponent();
 				}
@@ -242,7 +242,7 @@ const contextMenuOptions: ContextMenuOption[] = [
 		disabled: () => builderStore.readOnlyMode,
 	},
 	{
-		label: "Update to Latest Component",
+		label: __("Update to Latest Component"),
 		action: () => {
 			componentStore.updatePinnedComponent(block.value);
 		},
@@ -251,7 +251,7 @@ const contextMenuOptions: ContextMenuOption[] = [
 		disabled: () => builderStore.readOnlyMode,
 	},
 	{
-		label: "Edit Component",
+		label: __("Edit Component"),
 		action: () => {
 			componentStore.editComponent(block.value);
 		},
@@ -259,7 +259,7 @@ const contextMenuOptions: ContextMenuOption[] = [
 		disabled: () => builderStore.readOnlyMode,
 	},
 	{
-		label: "Save as Block Template",
+		label: __("Save as Block Template"),
 		action: () => {
 			showBlockTemplateDialog.value = true;
 		},
@@ -267,13 +267,13 @@ const contextMenuOptions: ContextMenuOption[] = [
 		disabled: () => builderStore.readOnlyMode,
 	},
 	{
-		label: "Save As Component",
+		label: __("Save As Component"),
 		action: () => promptCreateComponent(block.value),
 		condition: () => !block.value.isExtendedFromComponent(),
 		disabled: () => builderStore.readOnlyMode,
 	},
 	{
-		label: "Detach Component",
+		label: __("Detach Component"),
 		action: () => {
 			const newBlock = detachBlockFromComponent(block.value, null);
 			if (newBlock) {
@@ -285,7 +285,7 @@ const contextMenuOptions: ContextMenuOption[] = [
 		disabled: () => builderStore.readOnlyMode,
 	},
 	{
-		label: "Rename",
+		label: __("Rename"),
 		action: () => {
 			const layerLabel = target.value?.closest("[data-block-layer-id]")?.querySelector(".layer-label");
 			if (layerLabel) {
@@ -307,7 +307,7 @@ const contextMenuOptions: ContextMenuOption[] = [
 		disabled: () => builderStore.readOnlyMode,
 	},
 	{
-		label: "Delete",
+		label: __("Delete"),
 		action: () => {
 			const selectedBlocks = canvasStore.activeCanvas?.selectedBlocks || [];
 			selectedBlocks.forEach((selectedBlock: Block) => {
