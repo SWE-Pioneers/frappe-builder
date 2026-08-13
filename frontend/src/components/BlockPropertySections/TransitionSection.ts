@@ -1,5 +1,6 @@
 import StylePropertyControl from "@/components/Controls/StylePropertyControl.vue";
 import blockController from "@/utils/blockController";
+import { __ } from "@/translation";
 
 const transitionSectionProperties = [
 	{

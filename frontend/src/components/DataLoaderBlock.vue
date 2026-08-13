@@ -21,6 +21,7 @@
 </template>
 
 <script setup lang="ts">
+import { __ } from "@/translation";
 import type Block from "@/block";
 import usePageStore from "@/stores/pageStore";
 import { getDataForKey, getStandardPropValue } from "@/utils/helpers";

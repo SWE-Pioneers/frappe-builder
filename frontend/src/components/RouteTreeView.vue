@@ -51,6 +51,7 @@
 </template>
 
 <script setup lang="ts">
+import { __ } from "@/translation";
 // TODO: Refactor to meke it generic, this has lots of unnecessary coupling, props usage and hacky implementation
 import RouteTreeNode from "@/components/RouteTreeNode.vue";
 import { builderSettings } from "@/data/builderSettings";

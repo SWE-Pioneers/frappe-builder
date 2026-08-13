@@ -83,6 +83,7 @@
 	</FileUploader>
 </template>
 <script lang="ts" setup>
+import { __ } from "@/translation";
 import ImageUploader from "@/components/Controls/ImageUploader.vue";
 import InlineInput from "@/components/Controls/InlineInput.vue";
 import InputLabel from "@/components/Controls/InputLabel.vue";

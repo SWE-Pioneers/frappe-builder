@@ -2,6 +2,7 @@ import CodeEditor from "@/components/Controls/CodeEditor.vue";
 import blockController from "@/utils/blockController";
 import useCanvasStore from "../../stores/canvasStore";
 import BasePropertyControl from "../Controls/BasePropertyControl.vue";
+import { __ } from "@/translation";
 
 const HTMLOptionsSectionProperties = [
 	{

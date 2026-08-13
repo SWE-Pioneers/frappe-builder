@@ -3,6 +3,7 @@ import InlineInput from "@/components/Controls/InlineInput.vue";
 import OptionToggle from "@/components/Controls/OptionToggle.vue";
 import useCanvasStore from "@/stores/canvasStore";
 import blockController from "@/utils/blockController";
+import { __ } from "@/translation";
 
 const getEditorConfig = (): BlockEditorConfig => {
 	return blockController.getFirstSelectedBlock()?.editorConfig || {};

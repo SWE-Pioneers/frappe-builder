@@ -7,6 +7,7 @@
 	</Button>
 </template>
 <script lang="ts" setup>
+import { __ } from "@/translation";
 import blockController from "@/utils/blockController";
 import { uploadUserFont } from "@/utils/helpers";
 import { nextTick } from "vue";

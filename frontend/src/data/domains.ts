@@ -1,6 +1,7 @@
 import { createResource } from "frappe-ui";
 import { ref } from "vue";
 import { toast } from "frappe-ui";
+import { __ } from "@/translation";
 
 const API = "builder.domain";
 

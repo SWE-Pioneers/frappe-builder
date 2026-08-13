@@ -45,9 +45,7 @@
 					<span
 						v-if="field === 'to' && (row.status !== '301' || row.forward)"
 						class="flex shrink-0 items-center gap-1 rounded bg-surface-gray-3 px-1.5 py-0.5 text-xs text-ink-gray-5"
-						:title="
-							__('HTTP {0}{1}', [row.status, row.forward ? __(' · forwards query parameters') : ''])
-						">
+						:title="`HTTP ${row.status}${row.forward ? ' · forwards query parameters' : ''}`">
 						<span v-if="row.status !== '301'" class="tabular-nums">{{ row.status }}</span>
 						<span v-if="row.forward" class="lucide-arrow-right-left size-3" aria-hidden="true" />
 					</span>
@@ -127,6 +125,7 @@
 	</div>
 </template>
 <script setup lang="ts">
+import { __ } from "@/translation";
 import routeRedirects from "@/data/routeRedirects";
 import { confirm } from "@/utils/helpers";
 import { highlightSource, highlightTarget } from "@/utils/redirectSyntax";
@@ -262,11 +261,7 @@ const saveExisting = (id: string, d: Draft) => {
 		() => routeRedirects.setValue.submit({ name: id, ...docFields(d) }),
 		() => index !== -1 && Object.assign(routeRedirects.data![index], docFields(d)),
 		() => backup && Object.assign(routeRedirects.data![index], backup),
-		{
-			loading: __("Updating redirect..."),
-			success: __("Redirect updated"),
-			error: __("Error updating redirect"),
-		},
+		{ loading: "Updating redirect...", success: "Redirect updated", error: "Error updating redirect" },
 	);
 };
 
@@ -283,11 +278,7 @@ const deleteRedirect = async (id: string) => {
 		() => routeRedirects.delete.submit(id),
 		() => index !== -1 && routeRedirects.data!.splice(index, 1),
 		() => backup && routeRedirects.data!.splice(index, 0, backup),
-		{
-			loading: __("Deleting redirect..."),
-			success: __("Redirect deleted"),
-			error: __("Error deleting redirect"),
-		},
+		{ loading: "Deleting redirect...", success: "Redirect deleted", error: "Error deleting redirect" },
 	);
 };
 </script>

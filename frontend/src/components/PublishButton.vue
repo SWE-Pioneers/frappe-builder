@@ -49,6 +49,7 @@
 	</div>
 </template>
 <script lang="ts" setup>
+import { __ } from "@/translation";
 import useBuilderStore from "@/stores/builderStore";
 import useCanvasStore from "@/stores/canvasStore";
 import usePageStore from "@/stores/pageStore";

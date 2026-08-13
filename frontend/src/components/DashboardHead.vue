@@ -97,6 +97,7 @@
 </template>
 
 <script setup lang="ts">
+import { __ } from "@/translation";
 import OptionToggle from "@/components/Controls/OptionToggle.vue";
 import { useDashboardState } from "@/composables/useDashboardState";
 import useBuilderStore from "@/stores/builderStore";

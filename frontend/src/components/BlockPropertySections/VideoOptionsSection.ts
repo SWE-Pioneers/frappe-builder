@@ -3,6 +3,7 @@ import InlineInput from "@/components/Controls/InlineInput.vue";
 import OptionToggle from "@/components/Controls/OptionToggle.vue";
 import ImageUploadInput from "@/components/ImageUploadInput.vue";
 import blockController from "@/utils/blockController";
+import { __ } from "@/translation";
 
 const videoOptionsSectionProperties = [
 	{

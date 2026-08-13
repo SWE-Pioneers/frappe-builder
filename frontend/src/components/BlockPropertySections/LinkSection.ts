@@ -2,6 +2,7 @@ import AttributePropertyControl from "@/components/Controls/AttributePropertyCon
 import blockController from "@/utils/blockController";
 import { Switch } from "frappe-ui";
 import { computed } from "vue";
+import { __ } from "@/translation";
 
 const linkSectionProperties = [
 	{

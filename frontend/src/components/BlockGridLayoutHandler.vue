@@ -37,23 +37,18 @@
 		type="text"
 		:modelValue="width"
 		:enableSlider="true"
-		:unitOptions="['px', 'em', 'rem', 'fr']"
+		:unitOptions="GRID_UNIT_OPTIONS"
 		@update:modelValue="setWidth" />
 	<InlineInput
 		:label="__('Row Height')"
 		v-if="blockController.isGrid()"
 		v-show="['auto-fit', 'auto-fill'].includes(rows as string)"
 		:enableSlider="true"
-		:unitOptions="['px', 'em', 'rem', 'fr']"
+		:unitOptions="GRID_UNIT_OPTIONS"
 		type="text"
 		:modelValue="height"
 		@update:modelValue="setHeight" />
-	<StylePropertyControl
-		propertyKey="gap"
-		:label="__('Gap')"
-		v-if="blockController.isGrid()"
-		:enableSlider="true"
-		:unitOptions="['px', 'em', 'rem']" />
+	<SplitPropertyControl v-if="blockController.isGrid()" v-bind="gapProps" />
 	<!-- <InlineInput
 		label="Align"
 		v-if="blockController.isGrid()"
@@ -61,19 +56,19 @@
 		:modelValue="blockController.getStyle('justifyItems') || 'stretch'"
 		:options="[
 			{
-				label: 'Stretch',
+				label: __('Stretch'),
 				value: 'stretch',
 			},
 			{
-				label: 'Start',
+				label: __('Start'),
 				value: 'start',
 			},
 			{
-				label: 'Center',
+				label: __('Center'),
 				value: 'center',
 			},
 			{
-				label: 'End',
+				label: __('End'),
 				value: 'end',
 			},
 		]"
@@ -85,19 +80,19 @@
 		:modelValue="blockController.getStyle('gridAutoFlow') || 'row'"
 		:options="[
 			{
-				label: 'Row',
+				label: __('Row'),
 				value: 'row',
 			},
 			{
-				label: 'Column',
+				label: __('Column'),
 				value: 'column',
 			},
 			{
-				label: 'Row Dense',
+				label: __('Row Dense'),
 				value: 'row dense',
 			},
 			{
-				label: 'Column Dense',
+				label: __('Column Dense'),
 				value: 'column dense',
 			},
 		]"
@@ -111,39 +106,39 @@
 		:modelValue="blockController.getStyle('placeItems') || 'stretch'"
 		:options="[
 			{
-				label: 'Top Right',
+				label: __('Top Right'),
 				value: 'start end',
 			},
 			{
-				label: 'Top Center',
+				label: __('Top Center'),
 				value: 'start center',
 			},
 			{
-				label: 'Top Left',
+				label: __('Top Left'),
 				value: 'start start',
 			},
 			{
-				label: 'Center Right',
+				label: __('Center Right'),
 				value: 'center end',
 			},
 			{
-				label: 'Center',
+				label: __('Center'),
 				value: 'center center',
 			},
 			{
-				label: 'Center Left',
+				label: __('Center Left'),
 				value: 'center start',
 			},
 			{
-				label: 'Bottom Right',
+				label: __('Bottom Right'),
 				value: 'end end',
 			},
 			{
-				label: 'Bottom Center',
+				label: __('Bottom Center'),
 				value: 'end center',
 			},
 			{
-				label: 'Bottom Left',
+				label: __('Bottom Left'),
 				value: 'end start',
 			},
 		]"
@@ -174,50 +169,55 @@
 		:modelValue="blockController.getStyle('placeSelf') || 'stretch'"
 		:options="[
 			{
-				label: 'Top Right',
+				label: __('Top Right'),
 				value: 'start end',
 			},
 			{
-				label: 'Top Center',
+				label: __('Top Center'),
 				value: 'start center',
 			},
 			{
-				label: 'Top Left',
+				label: __('Top Left'),
 				value: 'start start',
 			},
 			{
-				label: 'Center Right',
+				label: __('Center Right'),
 				value: 'center end',
 			},
 			{
-				label: 'Center',
+				label: __('Center'),
 				value: 'center center',
 			},
 			{
-				label: 'Center Left',
+				label: __('Center Left'),
 				value: 'center start',
 			},
 			{
-				label: 'Bottom Right',
+				label: __('Bottom Right'),
 				value: 'end end',
 			},
 			{
-				label: 'Bottom Center',
+				label: __('Bottom Center'),
 				value: 'end center',
 			},
 			{
-				label: 'Bottom Left',
+				label: __('Bottom Left'),
 				value: 'end start',
 			},
 		]"
 		@update:modelValue="(val: string) => blockController.setStyle('placeSelf', val)" /> -->
 </template>
 <script lang="ts" setup>
+import { __ } from "@/translation";
 import InlineInput from "@/components/Controls/InlineInput.vue";
 import OptionToggle from "@/components/Controls/OptionToggle.vue";
+import SplitPropertyControl from "@/components/Controls/SplitPropertyControl.vue";
 import StylePropertyControl from "@/components/Controls/StylePropertyControl.vue";
 import blockController from "@/utils/blockController";
+import { GRID_UNIT_OPTIONS } from "@/utils/unitOptions";
 import { computed } from "vue";
+
+defineProps<{ gapProps: InstanceType<typeof SplitPropertyControl>["$props"] }>();
 
 const getGridType = () => {
 	return isFixed.value ? "fixed" : "auto";

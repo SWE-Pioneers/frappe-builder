@@ -22,6 +22,7 @@
 </template>
 
 <script setup lang="ts">
+import { __ } from "@/translation";
 import InputLabel from "@/components/Controls/InputLabel.vue";
 import ObjectEditor from "../ObjectEditor.vue";
 import InlineInput from "@/components/Controls/InlineInput.vue";

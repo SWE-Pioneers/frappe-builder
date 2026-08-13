@@ -55,9 +55,9 @@
 							</label>
 						</div>
 						<div class="border-surface-gray-3 mt-1 border-t px-2 pt-2">
-							<Button @click="clearAllFilters" variant="subtle" class="w-full">{{
-								__("Clear all filters")
-							}}</Button>
+							<Button @click="clearAllFilters" variant="subtle" class="w-full">
+								{{ __("Clear all filters") }}
+							</Button>
 						</div>
 					</div>
 				</template>
@@ -141,6 +141,7 @@
 	</div>
 </template>
 <script setup lang="ts">
+import { __ } from "@/translation";
 import type Block from "@/block";
 import useCanvasStore from "@/stores/canvasStore";
 import { watchDebounced } from "@vueuse/core";

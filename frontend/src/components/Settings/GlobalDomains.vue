@@ -1,8 +1,12 @@
 <template>
 	<div class="flex flex-col gap-3">
 		<!-- Domain list -->
-		<div v-if="loading && !domains.length" class="text-p-sm text-ink-gray-5">{{ __("Loading domains…") }}</div>
-		<div v-else-if="!domains.length" class="text-p-sm text-ink-gray-5">{{ __("No custom domains added yet.") }}</div>
+		<div v-if="loading && !domains.length" class="text-p-sm text-ink-gray-5">
+			{{ __("Loading domains…") }}
+		</div>
+		<div v-else-if="!domains.length" class="text-p-sm text-ink-gray-5">
+			{{ __("No custom domains added yet.") }}
+		</div>
 		<div v-else class="mb-2 flex flex-col gap-2">
 			<div
 				v-for="d in sortedDomains"
@@ -51,9 +55,7 @@
 					<div class="flex items-center gap-2 px-3 py-2.5">
 						<div class="min-w-0 flex-1">
 							<div class="flex items-baseline gap-1.5">
-								<span class="text-p-sm-semibold leading-6 text-ink-gray-8">
-									{{ __("{0} record", [rec.type]) }}
-								</span>
+								<span class="text-p-sm-semibold leading-6 text-ink-gray-8">{{ rec.type }} record</span>
 								<span class="font-mono text-p-xs">
 									<span :class="newDomain ? 'text-ink-gray-5' : 'text-ink-gray-3'">{{ rec.host }}</span>
 									<span class="px-1 text-ink-gray-4">→</span>
@@ -83,6 +85,7 @@
 </template>
 
 <script setup lang="ts">
+import { __ } from "@/translation";
 import { useDomains } from "@/data/domains";
 import { useIntervalFn } from "@vueuse/core";
 import { Badge, Dropdown, ErrorMessage, FormControl, toast } from "frappe-ui";
@@ -160,7 +163,7 @@ const dnsRecords = computed(() => {
 	records.push({
 		type: "A",
 		host: isSubdomain.value ? host : "@",
-		value: serverIP.value ?? __("loading…"),
+		value: serverIP.value ?? "loading…",
 		copyValue: serverIP.value ?? "",
 		recommended: !isSubdomain.value,
 		hint: isSubdomain.value
@@ -179,9 +182,8 @@ function brokenReason(d: any): string {
 		const a = parsed.A;
 		if (cname?.exists && !cname?.matched)
 			return __("CNAME record points to wrong destination: {0}", [cname.answer?.trim() || __("unknown")]);
-		if (a?.exists && !a?.matched)
+		if (a?.exists && !a?.matched) return `A record points to wrong IP: ${a.answer?.trim() || "unknown"}`;
 			return __("A record points to wrong IP: {0}", [a.answer?.trim() || __("unknown")]);
-		if (!cname?.exists && !a?.exists) return __("No DNS record found for this domain.");
 		if (parsed.matched || parsed.valid)
 			return __("DNS is verified but SSL certificate provisioning failed. Please retry.");
 	} catch {

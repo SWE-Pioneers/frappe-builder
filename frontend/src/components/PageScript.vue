@@ -44,8 +44,8 @@
 					<TabButtons
 						v-if="showBlockClientScriptToggle"
 						v-model="activeBlockClientScript"
-						:buttons="blockClientScriptTabs"
-						class="w-48" />
+						:options="blockClientScriptTabs"
+						:class="['w-48', STRETCH_TABS]" />
 				</div>
 			</template>
 			<template #default>
@@ -77,7 +77,7 @@
 								class="-mt-5 w-1/3 [&>div>div]:bg-surface-base"
 								height="calc(100% - 110px)"
 								description='Use Data Script to provide dynamic data to your web page.<br>
-								<b>Example:</b> data.events = frappe.get_list("Event")<br><br>
+								<b>{{ __("Example:") }}</b> data.events = frappe.get_list("Event")<br><br>
 								For more details on how to write data script, refer to <b><a class="underline" href="https://docs.frappe.io/builder/data-script" target="_blank">this documentation</a></b>.
 								'
 								:readonly="true"></CodeEditor>
@@ -135,7 +135,7 @@
 								class="[&>div>div]:bg-surface-white -mt-5 w-1/3"
 								height="calc(100% - 110px)"
 								description='Use Component Data Script to provide dynamic data to your component.<br>
-								<b>Example:</b> data.items = frappe.get_list("Item")<br><br>
+								<b>{{ __("Example:") }}</b> data.items = frappe.get_list("Item")<br><br>
 								Props are accessible via the <b>props</b> object.'
 								:readonly="true"></CodeEditor>
 						</div>
@@ -146,6 +146,7 @@
 	</div>
 </template>
 <script lang="ts" setup>
+import { __ } from "@/translation";
 import Dialog from "@/components/Controls/Dialog.vue";
 import { webPages } from "@/data/webPage";
 import useBuilderStore from "@/stores/builderStore";
@@ -153,11 +154,11 @@ import useCanvasStore from "@/stores/canvasStore.js";
 import usePageStore from "@/stores/pageStore";
 import { BuilderPage } from "@/types/doctypes";
 import componentController from "@/utils/componentController";
-import { toast } from "frappe-ui";
+import { STRETCH_TABS } from "@/utils/tabButtons";
+import { TabButtons, toast } from "frappe-ui";
 import { useTelemetry } from "frappe-ui/frappe";
 import { computed, defineComponent, ref, watch } from "vue";
 import CodeEditor from "./Controls/CodeEditor.vue";
-import TabButtons from "./Controls/TabButtons.vue";
 import PageClientScriptManager from "./PageClientScriptManager.vue";
 import PropsEditor from "./PropsEditor.vue";
 
@@ -198,17 +199,17 @@ const blockCSS = computed(() => canvasStore.fragmentData.block?.clientScript.css
 const fragmentProps = computed(() => canvasStore.fragmentData.block?.props || {});
 
 const dialogTitle = computed(() => {
-	const modeLabel = mode.value === "blockTemplate" ? __("Block Template") : capitalize(mode.value);
-	return currentScriptEditor.value == "data"
-		? __("{0} Data Script", [modeLabel])
-		: __("{0} Client Script", [modeLabel]);
+	const titles = {
+		page: { data: __("Page Data Script"), client: __("Page Client Script") },
+		component: { data: __("Component Data Script"), client: __("Component Client Script") },
+		blockTemplate: { data: __("Block Template Data Script"), client: __("Block Template Client Script") },
+	};
+	return titles[mode.value][currentScriptEditor.value == "data" ? "data" : "client"];
 });
 
 const showBlockClientScriptToggle = computed(() => {
 	return mode.value !== "page" && currentScriptEditor.value === "client";
 });
-
-const capitalize = (value: string) => value.charAt(0).toUpperCase() + value.slice(1);
 
 const savePageDataScript = (value: string) => {
 	webPages.setValue
@@ -283,6 +284,8 @@ const isDirty = computed(() => {
 	return false;
 });
 
+// immediate: the request may have arrived before this component mounted,
+// since the left panel mounts it lazily
 watch(
 	() => builderStore.showDataScriptDialog,
 	() => {
@@ -291,5 +294,6 @@ watch(
 			builderStore.showDataScriptDialog = null;
 		}
 	},
+	{ immediate: true },
 );
 </script>

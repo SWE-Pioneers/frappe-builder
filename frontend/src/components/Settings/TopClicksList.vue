@@ -1,11 +1,11 @@
 <template>
-	<div>
+	<div v-if="loading || rows.length">
 		<h3 class="text-lg-medium mb-4 text-ink-gray-7">{{ __("Top Clicks") }}</h3>
 		<div v-if="loading" class="flex h-[200px] items-center justify-center py-8 text-sm text-ink-gray-4">
 			{{ __("Loading...") }}
 		</div>
 		<ListView
-			v-else-if="rows.length"
+			v-else
 			class="!w-auto"
 			:columns="[
 				{ label: __('Target'), key: 'label', width: '50%' },
@@ -15,16 +15,12 @@
 			:options="{ selectable: false, emptyState: {}, showTooltip: false, onRowClick: highlightBlock }"
 			:rows="rows"
 			row-key="blockId" />
-		<AnalyticsEmptyState
-			v-else
-			:title="__('No clicks tracked yet')"
-			:hint="__('Enable click tracking on a block, then clicks on it will appear here.')" />
 	</div>
 </template>
 
 <script setup lang="ts">
+import { __ } from "@/translation";
 import { findBlockInTree } from "@/utils/block/tree";
-import AnalyticsEmptyState from "@/components/Settings/AnalyticsEmptyState.vue";
 import type { CTRElement } from "@/composables/useAnalytics";
 import useBuilderStore from "@/stores/builderStore";
 import useCanvasStore from "@/stores/canvasStore";

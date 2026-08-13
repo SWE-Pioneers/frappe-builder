@@ -150,6 +150,7 @@
 </template>
 
 <script setup lang="ts">
+import { __ } from "@/translation";
 import Dialog from "@/components/Controls/Dialog.vue";
 import WebPagePresetPicker from "@/components/WebPagePresetPicker.vue";
 import useBuilderStore from "@/stores/builderStore";

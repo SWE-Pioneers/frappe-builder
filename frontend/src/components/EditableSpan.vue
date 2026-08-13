@@ -11,6 +11,7 @@
 </template>
 
 <script lang="ts" setup>
+import { __ } from "@/translation";
 import { nextTick, ref, watch } from "vue";
 import { toast } from "frappe-ui";
 

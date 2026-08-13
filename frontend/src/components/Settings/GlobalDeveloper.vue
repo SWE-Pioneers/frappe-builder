@@ -20,9 +20,7 @@
 			size="sm"
 			:label="__('Prevent Click Emulation')"
 			:description="
-				__(
-					'Prevents click events from being emulated in the editor for blocks with Block Client Scripts.',
-				)
+				__('Prevents click events from being emulated in the editor for blocks with Block Client Scripts.')
 			"
 			:modelValue="Boolean(builderSettings.doc?.restrict_click_handlers)"
 			@update:modelValue="
@@ -30,18 +28,17 @@
 					builderStore.updateBuilderSettings('restrict_click_handlers', val);
 				}
 			" />
-		<div class="flex flex-col gap-2">
-			<p class="text-p-sm text-ink-gray-7">
-				{{
-					__(
-						"Note: Block Scripts are executed in a sandboxed environment. This may have limitations and might not perfectly replicate live site behavior. Executing untrusted scripts could be unsafe.",
-					)
-				}}
-			</p>
-		</div>
+		<p class="text-p-sm text-ink-gray-5">
+			{{
+				__(
+					"Note: Block Scripts are executed in a sandboxed environment. This may have limitations and might not perfectly replicate live site behavior. Executing untrusted scripts could be unsafe.",
+				)
+			}}
+		</p>
 	</div>
 </template>
 <script setup lang="ts">
+import { __ } from "@/translation";
 import { builderSettings } from "@/data/builderSettings";
 import useBuilderStore from "@/stores/builderStore";
 import { Select, Switch } from "frappe-ui";

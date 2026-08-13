@@ -1,6 +1,7 @@
 import InlineInput from "@/components/Controls/InlineInput.vue";
 import blockController from "@/utils/blockController";
 import { computed } from "vue";
+import { __ } from "@/translation";
 
 const dataKeySectionProperties = [
 	{

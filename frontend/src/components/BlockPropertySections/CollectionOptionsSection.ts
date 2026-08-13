@@ -5,6 +5,7 @@ import blockController from "@/utils/blockController";
 import componentController from "@/utils/componentController";
 import { getRepeaterScopedData } from "@/utils/helpers";
 import { computed, h } from "vue";
+import { __ } from "@/translation";
 
 const keyOptions = computed(() => {
 	const pageStore = usePageStore();

@@ -45,6 +45,7 @@
 </template>
 
 <script setup lang="ts">
+import { __ } from "@/translation";
 import usePageStore from "@/stores/pageStore";
 import { BuilderPage } from "@/types/doctypes";
 import { openInDesk } from "@/utils/helpers";

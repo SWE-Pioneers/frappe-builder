@@ -14,6 +14,7 @@
 </template>
 
 <script setup lang="ts">
+import { __ } from "@/translation";
 import { useDashboardState } from "@/composables/useDashboardState";
 
 const { showTemplatesDialog } = useDashboardState();

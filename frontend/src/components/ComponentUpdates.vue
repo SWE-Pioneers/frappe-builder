@@ -17,7 +17,12 @@
 			<div class="w-72 rounded-lg bg-surface-base p-3 shadow-xl" @mouseleave="clearHighlight">
 				<div class="mb-2 flex items-center justify-between">
 					<span class="text-sm font-medium text-ink-gray-8">{{ __("Component updates") }}</span>
-					<Button variant="subtle" size="sm" :label="__('Update all')" :loading="updatingAll" @click="updateAll" />
+					<Button
+						variant="subtle"
+						size="sm"
+						:label="__('Update all')"
+						:loading="updatingAll"
+						@click="updateAll" />
 				</div>
 				<p class="mb-3 text-xs text-ink-gray-5">
 					{{ __("These components changed since this page was last updated. Update to use the latest.") }}

@@ -4,6 +4,7 @@ import blockController from "@/utils/blockController";
 import { getOptimizeButtonText, optimizeImage, shouldShowOptimizeButton } from "@/utils/imageUtils";
 import { Button } from "frappe-ui";
 import { computed } from "vue";
+import { __ } from "@/translation";
 
 const imageOptionsSectionProperties = [
 	{
@@ -25,6 +26,7 @@ const imageOptionsSectionProperties = [
 		},
 		searchKeyWords:
 			"Image, URL, Src, Fit, ObjectFit, Object Fit, Fill, Contain, Cover, Dark, Mode, Dark Mode, Theme",
+		usedStyleProperties: ["object-fit"],
 	},
 	{
 		component: Button,

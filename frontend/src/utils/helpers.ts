@@ -5,19 +5,21 @@ import getBlockTemplate from "@/utils/blockTemplate";
 import { dialog, FileUploadHandler, toast } from "frappe-ui";
 import { reactive, toRaw } from "vue";
 import { getRGB, HexToHSV, HSVToHex } from "./colors";
+import { __ } from "@/translation";
 import {
 	addPxToNumber,
 	extractNumberAndUnit,
-	getBoxSpacing,
 	getNumberFromPx,
+	getSpacing,
 	normalizeValueWithUnits,
 	parseAndSetBackground,
-	setBoxSpacing,
+	removeDefaultUnit,
+	setSpacing,
 	shortenNumber,
 } from "./cssUtils";
 
 function toTitleCase(str: string): string {
-	return str.replace(/_/g, " ").replace(/\b\w/g, (l) => l.toUpperCase());
+	return str.replace(/[_-]/g, " ").replace(/\b\w/g, (l) => l.toUpperCase());
 }
 
 async function confirm(message: string, title: string = __("Confirm")): Promise<boolean> {
@@ -118,6 +120,42 @@ function toKebabCase(str: string) {
 		.replace(/\s+/g, "-");
 }
 
+function normalizeCSSPropertyName(property: string | null | undefined) {
+	return (property || "").trim().toLowerCase();
+}
+
+const INTERACTIVE_CONTROL_SELECTOR =
+	"input, textarea, select, button, a, [role='button'], [contenteditable='true'], .form-input, [class~='group/autocomplete']";
+
+// used to let control widgets keep their own click/contextmenu behaviour
+function isInteractiveControl(target: EventTarget | null) {
+	if (!(target instanceof HTMLElement)) return false;
+	return Boolean(target.closest(INTERACTIVE_CONTROL_SELECTOR));
+}
+
+// splits an optional state prefix (hover:color) from the property name
+function splitStylePrefix(style: string) {
+	const separatorIndex = style.indexOf(":");
+	if (separatorIndex === -1) return { prefix: "", property: style };
+	return { prefix: style.slice(0, separatorIndex + 1), property: style.slice(separatorIndex + 1) };
+}
+
+// hover:border-color -> hover:borderColor
+function toStyleProperty(cssProperty: string) {
+	const { prefix, property } = splitStylePrefix(cssProperty);
+	return `${prefix}${kebabToCamelCase(property)}` as styleProperty;
+}
+
+// hover:borderColor -> hover:border-color
+function toCSSProperty(style: string) {
+	const { prefix, property } = splitStylePrefix(style);
+	return `${prefix}${toKebabCase(property)}`;
+}
+
+function stripStatePrefix(style: string) {
+	return splitStylePrefix(style).property;
+}
+
 function isJSONString(str: string) {
 	try {
 		JSON.parse(str);
@@ -210,9 +248,6 @@ const detachBlockFromComponent = (block: Block, componentId: null | string) => {
 	blockCopy.customAttributes = component?.customAttributes
 		? { ...component.customAttributes, ...block.customAttributes }
 		: block.customAttributes;
-	blockCopy.rawStyles = component?.rawStyles
-		? { ...component.rawStyles, ...block.rawStyles }
-		: block.rawStyles;
 	blockCopy.isRepeaterBlock = component?.isRepeaterBlock || block.isRepeaterBlock;
 	blockCopy.visibilityCondition = component?.visibilityCondition || block.visibilityCondition;
 	blockCopy.innerHTML = block.innerHTML || component?.innerHTML;
@@ -450,13 +485,16 @@ async function uploadUserFont(
 	const existingFont = userFont.data?.find((f: { font_name: string }) => f.font_name === fontName);
 
 	if (existingFont) {
-		toast.info(__("Font \"{0}\" already exists in the project", [fontName]));
+		toast.info(__('Font "{0}" already exists in the project', [fontName]));
 		return { uploaded: false, fontName, alreadyExists: true };
 	}
 
 	// Confirm before uploading if requested
 	if (options.confirmBeforeUpload) {
-		const confirmed = await confirm(__("Do you want to upload the font \"{0}\"?", [fontName]), __("Upload Font"));
+		const confirmed = await confirm(
+			__('Do you want to upload the font "{0}"?', [fontName]),
+			__("Upload Font"),
+		);
 		if (!confirmed) {
 			return null;
 		}
@@ -492,7 +530,7 @@ async function uploadUserFont(
 
 	toast.promise(uploadPromise, {
 		loading: __("Uploading font..."),
-		success: __("Font \"{0}\" uploaded successfully", [fontName]),
+		success: __('Font "{0}" uploaded successfully', [fontName]),
 		error: __("Failed to upload font"),
 	});
 
@@ -854,6 +892,13 @@ function isDialogOpen() {
 	return !!document.querySelector("[role='dialog']");
 }
 
+function getPageUsageMessage(count: number) {
+	if (!count) {
+		return __("not used in any pages");
+	}
+	return count === 1 ? __("used in 1 page") : __("used in {0} pages", [count]);
+}
+
 function parseJSONWithFallback<T>(value: T | string | undefined, fallback: T): T {
 	if (value === undefined || value === null || value === "") {
 		return fallback;
@@ -885,19 +930,20 @@ export {
 	getBlockInstance,
 	getBlockObjectCopy as getBlockObject,
 	getBlockString,
-	getBoxSpacing,
 	getCopyWithoutParent,
 	getDataArray,
 	getDataForKey,
 	getDefaultPropsList,
 	getImageBlock,
 	getNumberFromPx,
+	getPageUsageMessage,
 	getParentProps,
 	getPropValue,
 	getRepeaterScopedData,
 	getRGB,
 	getRootBlockTemplate,
 	getRouteVariables,
+	getSpacing,
 	getStandardPropValue,
 	extractComponentId,
 	getTextContent,
@@ -909,18 +955,24 @@ export {
 	isCtrlOrCmd,
 	isDialogOpen,
 	isHTMLString,
+	isInteractiveControl,
 	isJSONString,
 	isTargetEditable,
 	kebabToCamelCase,
 	mapToObject,
+	normalizeCSSPropertyName,
 	normalizeValueWithUnits,
 	openInDesk,
 	parseAndSetBackground,
+	removeDefaultUnit,
 	replaceMapKey,
-	setBoxSpacing,
+	setSpacing,
 	shortenNumber,
 	showDialog,
+	stripStatePrefix,
+	toCSSProperty,
 	toKebabCase,
+	toStyleProperty,
 	toTitleCase,
 	triggerCopyEvent,
 	uploadBuilderAsset,

@@ -1,6 +1,7 @@
 import InlineInput from "@/components/Controls/InlineInput.vue";
 import OptionToggle from "@/components/Controls/OptionToggle.vue";
 import blockController from "@/utils/blockController";
+import { __ } from "@/translation";
 
 const inputOptionsSectionProperties = [
 	{
@@ -9,7 +10,19 @@ const inputOptionsSectionProperties = [
 			return {
 				label: __("Type"),
 				type: "select",
-				options: ["text", "number", "email", "password", "date", "time", "search", "tel", "url", "color", "radio"],
+				options: [
+					"text",
+					"number",
+					"email",
+					"password",
+					"date",
+					"time",
+					"search",
+					"tel",
+					"url",
+					"color",
+					"radio",
+				],
 				modelValue: blockController.getAttribute("type") || "text",
 			};
 		},
@@ -76,7 +89,8 @@ const inputOptionsSectionProperties = [
 					{ label: __("No"), value: false },
 				],
 				modelValue:
-					blockController.getAttribute("checked") === "" || blockController.getAttribute("checked") === "checked",
+					blockController.getAttribute("checked") === "" ||
+					blockController.getAttribute("checked") === "checked",
 			};
 		},
 		searchKeyWords: "Checked, Radio, DefaultValue, Default Value, Selected, Initially Checked",
@@ -98,4 +112,3 @@ export default {
 	properties: inputOptionsSectionProperties,
 	condition: () => blockController.isInput(),
 };
-

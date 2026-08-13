@@ -39,6 +39,7 @@
 	</router-link>
 </template>
 <script setup lang="ts">
+import { __ } from "@/translation";
 import PageActionsDropdown from "@/components/PageActionsDropdown.vue";
 import { BuilderPage } from "@/types/doctypes";
 import { getUserInfo } from "@/usersInfo";

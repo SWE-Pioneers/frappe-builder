@@ -60,13 +60,16 @@
 			class="flex items-center justify-end gap-2"
 			v-if="filteredItems.length !== 0 && builderStore.leftPanelActiveTab !== 'Code'">
 			<div class="flex gap-2">
-				<Button variant="subtle" @click="builderStore.leftPanelActiveTab = 'Code'">{{ __("Open Code Tab") }}</Button>
+				<Button variant="subtle" @click="builderStore.leftPanelActiveTab = 'Code'">
+					{{ __("Open Code Tab") }}
+				</Button>
 			</div>
 		</div>
 	</div>
 </template>
 
 <script setup lang="ts">
+import { __ } from "@/translation";
 import Block from "@/block";
 import useBuilderStore from "@/stores/builderStore";
 import usePageStore from "@/stores/pageStore";

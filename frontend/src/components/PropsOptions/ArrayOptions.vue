@@ -22,6 +22,7 @@
 </template>
 
 <script setup lang="ts">
+import { __ } from "@/translation";
 import InputLabel from "@/components/Controls/InputLabel.vue";
 import Input from "@/components/Controls/Input.vue";
 import ArrayEditor from "@/components/ArrayEditor.vue";

@@ -68,6 +68,7 @@
 	</router-link>
 </template>
 <script setup lang="ts">
+import { __ } from "@/translation";
 import PageActionsDropdown from "@/components/PageActionsDropdown.vue";
 import usePageStore from "@/stores/pageStore";
 import { BuilderPage } from "@/types/doctypes";

@@ -18,11 +18,13 @@
 				value: '100%',
 			},
 		]"
-		:unitOptions="['px', '%', 'vw', 'vh']"></StylePropertyControl>
+		:unitOptions="DIMENSION_UNIT_OPTIONS"></StylePropertyControl>
 </template>
 <script setup lang="ts">
+import { __ } from "@/translation";
 import Autocomplete from "@/components/Controls/Autocomplete.vue";
 import StylePropertyControl from "@/components/Controls/StylePropertyControl.vue";
+import { DIMENSION_UNIT_OPTIONS } from "@/utils/unitOptions";
 
 defineProps<{
 	property: styleProperty;

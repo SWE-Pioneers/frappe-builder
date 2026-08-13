@@ -25,6 +25,7 @@
 </template>
 
 <script setup lang="ts">
+import { __ } from "@/translation";
 import { websiteSettings } from "@/data/websiteSettings";
 import { Button, FeatherIcon } from "frappe-ui";
 import { inject } from "vue";

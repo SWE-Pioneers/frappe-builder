@@ -139,6 +139,7 @@
 </template>
 
 <script lang="ts" setup>
+import { __ } from "@/translation";
 import ColorInput from "@/components/Controls/ColorInput.vue";
 import Input from "@/components/Controls/Input.vue";
 import OptionToggle from "@/components/Controls/OptionToggle.vue";

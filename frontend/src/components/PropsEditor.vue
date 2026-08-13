@@ -119,6 +119,7 @@
 	</div>
 </template>
 <script setup lang="ts">
+import { __ } from "@/translation";
 import { mapToObject, replaceMapKey } from "@/utils/helpers";
 import { ref, useAttrs, watch } from "vue";
 

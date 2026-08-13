@@ -1,12 +1,12 @@
 import Autocomplete from "@/components/Controls/Autocomplete.vue";
 import BasePropertyControl from "@/components/Controls/BasePropertyControl.vue";
-import FontUploader from "@/components/Controls/FontUploader.vue";
+import FontInput from "@/components/Controls/FontInput.vue";
 import OptionToggle from "@/components/Controls/OptionToggle.vue";
 import StylePropertyControl from "@/components/Controls/StylePropertyControl.vue";
-import userFonts from "@/data/userFonts";
-import { UserFont } from "@/types/doctypes";
 import blockController from "@/utils/blockController";
-import { setFont as _setFont, fontList, getFontWeightOptions } from "@/utils/fontManager";
+import { setFont as _setFont, getFontWeightOptions, loadFontList } from "@/utils/fontManager";
+import { BOX_UNIT_OPTIONS } from "@/utils/unitOptions";
+import { __ } from "@/translation";
 
 const setFont = (font: string) => {
 	_setFont(font, null).then(() => {
@@ -39,48 +39,8 @@ const typographySectionProperties = [
 		getProps: () => {
 			return {
 				label: __("Family"),
-				component: Autocomplete,
+				component: FontInput,
 				propertyKey: "fontFamily",
-				getOptions: (filterString: string) => {
-					const fontOptions = [] as { label: string; value: string }[];
-					userFonts.data?.forEach((font: UserFont) => {
-						if (fontOptions.length >= 20) {
-							return;
-						}
-						const fontName = font.font_name as string;
-						if (fontName.toLowerCase().includes(filterString.toLowerCase()) || !filterString) {
-							fontOptions.push({
-								label: fontName,
-								value: fontName,
-							});
-						}
-					});
-					if (fontOptions.length) {
-						fontOptions.unshift({
-							label: __("Custom"),
-							value: "_separator_1",
-						});
-						fontOptions.push({
-							label: __("Default"),
-							value: "_separator_2",
-						});
-					}
-					fontList.items.forEach((font) => {
-						if (fontOptions.length >= 20) {
-							return;
-						}
-						if (font.family.toLowerCase().includes(filterString.toLowerCase()) || !filterString) {
-							fontOptions.push({
-								label: font.family,
-								value: font.family,
-							});
-						}
-					});
-					return fontOptions;
-				},
-				actionButton: {
-					component: FontUploader,
-				},
 				getModelValue: () => blockController.getFontFamily(),
 				setModelValue: (val: string) => setFont(val),
 			};
@@ -95,7 +55,13 @@ const typographySectionProperties = [
 				label: __("Weight"),
 				propertyKey: "fontWeight",
 				component: Autocomplete,
-				options: getFontWeightOptions((blockController.getStyle("fontFamily") || "Inter") as string),
+				// static options were never query-filtered, so ignore the search
+				// string; awaiting the list keeps all weights of a preselected
+				// font available on first open
+				getOptions: async () => {
+					await loadFontList();
+					return getFontWeightOptions((blockController.getStyle("fontFamily") || "Inter") as string);
+				},
 				step: 100,
 				min: 100,
 				max: 900,
@@ -111,7 +77,7 @@ const typographySectionProperties = [
 				propertyKey: "fontSize",
 				enableSlider: true,
 				minValue: 1,
-				unitOptions: ["px", "em", "rem"],
+				unitOptions: BOX_UNIT_OPTIONS,
 			};
 		},
 		searchKeyWords: "Font, Size, FontSize",

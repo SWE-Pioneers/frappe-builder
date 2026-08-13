@@ -1,5 +1,7 @@
+import { __ } from "@/translation";
 import type Block from "@/block";
 import type BuilderCanvas from "@/components/BuilderCanvas.vue";
+import type { IndicatorGeometry } from "@/utils/dropGeometry";
 import { getVersionedDoc } from "@/data/snapshot";
 import { confirm, getBlockCopy, getBlockInstance } from "@/utils/helpers";
 import { toast } from "frappe-ui";
@@ -31,6 +33,18 @@ const useCanvasStore = defineStore("canvasStore", {
 			parentBlock: <Block | null>null,
 			index: <number | null>null,
 		},
+		// On-canvas block reordering (pointer-based). Separate from dropTarget
+		// (panel → canvas drops). The overlay DropIndicator reads this; nothing here
+		// touches the canvas DOM, so the layout stays frozen during a drag.
+		reorderTarget: {
+			active: <boolean>false,
+			// insertion line geometry, screen px
+			line: <IndicatorGeometry | null>null,
+			containerRect: <{ top: number; left: number; width: number; height: number } | null>null,
+			isComponentParent: <boolean>false,
+			// dropping into the block's own container (reorder) vs a different one
+			isSameContainer: <boolean>false,
+		},
 		editableBlock: <Block | null>null,
 		editingContentType: <"html" | "css" | "js">"html", // TODO: Remove js and css
 		editingMode: <EditingMode>"page",
@@ -56,7 +70,11 @@ const useCanvasStore = defineStore("canvasStore", {
 		// the draft's content or undo stack. We just stash the draft root to restore it.
 		async previewVersion(snapshotName: string) {
 			const doc = await getVersionedDoc(snapshotName);
-			const blocks = JSON.parse((doc?.draft_blocks || doc?.blocks || "[]") as string);
+			this.previewVersionBlocks((doc?.draft_blocks || doc?.blocks) as string, snapshotName);
+		},
+		// preview raw blocks JSON under a preview key (e.g. the live published version)
+		previewVersionBlocks(blocksJSON: string, previewName: string) {
+			const blocks = JSON.parse(blocksJSON || "[]");
 			if (!blocks[0] || !this.activeCanvas) return;
 			const previewRoot = getBlockInstance(blocks[0]);
 			if (!this.versionPreviewBlock) {
@@ -64,7 +82,7 @@ const useCanvasStore = defineStore("canvasStore", {
 			}
 			this.activeCanvas.setRootBlock(previewRoot, false, false);
 			this.versionPreviewBlock = previewRoot;
-			this.previewSnapshotName = snapshotName;
+			this.previewSnapshotName = previewName;
 			toast.info(__("Read-only preview · Use <b>Restore</b> to load this version."), {
 				id: PREVIEW_TOAST_ID,
 				duration: Infinity,
@@ -270,6 +288,16 @@ const useCanvasStore = defineStore("canvasStore", {
 			if (placeholder) {
 				placeholder.remove();
 			}
+		},
+
+		clearReorderTarget() {
+			this.reorderTarget = {
+				active: false,
+				line: null,
+				containerRect: null,
+				isComponentParent: false,
+				isSameContainer: false,
+			};
 		},
 	},
 });

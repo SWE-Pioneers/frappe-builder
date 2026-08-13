@@ -9,18 +9,11 @@ declare module "*.vue" {
 	const component: DefineComponent<{}, {}, any>;
 	export default component;
 }
-
-// Global translation helper, wired up by src/translation.ts (window.__).
-// Available as a bare identifier in <script setup> and via globalProperties in templates.
-declare function __(
-	message: string,
-	replace?: Array<string | number> | Record<string, string | number>,
-	context?: string | null,
-): string;
-
-// Make `__` resolve in Vue templates (registered on app.config.globalProperties).
-declare module "vue" {
-	interface ComponentCustomProperties {
-		__: typeof __;
-	}
+declare module "*.svg?raw" {
+	const content: string;
+	export default content;
+}
+declare module "*.png" {
+	const src: string;
+	export default src;
 }

@@ -1,10 +1,11 @@
+import { __ } from "@/translation";
 import type Block from "@/block";
 import useCanvasStore from "@/stores/canvasStore";
 import useComponentStore from "@/stores/componentStore";
 import usePageStore from "@/stores/pageStore";
-import { BuilderClientScript, BuilderComponent, BuilderPage, BuilderVariable } from "@/types/doctypes";
+import { BuilderClientScript, BuilderComponent, BuilderPage, BuilderToken } from "@/types/doctypes";
 
-import builderVariables from "@/data/builderVariable";
+import builderTokens from "@/data/builderToken";
 import {
 	copyToClipboard,
 	detachBlockFromComponent,
@@ -19,6 +20,9 @@ import { nextTick } from "vue";
 import { webPages } from "../data/webPage";
 
 type BuilderPageClientScriptRef = { builder_script: string; idx?: number };
+
+// pre-rename sites use variable_name where Builder Token uses token_name
+type LegacyAwareToken = BuilderToken & { variable_name?: string };
 
 type BuilderPageSettings = Pick<
 	BuilderPage,
@@ -43,7 +47,7 @@ type BuilderPageSettings = Pick<
 interface BuilderClipboardData {
 	blocks: (Block | BlockOptions)[];
 	components: BuilderComponent[];
-	variables?: BuilderVariable[];
+	variables?: LegacyAwareToken[];
 	sourceURL?: string;
 	pageDoc?: BuilderPageSettings;
 	pageScripts?: BuilderClientScript[];
@@ -96,11 +100,12 @@ export function copyBuilderBlocks(
 		return blockCopy;
 	});
 
-	const variableDocuments: BuilderVariable[] = [];
+	const variableDocuments: LegacyAwareToken[] = [];
 	for (const variableName of variableNames) {
-		const variable = builderVariables.data?.find((v: BuilderVariable) => v.name === variableName);
+		const variable = builderTokens.data?.find((v: BuilderToken) => v.name === variableName);
 		if (variable) {
-			variableDocuments.push(variable);
+			// variable_name keeps the clipboard readable by sites on the pre-rename schema
+			variableDocuments.push({ ...variable, variable_name: variable.token_name });
 		}
 	}
 
@@ -179,11 +184,10 @@ async function handlePagePaste(
 		title: __("Pasting a page!"),
 		message: __(
 			"You are about to paste a page with settings and scripts. Do you want to update the current page or create a new one?",
-		),
 		actions: [
 			{
 				label: __("Create New Page"),
-				variant: "solid",
+				variant: "subtle",
 				async onClick() {
 					toast.loading(__("Pasting..."), { id: "paste-page" });
 					await handleComponents(clipboardData, crossSitePaste);
@@ -199,7 +203,7 @@ async function handlePagePaste(
 			},
 			{
 				label: __("Update Current Page"),
-				variant: "subtle",
+				variant: "solid",
 				async onClick() {
 					toast.loading(__("Pasting..."), { id: "paste-page" });
 					await handleComponents(clipboardData, crossSitePaste);
@@ -222,26 +226,42 @@ async function handlePagePaste(
 	});
 }
 
+// clipboards copied from a site on the pre-rename schema carry variable_name
+function normalizeLegacyToken(variable: LegacyAwareToken): BuilderToken {
+	if (!variable.token_name && variable.variable_name) {
+		variable.token_name = variable.variable_name;
+	}
+	delete variable.variable_name;
+	return variable;
+}
+
 async function handleVariables(clipboardData: BuilderClipboardData, crossSitePaste: boolean) {
 	const idMap = new Map<string, string>();
-	for (const variable of clipboardData.variables || []) {
+	for (const variable of (clipboardData.variables || []).map(normalizeLegacyToken)) {
 		if (crossSitePaste) {
 			const originalName = variable.name;
-			const newName = generateHash(originalName, clipboardData.sourceURL || "");
-			variable.name = newName;
-			idMap.set(originalName, newName);
-			try {
-				await builderVariables.insert.submit(variable);
-			} catch (error: any) {
-				if (error?.response?.status === 409) {
-					await builderVariables.setValue.submit(variable);
+			// a token id is assigned by the server, so reuse an equivalent token when
+			// there is one and otherwise map the refs to the id we actually get back
+			const twin = builderTokens.data?.find(
+				(v: BuilderToken) =>
+					v.token_name === variable.token_name && v.value === variable.value && v.type === variable.type,
+			);
+			let newName = twin?.name;
+			if (!newName) {
+				try {
+					newName = (await builderTokens.insert.submit(variable))?.name;
+				} catch (error: any) {
+					console.error("Error inserting token:", error);
 				}
 			}
+			if (newName && newName !== originalName) {
+				idMap.set(originalName, newName);
+			}
 		} else {
-			const existing = builderVariables.data?.find((v: BuilderVariable) => v.name === variable.name);
+			const existing = builderTokens.data?.find((v: BuilderToken) => v.name === variable.name);
 			if (!existing) {
 				try {
-					await builderVariables.insert.submit(variable);
+					await builderTokens.insert.submit(variable);
 				} catch (error: any) {
 					if (error?.response?.status !== 409) {
 						console.error("Error inserting variable:", error);
@@ -276,7 +296,6 @@ function rewriteVariableRefsInBlock(block: BlockOptions, idMap: Map<string, stri
 	rewriteObj(block.baseStyles as Record<string, unknown> | undefined);
 	rewriteObj(block.mobileStyles as Record<string, unknown> | undefined);
 	rewriteObj(block.tabletStyles as Record<string, unknown> | undefined);
-	rewriteObj(block.rawStyles as Record<string, unknown> | undefined);
 	rewriteObj(block.attributes as Record<string, unknown> | undefined);
 	if (block.innerHTML) block.innerHTML = rewrite(block.innerHTML) as string;
 	block.children?.forEach((child) => rewriteVariableRefsInBlock(child, idMap));
@@ -321,7 +340,10 @@ async function insertBlocks(blocks: (Block | BlockOptions)[]) {
 		}
 		blocks.forEach((block) => parentBlock.addChild(getBlockCopy(block), null, true));
 	} else {
-		canvasStore.pushBlocks(blocks, false);
+		canvasStore.pushBlocks(
+			blocks.map((block) => getBlockCopy(block)),
+			false,
+		);
 	}
 }
 

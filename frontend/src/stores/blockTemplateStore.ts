@@ -1,3 +1,4 @@
+import { __ } from "@/translation";
 import type Block from "@/block";
 import builderBlockTemplate from "@/data/builderBlockTemplate";
 import { BlockTemplate } from "@/types/doctypes";

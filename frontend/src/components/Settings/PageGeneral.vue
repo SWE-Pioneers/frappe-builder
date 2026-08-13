@@ -83,7 +83,11 @@
 								@upload="(url: string) => pageStore.updateActivePage('favicon', url)"
 								@remove="() => pageStore.updateActivePage('favicon', '')" />
 							<span class="text-p-sm text-ink-gray-6">
-								{{ __("Appears next to the title in your browser tab. Recommended size is 32x32 px in PNG or ICO") }}
+								{{
+									__(
+										"Appears next to the title in your browser tab. Recommended size is 32x32 px in PNG or ICO",
+									)
+								}}
 							</span>
 						</div>
 					</div>
@@ -138,7 +142,9 @@
 						<div v-if="pageStore.activePage?.is_standard" class="flex items-center justify-between">
 							<div class="flex flex-col gap-2">
 								<span class="text-base-medium text-ink-gray-9">{{ __("App") }}</span>
-								<p class="max-w-xs text-p-sm text-ink-gray-7">{{ __("Select the app for this standard page") }}</p>
+								<p class="max-w-xs text-p-sm text-ink-gray-7">
+									{{ __("Select the app for this standard page") }}
+								</p>
 							</div>
 							<div>
 								<BuilderInput
@@ -174,6 +180,7 @@
 	</div>
 </template>
 <script setup lang="ts">
+import { __ } from "@/translation";
 import ImageUploader from "@/components/Controls/ImageUploader.vue";
 import builderProjectFolder from "@/data/builderProjectFolder";
 import { builderSettings } from "@/data/builderSettings";
@@ -187,6 +194,7 @@ import { computed } from "vue";
 const pageStore = usePageStore();
 const builderStore = useBuilderStore();
 const isDeveloperMode = computed(() => Boolean(window.is_developer_mode));
+
 const fullURL = computed(
 	() => window.location.origin + (pageStore.activePage?.route ? "/" + pageStore.activePage.route : ""),
 );

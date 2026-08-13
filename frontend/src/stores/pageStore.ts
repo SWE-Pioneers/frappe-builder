@@ -5,6 +5,7 @@ import router from "@/router";
 import useBuilderStore from "@/stores/builderStore";
 import useCanvasStore from "@/stores/canvasStore";
 import useComponentStore from "@/stores/componentStore.js";
+import { __ } from "@/translation";
 import { BuilderClientScript, BuilderPage } from "@/types/doctypes";
 import getBlockTemplate from "@/utils/blockTemplate";
 import {
@@ -198,7 +199,9 @@ const usePageStore = defineStore("pageStore", {
 
 		async revertChanges() {
 			const confirmed = await confirm(
-				__("This will revert all changes made to the page since the last publish. Are you sure you want to continue?"),
+				__(
+					__("This will revert all changes made to the page since the last publish. Are you sure you want to continue?"),
+				),
 			);
 			if (confirmed) {
 				await this.updateActivePage("draft_blocks", null);
@@ -309,6 +312,13 @@ const usePageStore = defineStore("pageStore", {
 					} else {
 						this.activePage = page;
 					}
+				})
+				.catch((e: { exc_type?: string }) => {
+					if (e?.exc_type === "InReadOnlyMode") {
+						builderStore.isSiteInReadOnlyMode = true;
+						return;
+					}
+					throw e;
 				})
 				.finally(() => {
 					if (this.saveId === saveId) {

@@ -1,6 +1,7 @@
 import { createResource } from "frappe-ui";
 import { ref } from "vue";
 import { NavigationGuardNext, RouteLocationNormalized, createRouter, createWebHistory } from "vue-router";
+import { __ } from "./translation";
 
 let hasPermission: null | boolean = null;
 let sessionUser = ref("Guest");

@@ -74,6 +74,7 @@
 	</div>
 </template>
 <script lang="ts" setup>
+import { __ } from "@/translation";
 import PanelResizer from "@/components/PanelResizer.vue";
 import PublishButton from "@/components/PublishButton.vue";
 import router from "@/router";

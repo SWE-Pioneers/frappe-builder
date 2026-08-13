@@ -1,3 +1,4 @@
+import { __ } from "@/translation";
 import type Block from "@/block";
 import { useLatestRequest } from "@/composables/useLatestRequest";
 import { getVersionedDoc } from "@/data/snapshot";

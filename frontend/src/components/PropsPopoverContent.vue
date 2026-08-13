@@ -51,6 +51,7 @@
 </template>
 
 <script setup lang="ts">
+import { __ } from "@/translation";
 import InputLabel from "@/components/Controls/InputLabel.vue";
 import OptionToggle from "@/components/Controls/OptionToggle.vue";
 
