@@ -234,7 +234,7 @@ const renameFolder = async (newFolderName: string, targetFolder: BuilderProjectF
 const deleteFolder = async (folderName: string) => {
 	const confirmed = await confirm(
 		__(
-			__(
+			'Are you sure you want to delete this folder? All the pages under this folder will be visible under "All Pages"',
 		),
 	);
 	if (!confirmed) return;

@@ -1,7 +1,7 @@
 <template>
 	<div class="no-scrollbar flex flex-col gap-6 overflow-auto">
 		<CodeEditor
-			:label="__('<head> HTML')"
+			label="<head> HTML"
 			type="HTML"
 			:readonly="builderStore.readOnlyMode"
 			:description="__('Add meta tags, styles, and scripts to page head')"
@@ -11,7 +11,7 @@
 			@update:modelValue="(val) => pageStore.updateActivePage('head_html', val)"
 			:showLineNumbers="true"></CodeEditor>
 		<CodeEditor
-			:label="__('<body> HTML')"
+			label="<body> HTML"
 			type="HTML"
 			:readonly="builderStore.readOnlyMode"
 			:description="__('Add scripts to page body')"

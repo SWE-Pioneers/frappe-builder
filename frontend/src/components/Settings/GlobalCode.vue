@@ -1,7 +1,7 @@
 <template>
 	<div class="no-scrollbar flex flex-col gap-5 overflow-auto">
 		<CodeEditor
-			:label="__('<head> HTML')"
+			label="<head> HTML"
 			type="HTML"
 			:description="__('Added to end of head. For meta tags, styles, and scripts.')"
 			:modelValue="builderSettings.doc?.head_html"
@@ -10,7 +10,7 @@
 			@update:modelValue="builderStore.updateBuilderSettings('head_html', $event)"
 			:showLineNumbers="true"></CodeEditor>
 		<CodeEditor
-			:label="__('<body> HTML')"
+			label="<body> HTML"
 			type="HTML"
 			:description="__('Added to end of body. For adding scripts.')"
 			:modelValue="builderSettings.doc?.body_html"

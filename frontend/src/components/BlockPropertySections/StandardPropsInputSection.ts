@@ -21,8 +21,8 @@ const getPropsMap = (propName: string, propDetails: BlockProps[string]) => {
 			map = {
 				component: OptionToggle,
 				options: [
-					{ label: propDetails.propOptions?.options?.trueLabel || __("True"), value: true },
-					{ label: propDetails.propOptions?.options?.falseLabel || __("False"), value: false },
+					{ label: propDetails.propOptions?.options?.trueLabel || "True", value: true },
+					{ label: propDetails.propOptions?.options?.falseLabel || "False", value: false },
 				],
 			};
 			break;

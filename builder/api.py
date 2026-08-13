@@ -206,18 +206,6 @@ def check_app_permission():
 	return False
 
 
-@frappe.whitelist(allow_guest=True)
-def get_translations():
-	from frappe.translate import get_all_translations
-
-	if frappe.session.user != "Guest":
-		language = frappe.db.get_value("User", frappe.session.user, "language")
-	else:
-		language = frappe.db.get_single_value("System Settings", "language")
-
-	return get_all_translations(language)
-
-
 @frappe.whitelist()
 def get_pending_invitations() -> list[dict]:
 	from frappe.core.doctype.user_invitation.user_invitation import UserInvitation

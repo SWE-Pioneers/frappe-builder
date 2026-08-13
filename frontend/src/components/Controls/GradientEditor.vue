@@ -137,20 +137,20 @@ watch([elementX, pressed], () => {
 });
 
 const presets = [
-	{ name: __("Hyper"), gradient: "linear-gradient(135deg, #0cebeb 0%, #20e3b2 50%, #29ffc6 100%)" },
-	{ name: __("Ocean"), gradient: "linear-gradient(135deg, #2b5876 0%, #4e4376 100%)" },
-	{ name: __("Sunkist"), gradient: "linear-gradient(135deg, #f2994a 0%, #f2c94c 100%)" },
-	{ name: __("Skyline"), gradient: "linear-gradient(135deg, #1488cc 0%, #2b32b2 100%)" },
-	{ name: __("Lush"), gradient: "linear-gradient(135deg, #a8ff78 0%, #78ffd6 100%)" },
-	{ name: __("Purple Bliss"), gradient: "linear-gradient(135deg, #360033 0%, #0b8793 100%)" },
-	{ name: __("Sunset"), gradient: "linear-gradient(135deg, #ee0979 0%, #ff6a00 100%)" },
-	{ name: __("Dusk"), gradient: "linear-gradient(135deg, #ffd89b 0%, #19033d 100%)" },
-	{ name: __("Cosmic"), gradient: "linear-gradient(135deg, #ff00cc 0%, #333399 100%)" },
-	{ name: __("Clean Mirror"), gradient: "linear-gradient(135deg, #e3e3e3 0%, #5d6d7e 100%)" },
-	{ name: __("Neon Glow"), gradient: "radial-gradient(circle at center, #00f260 0%, #0575e6 100%)" },
-	{ name: __("Soft Radial"), gradient: "radial-gradient(circle at center, #ff9a9e 0%, #fecfef 100%)" },
-	{ name: __("Deep Ocean"), gradient: "radial-gradient(circle at center, #2b5876 0%, #4e4376 100%)" },
-	{ name: __("Royal"), gradient: "linear-gradient(135deg, #141e30 0%, #243b55 100%)" },
+	{ name: "Hyper", gradient: "linear-gradient(135deg, #0cebeb 0%, #20e3b2 50%, #29ffc6 100%)" },
+	{ name: "Ocean", gradient: "linear-gradient(135deg, #2b5876 0%, #4e4376 100%)" },
+	{ name: "Sunkist", gradient: "linear-gradient(135deg, #f2994a 0%, #f2c94c 100%)" },
+	{ name: "Skyline", gradient: "linear-gradient(135deg, #1488cc 0%, #2b32b2 100%)" },
+	{ name: "Lush", gradient: "linear-gradient(135deg, #a8ff78 0%, #78ffd6 100%)" },
+	{ name: "Purple Bliss", gradient: "linear-gradient(135deg, #360033 0%, #0b8793 100%)" },
+	{ name: "Sunset", gradient: "linear-gradient(135deg, #ee0979 0%, #ff6a00 100%)" },
+	{ name: "Dusk", gradient: "linear-gradient(135deg, #ffd89b 0%, #19033d 100%)" },
+	{ name: "Cosmic", gradient: "linear-gradient(135deg, #ff00cc 0%, #333399 100%)" },
+	{ name: "Clean Mirror", gradient: "linear-gradient(135deg, #e3e3e3 0%, #5d6d7e 100%)" },
+	{ name: "Neon Glow", gradient: "radial-gradient(circle at center, #00f260 0%, #0575e6 100%)" },
+	{ name: "Soft Radial", gradient: "radial-gradient(circle at center, #ff9a9e 0%, #fecfef 100%)" },
+	{ name: "Deep Ocean", gradient: "radial-gradient(circle at center, #2b5876 0%, #4e4376 100%)" },
+	{ name: "Royal", gradient: "linear-gradient(135deg, #141e30 0%, #243b55 100%)" },
 ];
 
 const applyPreset = (presetGradient: string) => {

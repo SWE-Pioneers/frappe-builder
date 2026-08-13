@@ -19,7 +19,7 @@
 				</div>
 				<div class="flex flex-col gap-3 text-base">
 					<div class="flex">
-						<span class="w-20 text-ink-gray-6">{{ __("URL") }}</span>
+						<span class="w-20 text-ink-gray-6">URL</span>
 						<a class="font-medium text-ink-gray-8 hover:underline" target="_blank" :href="fullURL">
 							{{ fullURL }}
 						</a>
@@ -72,7 +72,7 @@
 									builderSettings.doc?.favicon ||
 									'/assets/builder/images/frappe_black.png'
 								"
-								:alt="__('Favicon')"
+								alt="Favicon"
 								class="size-6 rounded" />
 						</div>
 						<div class="flex flex-1 flex-col gap-2">
@@ -141,7 +141,7 @@
 						<hr v-if="pageStore.activePage?.is_standard" class="w-full border-outline-gray-2" />
 						<div v-if="pageStore.activePage?.is_standard" class="flex items-center justify-between">
 							<div class="flex flex-col gap-2">
-								<span class="text-base-medium text-ink-gray-9">{{ __("App") }}</span>
+								<span class="text-base-medium text-ink-gray-9">App</span>
 								<p class="max-w-xs text-p-sm text-ink-gray-7">
 									{{ __("Select the app for this standard page") }}
 								</p>
@@ -261,7 +261,7 @@ const notifyStandardPageExport = () => {
 
 	if (activePage?.is_standard) {
 		const appName = toTitleCase(activePage?.app || "");
-		toast.success(__("This page will be exported to {0} app as standard page", [appName]));
+		toast.success(`This page will be exported to ${appName} app as standard page`);
 	}
 };
 </script>

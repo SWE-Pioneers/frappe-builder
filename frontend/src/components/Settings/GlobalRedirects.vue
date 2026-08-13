@@ -59,14 +59,14 @@
 			</div>
 
 			<div v-if="searchQuery.trim() && !rows.length" class="px-2 py-6 text-center text-sm text-ink-gray-5">
-				{{ __('No redirects match "{0}"', [searchQuery]) }}
+				No redirects match "{{ searchQuery }}"
 			</div>
 		</div>
 
 		<Dialog
 			v-model="showDialog"
-			:title="editingId ? __('Edit Redirect') : __('Add Redirect')"
-			:actions="[{ label: editingId ? __('Save') : __('Add Redirect'), variant: 'solid', onClick: commit }]">
+			:title="editingId ? 'Edit Redirect' : 'Add Redirect'"
+			:actions="[{ label: editingId ? 'Save' : 'Add Redirect', variant: 'solid', onClick: commit }]">
 			<template #default>
 				<div class="flex flex-col gap-3">
 					<BuilderInput
@@ -75,7 +75,7 @@
 						required
 						:ref="(el) => field === 'from' && (fromRef = el)"
 						:modelValue="draft[field]"
-						:label="field === 'from' ? __('Source') : __('Target')"
+						:label="field === 'from' ? 'Source' : 'Target'"
 						type="text"
 						:hideClearButton="true"
 						:placeholder="placeholders[field]"
@@ -141,10 +141,10 @@ const cellDividerClass = "border-l border-outline-gray-1 pl-2";
 const fields = ["from", "to"] as const;
 const placeholders: Record<Field, string> = { from: "/old-path", to: "/new-path" };
 const statusOptions = [
-	{ label: __("301 - Moved Permanently"), value: "301" },
-	{ label: __("302 - Found (Temporary)"), value: "302" },
-	{ label: __("307 - Temporary Redirect"), value: "307" },
-	{ label: __("308 - Permanent Redirect"), value: "308" },
+	{ label: "301 - Moved Permanently", value: "301" },
+	{ label: "302 - Found (Temporary)", value: "302" },
+	{ label: "307 - Temporary Redirect", value: "307" },
+	{ label: "308 - Permanent Redirect", value: "308" },
 ];
 
 const highlight = (field: Field, value: string) =>
@@ -250,7 +250,7 @@ const insertNew = (d: Draft) => {
 			const i = findIndex(tempId);
 			if (i !== -1) routeRedirects.data?.splice(i, 1);
 		},
-		{ loading: __("Adding redirect..."), success: __("Redirect added"), error: __("Error adding redirect") },
+		{ loading: "Adding redirect...", success: "Redirect added", error: "Error adding redirect" },
 	);
 };
 
@@ -268,7 +268,7 @@ const saveExisting = (id: string, d: Draft) => {
 const deleteRedirect = async (id: string) => {
 	const row = rows.value.find((r) => r.id === id);
 	const message = row
-		? __('Are you sure you want to delete the redirect from "{0}" to "{1}"?', [row.from, row.to])
+		? `Are you sure you want to delete the redirect from "${row.from}" to "${row.to}"?`
 		: __("Are you sure you want to delete this redirect?");
 	if (!(await confirm(message))) return;
 

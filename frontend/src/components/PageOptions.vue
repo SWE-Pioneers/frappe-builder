@@ -19,7 +19,7 @@
 				@update:modelValue="(val: string) => updateActivePage('route', val)" />
 			<!-- Dynamic Route Variables -->
 			<CollapsibleSection
-				:sectionName="__('URL Variables')"
+				sectionName="URL Variables"
 				v-if="dynamicVariables.length"
 				class="w-full [&>div>h3]:!text-xs [&>div>h3]:!text-ink-gray-5">
 				<BuilderInput

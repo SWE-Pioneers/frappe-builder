@@ -130,7 +130,7 @@ const props = withDefaults(
 		getControlAttrs?: (variant: string | null) => Record<string, unknown>;
 	}>(),
 	{
-		placeholder: __("unset"),
+		placeholder: "unset",
 		controlType: "style",
 		enableSlider: false,
 		unitOptions: () => [],

@@ -34,9 +34,8 @@ const optionsSectionProperties = [
 				setModelValue: (val: BlockVisibilityCondition) => {
 					blockController.setKeyValue("visibilityCondition", val);
 				},
-				description: __(
+				description:
 					"Visibility condition to show/hide the block based on a condition. Pass a boolean variable created in your Data Script.<br><b>Note:</b> This is only evaluated in the preview mode.",
-				),
 			};
 		},
 		searchKeyWords:

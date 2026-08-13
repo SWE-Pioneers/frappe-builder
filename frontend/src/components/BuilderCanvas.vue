@@ -228,7 +228,7 @@ const canvasProps = reactive({
 		{
 			icon: "lucide-monitor",
 			device: "desktop",
-			displayName: __("Desktop"),
+			displayName: "Desktop",
 			width: 1400,
 			visible: true,
 			renderedOnce: true,
@@ -236,14 +236,14 @@ const canvasProps = reactive({
 		{
 			icon: "lucide-tablet",
 			device: "tablet",
-			displayName: __("Tablet"),
+			displayName: "Tablet",
 			width: 800,
 			visible: false,
 		},
 		{
 			icon: "lucide-smartphone",
 			device: "mobile",
-			displayName: __("Mobile"),
+			displayName: "Mobile",
 			width: 420,
 			visible: false,
 		},

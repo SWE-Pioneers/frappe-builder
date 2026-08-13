@@ -22,7 +22,7 @@
 					class="text-ink-blue-8 underline">
 					openrouter.ai/keys
 				</a>
-				{{ __("— supports Claude, Gemini, GPT and more under one key.") }}
+				— supports Claude, Gemini, GPT and more under one key.
 			</p>
 		</div>
 		<div v-if="statusMessage" class="rounded-lg p-3 text-sm" :class="statusClass">
@@ -61,10 +61,10 @@ const testApiKey = async () => {
 		}).submit()) as { success: boolean; message?: string };
 
 		if (result.success) {
-			statusMessage.value = __("API key is valid!");
+			statusMessage.value = "API key is valid!";
 			statusClass.value = "text-ink-green-6 bg-surface-green-1";
 		} else {
-			statusMessage.value = result.message || __("API key test failed");
+			statusMessage.value = result.message || "API key test failed";
 			statusClass.value = "text-ink-red-6 bg-surface-red-1";
 		}
 	} catch (error: unknown) {

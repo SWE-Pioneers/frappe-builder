@@ -22,7 +22,7 @@
 				{{ group.title }}
 			</p>
 			<span class="shrink-0 text-xs text-ink-gray-4">
-				{{ group.pages.length }} {{ group.pages.length === 1 ? __("page") : __("pages") }}
+				{{ group.pages.length }} {{ group.pages.length === 1 ? "page" : "pages" }}
 			</span>
 		</div>
 	</div>

@@ -108,7 +108,7 @@ const questions: {
 }[] = [
 	{
 		key: "source",
-		heading: __("How did you hear about Builder?"),
+		heading: "How did you hear about Builder?",
 		subtitle: "Just curious, it helps us know what's working.",
 		otherPlaceholder: "I heard from the community",
 		options: [
@@ -122,7 +122,7 @@ const questions: {
 	},
 	{
 		key: "role",
-		heading: __("Which one best describes you?"),
+		heading: "Which one best describes you?",
 		subtitle: "This helps us personalise your Builder experience",
 		otherPlaceholder: "I'm a student building my first site",
 		options: [
@@ -136,7 +136,7 @@ const questions: {
 	},
 	{
 		key: "use_case",
-		heading: __("What do you want to build first?"),
+		heading: "What do you want to build first?",
 		subtitle: "We'll point you to the right starting templates",
 		otherPlaceholder: "A booking site for my clinic",
 		options: [

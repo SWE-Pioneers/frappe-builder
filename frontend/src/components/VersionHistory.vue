@@ -241,7 +241,7 @@ async function saveVersion() {
 async function restore(snapshot: BuilderSnapshot) {
 	const confirmed = await confirm(
 		__(
-			__(
+			"This will load this version into the editor as your current draft. Your live page won't change until you publish. Continue?",
 		),
 	);
 	if (!confirmed) return;

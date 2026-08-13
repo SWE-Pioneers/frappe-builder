@@ -8,7 +8,7 @@ const API = "builder.domain";
 function getErrorMessage(e: any): string {
 	const msg = Array.isArray(e?.messages) && e.messages[0];
 	if (msg && typeof msg === "string") return msg.replace(/<[^>]*>/g, "").trim();
-	return e?.message || __("Something went wrong");
+	return e?.message || "Something went wrong";
 }
 
 export function useDomains() {
@@ -41,25 +41,25 @@ export function useDomains() {
 			return { matched: result?.matched ?? false, error: "" };
 		} catch (e: any) {
 			const msg = Array.isArray(e?.messages) && e.messages[0];
-			const error = (msg && typeof msg === "string" ? msg : e?.message) || __("Something went wrong");
+			const error = (msg && typeof msg === "string" ? msg : e?.message) || "Something went wrong";
 			return { matched: false, error };
 		}
 	}
 
 	async function addDomain(domain: string): Promise<{ ok: boolean; error?: string }> {
-		const id = toast.loading(__("Verifying DNS for {0}…", [domain]));
+		const id = toast.loading(`Verifying DNS for ${domain}…`);
 		try {
 			const { matched, error } = await checkDNS(domain);
 			if (!matched) {
 				toast.error(__("Domain verification failed"), { id });
 				return {
 					ok: false,
-					error: error || __("DNS not yet propagated. Make sure the record is set correctly and try again."),
+					error: error || "DNS not yet propagated. Make sure the record is set correctly and try again.",
 				};
 			}
-			toast.loading(__("Adding {0}…", [domain]), { id });
+			toast.loading(`Adding ${domain}…`, { id });
 			await createResource({ url: `${API}.add_domain` }).submit({ domain });
-			toast.success(__("{0} added successfully", [domain]), { id });
+			toast.success(`${domain} added successfully`, { id });
 			await fetchDomains();
 			return { ok: true };
 		} catch (e: any) {
@@ -69,23 +69,23 @@ export function useDomains() {
 	}
 
 	async function removeDomain(domain: string) {
-		await callAPI("remove_domain", domain, __("{0} removed", [domain]), __("Removing {0}…", [domain]));
+		await callAPI("remove_domain", domain, `${domain} removed`, `Removing ${domain}…`);
 	}
 
 	async function retryDomain(domain: string) {
-		await callAPI("retry_add_domain", domain, __("Retrying {0}", [domain]), __("Retrying {0}…", [domain]));
+		await callAPI("retry_add_domain", domain, `Retrying ${domain}`, `Retrying ${domain}…`);
 	}
 
 	async function setHostName(domain: string) {
-		await callAPI("set_host_name", domain, __("{0} set as primary", [domain]), __("Updating primary domain…"));
+		await callAPI("set_host_name", domain, `${domain} set as primary`, `Updating primary domain…`);
 	}
 
 	async function setRedirect(domain: string) {
-		await callAPI("set_redirect", domain, __("Redirect enabled for {0}", [domain]), __("Enabling redirect…"));
+		await callAPI("set_redirect", domain, `Redirect enabled for ${domain}`, `Enabling redirect…`);
 	}
 
 	async function unsetRedirect(domain: string) {
-		await callAPI("unset_redirect", domain, __("Redirect disabled for {0}", [domain]), __("Disabling redirect…"));
+		await callAPI("unset_redirect", domain, `Redirect disabled for ${domain}`, `Disabling redirect…`);
 	}
 
 	async function callAPI(method: string, domain: string, successMsg: string, loadingMsg?: string) {

@@ -7,7 +7,7 @@
 				variant="ghost"
 				size="sm"
 				class="h-full rounded-r-none"
-				:tooltip="showReplace ? __('Hide Replace') : __('Show Replace')"
+				:tooltip="showReplace ? 'Hide Replace' : 'Show Replace'"
 				@click="toggleReplace">
 				<span
 					:class="[showReplace ? 'lucide-chevron-down' : 'lucide-chevron-right', 'h-4 w-4']"

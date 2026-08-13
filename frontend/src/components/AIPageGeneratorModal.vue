@@ -36,7 +36,7 @@
 					<div
 						v-if="imagePreviewUrl"
 						class="flex items-center gap-2 rounded-md border border-outline-gray-2 bg-surface-gray-1 p-1.5 pr-2.5">
-						<img :src="imagePreviewUrl" class="h-8 w-8 rounded object-cover" :alt="__('Reference image')" />
+						<img :src="imagePreviewUrl" class="h-8 w-8 rounded object-cover" alt="Reference image" />
 						<span class="flex-1 truncate text-xs text-ink-gray-7">{{ imageFileName }}</span>
 						<button
 							type="button"
@@ -310,11 +310,11 @@ function clearImage() {
 
 function attachImageFile(file: File) {
 	if (!file.type.startsWith("image/")) {
-		errorMessage.value = __("Please paste a valid image.");
+		errorMessage.value = "Please paste a valid image.";
 		return;
 	}
 	if (file.size > 5 * 1024 * 1024) {
-		errorMessage.value = __("Image must be smaller than 5 MB.");
+		errorMessage.value = "Image must be smaller than 5 MB.";
 		return;
 	}
 	imageFileName.value = file.name || "pasted-image.png";
@@ -394,7 +394,7 @@ function parseBlock(raw: string): BlockOptions | null {
 function resetState() {
 	generating.value = true;
 	errorMessage.value = "";
-	progressMessage.value = __("Initializing…");
+	progressMessage.value = "Initializing…";
 	streamingContent.value = "";
 	showDialog.value = false;
 }
@@ -423,7 +423,7 @@ async function runTask(type: "generate" | "modify", customParams: Record<string,
 			}),
 		}).submit();
 	} catch (e) {
-		handleError(e, __("An error occurred while {0}", [isModify ? __("modifying") : __("generating")]));
+		handleError(e, `An error occurred while ${isModify ? "modifying" : "generating"}`);
 	}
 }
 
@@ -444,7 +444,7 @@ async function executeDirect(
 ) {
 	emit("update:blockContext", block);
 	runTask("modify", {
-		prompt: customPrompt || (type === "rewrite_text" ? __("Improve this text") : __("Replace image")),
+		prompt: customPrompt || (type === "rewrite_text" ? "Improve this text" : "Replace image"),
 		block_context: JSON.stringify(block),
 		task_type: type,
 	});
@@ -507,7 +507,7 @@ function makeHandlers(isModify: boolean) {
 
 	const onComplete = (data: CompleteData) => {
 		generating.value = false;
-		progressMessage.value = data.message || __("Operation completed");
+		progressMessage.value = data.message || "Operation completed";
 		setTimeout(() => (progressMessage.value = ""), 2000);
 		if (isModify) {
 			processModifyStreaming();
@@ -526,8 +526,7 @@ function makeHandlers(isModify: boolean) {
 		progressMessage.value = "";
 		showDialog.value = true;
 		errorMessage.value =
-			data.message ||
-			__("An error occurred while {0}", [isModify ? __("modifying the section") : __("generating the page")]);
+			data.message || `An error occurred while ${isModify ? "modifying the section" : "generating the page"}`;
 		remoteTaskType.value = null;
 		remoteBlockId.value = null;
 	};

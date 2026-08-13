@@ -32,7 +32,7 @@
 				<component :is="selectedItemDoc?.component" class="pb-16" />
 			</KeepAlive>
 			<div v-else class="flex items-center justify-center">
-				<span class="text-ink-gray-5">{{ __("Loading...") }}</span>
+				<span class="text-ink-gray-5">Loading...</span>
 			</div>
 		</div>
 	</div>

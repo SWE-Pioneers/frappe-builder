@@ -53,9 +53,8 @@ const inputOptionsSectionProperties = [
 			return {
 				label: __("Name"),
 				modelValue: blockController.getAttribute("name") || "",
-				description: __(
+				description:
 					"Group name for this radio button. Radio buttons with the same name are grouped together.",
-				),
 			};
 		},
 		searchKeyWords: "Radio, Name, Group, RadioName, Radio Name, Group Name, input, radio button",

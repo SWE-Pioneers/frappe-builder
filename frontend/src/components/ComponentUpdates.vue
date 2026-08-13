@@ -37,7 +37,7 @@
 						<div class="flex min-w-0 flex-col">
 							<span class="truncate text-sm text-ink-gray-8">{{ item.component_name }}</span>
 							<span class="text-xs text-ink-gray-5">
-								{{ item.count }} {{ item.count === 1 ? __("instance") : __("instances") }}
+								{{ item.count }} instance{{ item.count === 1 ? "" : "s" }}
 							</span>
 						</div>
 						<Button

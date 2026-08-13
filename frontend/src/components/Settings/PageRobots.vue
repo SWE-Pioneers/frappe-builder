@@ -13,7 +13,7 @@
 				"
 				type="Python"
 				height="100%"
-				:label="__('robot.txt')"
+				label="robot.txt"
 				:showSaveButton="true"
 				:description="description"
 				:show-line-numbers="true"></CodeEditor>

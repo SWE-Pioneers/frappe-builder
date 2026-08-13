@@ -14,7 +14,7 @@
 				ref="searchInput"
 				class="flex-1"
 				type="text"
-				:placeholder="searchMode === 'replace' ? __('Find...') : __('Search blocks...')"
+				:placeholder="searchMode === 'replace' ? 'Find...' : 'Search blocks...'"
 				v-model="query"
 				@input="setQuery"
 				@keydown.enter="handlePrimaryAction" />
@@ -89,10 +89,10 @@
 				variant="solid"
 				class="w-full"
 				:disabled="!replaceQuery">
-				{{ __("Replace All ({0} matches)", [results.length]) }}
+				Replace All ({{ results.length }} matches)
 			</Button>
 			<div v-if="searchMode === 'replace' && replacedCount > 0" class="mt-2 text-xs text-ink-gray-5">
-				{{ __("{0} replacements made", [replacedCount]) }}
+				{{ replacedCount }} replacements made
 			</div>
 		</div>
 
@@ -164,14 +164,14 @@ const searchInSelectedBlock = ref(false);
 const propertyHandlers = [
 	{
 		key: "element",
-		name: __("Tag"),
+		name: "Tag",
 		matches: (block: Block, term: string) => block.getElement()?.toLowerCase().includes(term),
 		replace: () => false,
 	},
 	{
 		// dynamicValues and dataKey
 		key: "data",
-		name: __("Data"),
+		name: "Data",
 		matches: (block: Block, term: string) => {
 			if (block.getDynamicValues()) {
 				block.getDynamicValues().forEach((dv: BlockDataKey) => {
@@ -191,7 +191,7 @@ const propertyHandlers = [
 	},
 	{
 		key: "content",
-		name: __("Content"),
+		name: "Content",
 		matches: (block: Block, term: string) => block.getInnerHTML()?.toLowerCase().includes(term),
 		replace: (block: Block, searchTerm: string, replaceTerm: string) => {
 			const innerHTML = block.getInnerHTML();
@@ -207,7 +207,7 @@ const propertyHandlers = [
 	},
 	{
 		key: "styles",
-		name: __("Style"),
+		name: "Style",
 		matches: (block: Block, term: string) => {
 			const styles = { ...block.baseStyles, ...block.mobileStyles, ...block.tabletStyles };
 			return Object.values(styles).some((val) => String(val).toLowerCase().includes(term));
@@ -222,7 +222,7 @@ const propertyHandlers = [
 	},
 	{
 		key: "attributes",
-		name: __("Attributes"),
+		name: "Attributes",
 		matches: (block: Block, term: string) => {
 			const attrs = { ...block.attributes, ...block.customAttributes };
 			return Object.values(attrs).some((val) => String(val).toLowerCase().includes(term));
@@ -236,7 +236,7 @@ const propertyHandlers = [
 	},
 	{
 		key: "classes",
-		name: __("CSS Classes"),
+		name: "CSS Classes",
 		matches: (block: Block, term: string) => {
 			return block.classes?.some((c) => c.toLowerCase().includes(term));
 		},
@@ -315,7 +315,7 @@ const getMatchDetails = (block: Block) => {
 	const lowerSearchTerm = query.value.toLowerCase();
 	const details = propertyHandlers.filter((h) => h.matches(block, lowerSearchTerm)).map((h) => h.name);
 
-	return details.length > 0 ? __("Found in: {0}", [details.join(", ")]) : "";
+	return details.length > 0 ? `Found in: ${details.join(", ")}` : "";
 };
 
 const replaceInProperty = (obj: any, searchTerm: string, replaceTerm: string): boolean => {
@@ -367,7 +367,7 @@ const replaceInBlock = (block: Block, index: number) => {
 	if (hasReplacement) {
 		replacedCount.value++;
 		results.value.splice(index, 1);
-		toast.success(__("Replaced in {0}", [block.getBlockDescription()]));
+		toast.success(`Replaced in ${block.getBlockDescription()}`);
 	} else {
 		toast.error(__("No replacements made"));
 	}
@@ -388,7 +388,7 @@ const replaceAll = () => {
 	});
 
 	if (totalReplacements > 0) {
-		toast.success(__("Made {0} replacements across {1} blocks", [totalReplacements, totalReplacements]));
+		toast.success(`Made ${totalReplacements} replacements across ${totalReplacements} blocks`);
 		performSearch();
 	} else {
 		toast.error(__("No replacements made"));

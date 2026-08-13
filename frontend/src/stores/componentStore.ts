@@ -85,7 +85,7 @@ const useComponentStore = defineStore("componentStore", {
 				componentBlock,
 				"component",
 				(block: Block) => this.saveComponent(block, componentName),
-				__("Save Component"),
+				"Save Component",
 				component.component_name,
 				component.name,
 				true,
@@ -122,14 +122,14 @@ const useComponentStore = defineStore("componentStore", {
 									auto: true,
 								});
 								await toast.promise(componentResource.promise!, {
-									loading: __("Syncing component in all the pages..."),
+									loading: "Syncing component in all the pages...",
 									success: () => {
 										pageStore.fetchActivePage().then(() => {
 											pageStore.setPage(pageStore.activePage?.name as string);
 										});
-										return __("Component synced in all the pages!");
+										return "Component synced in all the pages!";
 									},
-									error: () => __("Error syncing component in all the pages!"),
+									error: () => "Error syncing component in all the pages!",
 								});
 							},
 						},
@@ -439,7 +439,7 @@ const useComponentStore = defineStore("componentStore", {
 				alert(__("Component is used in current page. You cannot delete it."));
 			} else {
 				const confirmed = await confirm(
-					__("Are you sure you want to delete component: {0}?", [component.component_name]),
+					`Are you sure you want to delete component: ${component.component_name}?`,
 				);
 				if (confirmed) {
 					webComponent.delete.submit(component.name).then(() => {

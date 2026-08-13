@@ -21,7 +21,7 @@ const editorConfigSectionProperties = [
 		getProps: () => ({
 			label: __("Layer Icon"),
 			modelValue: getEditorConfig().icon || "",
-			placeholder: __("e.g. play-circle"),
+			placeholder: "e.g. play-circle",
 		}),
 		events: {
 			"update:modelValue": (val: string) => setEditorConfig({ icon: val || undefined }),

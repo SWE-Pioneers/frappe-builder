@@ -200,7 +200,7 @@ const usePageStore = defineStore("pageStore", {
 		async revertChanges() {
 			const confirmed = await confirm(
 				__(
-					__("This will revert all changes made to the page since the last publish. Are you sure you want to continue?"),
+					"This will revert all changes made to the page since the last publish. Are you sure you want to continue?",
 				),
 			);
 			if (confirmed) {

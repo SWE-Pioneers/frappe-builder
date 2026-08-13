@@ -36,7 +36,7 @@
 			</div>
 			<Input
 				type="checkbox"
-				:label="__('Open in New Tab')"
+				:label="'Open in New Tab'"
 				class="text-xs"
 				v-model="openInNewTab"
 				@change="() => setLink(textLink, false)"></Input>
@@ -263,9 +263,9 @@ const handleKeydown = (e: KeyboardEvent) => {
 		e.preventDefault();
 		e.stopPropagation();
 		const blockWarnings = {
-			isHeader: __("You cannot make heading a link"),
-			isLink: __("You cannot add link inside a link block"),
-			isButton: __("You cannot add link inside a button block"),
+			isHeader: "You cannot make heading a link",
+			isLink: "You cannot add link inside a link block",
+			isButton: "You cannot add link inside a button block",
 		};
 
 		const blockType = Object.entries(blockWarnings).find(([type]) => (props.block as any)[type]());
