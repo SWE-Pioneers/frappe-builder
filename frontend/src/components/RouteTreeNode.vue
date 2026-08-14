@@ -38,7 +38,7 @@
 						:title="node.page.page_title">
 						{{ node.page.page_title }}
 					</span>
-					<span class="ml-auto mr-1 flex shrink-0 items-center gap-1">
+					<span class="ms-auto me-1 flex shrink-0 items-center gap-1">
 						<Tooltip v-if="isHomePage(node.page)" :text="__('Home page')" :hoverDelay="0.5">
 							<HomeIcon class="size-3.5 text-ink-green-6" />
 						</Tooltip>
@@ -90,7 +90,7 @@
 					@click="onLoadMore(node.id, node.loadedCount)">
 					<span class="lucide-more-horizontal size-3" aria-hidden="true" />
 					Load {{ Math.min(PAGE_LIMIT_PER_NODE, node.totalCount - node.loadedCount) }} more
-					<span class="ml-0.5 text-ink-gray-3">({{ node.totalCount - node.loadedCount }} remaining)</span>
+					<span class="ms-0.5 text-ink-gray-3">({{ node.totalCount - node.loadedCount }} remaining)</span>
 				</button>
 			</div>
 		</section>

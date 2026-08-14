@@ -35,7 +35,7 @@
 				<Transition name="fade">
 					<div
 						v-if="imagePreviewUrl"
-						class="flex items-center gap-2 rounded-md border border-outline-gray-2 bg-surface-gray-1 p-1.5 pr-2.5">
+						class="flex items-center gap-2 rounded-md border border-outline-gray-2 bg-surface-gray-1 p-1.5 pe-2.5">
 						<img :src="imagePreviewUrl" class="h-8 w-8 rounded object-cover" alt="Reference image" />
 						<span class="flex-1 truncate text-xs text-ink-gray-7">{{ imageFileName }}</span>
 						<button
