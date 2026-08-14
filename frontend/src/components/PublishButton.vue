@@ -43,7 +43,7 @@
 					@click="open"
 					:disabled="Boolean(pageStore.activePage?.is_template) || builderStore.readOnlyMode"
 					icon="lucide-chevron-down"
-					class="!w-6 justify-start rounded-bl-none rounded-tl-none border-0 pr-0 text-xs"></Button>
+					class="!w-6 justify-start rounded-bl-none rounded-tl-none border-0 pe-0 text-xs"></Button>
 			</template>
 		</Dropdown>
 	</div>

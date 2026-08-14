@@ -4,7 +4,7 @@
 			<router-link
 				:to="{ name: 'builder', params: { pageId: route.params.pageId || 'new' } }"
 				class="flex w-fit text-sm text-ink-gray-7 hover:text-ink-gray-9">
-				<span class="lucide-arrow-left mr-4 h-4 w-4 cursor-pointer" aria-hidden="true" />
+				<span class="lucide-arrow-left me-4 h-4 w-4 cursor-pointer" aria-hidden="true" />
 				{{ __("Back to builder") }}
 			</router-link>
 			<div class="flex gap-1">
@@ -42,7 +42,7 @@
 				width: width + 'px',
 			}">
 			<PanelResizer
-				class="ml-[-12px]"
+				class="ms-[-12px]"
 				side="left"
 				:dimension="width"
 				:minDimension="minWidth"
@@ -60,7 +60,7 @@
 				ref="previewWindow"></iframe>
 			<div v-if="loading || resizing" class="absolute flex h-full w-full items-center justify-center"></div>
 			<PanelResizer
-				class="mr-[-8px]"
+				class="me-[-8px]"
 				side="right"
 				:dimension="width"
 				:minDimension="minWidth"
